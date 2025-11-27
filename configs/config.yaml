@@ -1,0 +1,64 @@
+paths:
+  raw_data_path: "data/raw"  # Root directory containing Materna-Trace-* folders
+  processed_data_path: "data/processed"
+  external_data_path: "data/external"
+  checkpoints_path: "outputs/checkpoints"
+  logs_path: "outputs/logs"
+  results_path: "outputs/results"
+  figures_path: "outputs/figures"
+
+hyperparameters:
+  lstm:
+    input_dim: 1
+    hidden_dim: 64
+    num_layers: 2
+    dropout: 0.2
+    batch_size: 32
+    learning_rate: 0.001
+    num_epochs: 100
+
+evaluation:
+  metrics:
+    - mae
+    - rmse
+    - r2
+
+logging:
+  config_path: "configs/logging.yaml"
+
+seed: 42
+
+data:
+  raw_dir: "data/raw"
+  traces:
+    - "Materna-Trace-1"
+    - "Materna-Trace-2"
+    - "Materna-Trace-3"
+
+output:
+  results_dir: "outputs/results"
+  figures_dir: "outputs/figures"
+  checkpoints_dir: "outputs/checkpoints"
+  logs_dir: "outputs/logs"
+
+training:
+  window_size: 20
+  window_sizes:
+    - 20
+    - 40
+    - 80
+  batch_size: 64
+  epochs: 50
+  patience: 5
+  seed: 42
+  device: "gpu"  # "cpu" to force CPU
+  save_lstm_models: false  # Set true to persist a per-VM LSTM checkpoint
+  vm_whitelist:
+    - "Materna-Trace-1/01.csv"
+
+models:
+  lstm:
+    units1: 64
+    units2: 32
+    dense1: 32
+    dense2: 16
