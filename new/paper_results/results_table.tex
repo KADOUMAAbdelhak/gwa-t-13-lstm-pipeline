@@ -1,0 +1,17 @@
+
+\begin{table}[htbp]
+\centering
+\caption{Prediction Performance of Tree-Based Models for VM Resource Metrics}
+\label{tab:results}
+\begin{tabular}{lllrrrr}
+\toprule
+\textbf{Metric} & \textbf{Model} & \textbf{R²} & \textbf{RMSE} & \textbf{MAE} & \textbf{MAPE (\%)} \\
+\midrule
+CPU usage (\%) & Random Forest & 0.9416 & 0.17 & 0.10 & 3.7 \\
+Memory usage (\%) & Random Forest & 0.8955 & 1.93 & 1.49 & 17.1 \\
+Disk write throughput (KB/s) & XGBoost & 0.9568 & 12.62 & 0.86 & 4.1 \\
+Network received throughput (KB/s) & XGBoost & 0.9221 & 26.76 & 5.16 & 48.0 \\
+Network transmitted throughput (KB/s) & XGBoost & 0.9071 & 30.87 & 8.68 & 161.3 \\
+\bottomrule
+\end{tabular}
+\end{table}

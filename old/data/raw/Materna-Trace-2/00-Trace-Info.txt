@@ -1,0 +1,11097 @@
+
+TraceAnalysis:
+
+
+Results for each Workload Trace:
+
+Trace File: 1
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 90 MHz
+- maxCPU: 939 MHz
+- avgCPU: 119 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 21 MB
+- maxRAM: 2512 MB
+- avgRAM: 297 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 2
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 85 MHz
+- maxCPU: 2947 MHz
+- avgCPU: 461 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 62 MB
+- maxRAM: 2719 MB
+- avgRAM: 334 MB
+
+# of TraceLog entries: 8636
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 3
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 136 MHz
+- maxCPU: 1532 MHz
+- avgCPU: 179 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 245 MB
+- maxRAM: 5034 MB
+- avgRAM: 736 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 4
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 66 MHz
+- maxCPU: 1023 MHz
+- avgCPU: 82 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 659 MB
+- maxRAM: 4198 MB
+- avgRAM: 1032 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 5
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 61 MHz
+- maxCPU: 755 MHz
+- avgCPU: 71 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 605 MB
+- maxRAM: 5482 MB
+- avgRAM: 1008 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 6
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 22 MHz
+- maxCPU: 355 MHz
+- avgCPU: 27 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 38 MB
+- maxRAM: 1264 MB
+- avgRAM: 94 MB
+
+# of TraceLog entries: 8629
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 7
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 22 MHz
+- maxCPU: 238 MHz
+- avgCPU: 28 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 37 MB
+- maxRAM: 1425 MB
+- avgRAM: 95 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 8
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 414 MHz
+- maxCPU: 3859 MHz
+- avgCPU: 526 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 261 MB
+- maxRAM: 4100 MB
+- avgRAM: 680 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 9
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 70 MHz
+- maxCPU: 1833 MHz
+- avgCPU: 148 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 155 MB
+- maxRAM: 3612 MB
+- avgRAM: 386 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 10
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 47 MHz
+- maxCPU: 4479 MHz
+- avgCPU: 307 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 147 MB
+- maxRAM: 4280 MB
+- avgRAM: 891 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 11
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 44 MHz
+- maxCPU: 4798 MHz
+- avgCPU: 188 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 119 MB
+- maxRAM: 2834 MB
+- avgRAM: 806 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 12
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 30 MHz
+- maxCPU: 1121 MHz
+- avgCPU: 73 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 76 MB
+- maxRAM: 2787 MB
+- avgRAM: 209 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 13
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 31 MHz
+- maxCPU: 1176 MHz
+- avgCPU: 74 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 65 MB
+- maxRAM: 2703 MB
+- avgRAM: 204 MB
+
+# of TraceLog entries: 8921
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 14
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 89 MHz
+- maxCPU: 8632 MHz
+- avgCPU: 928 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 719 MB
+- maxRAM: 10669 MB
+- avgRAM: 2883 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 15
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 138 MHz
+- maxCPU: 11215 MHz
+- avgCPU: 1804 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 769 MB
+- maxRAM: 7814 MB
+- avgRAM: 3480 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 16
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 22 MHz
+- maxCPU: 13477 MHz
+- avgCPU: 808 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 299 MB
+- maxRAM: 7601 MB
+- avgRAM: 2321 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 17
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 21 MHz
+- maxCPU: 4121 MHz
+- avgCPU: 429 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 38 MB
+- maxRAM: 6094 MB
+- avgRAM: 1335 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 18
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 16 MHz
+- maxCPU: 1410 MHz
+- avgCPU: 98 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 24 MB
+- maxRAM: 1777 MB
+- avgRAM: 526 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 19
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 235 MHz
+- maxCPU: 3171 MHz
+- avgCPU: 663 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 2227 MB
+- maxRAM: 13607 MB
+- avgRAM: 5802 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 20
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 11 MHz
+- maxCPU: 2377 MHz
+- avgCPU: 640 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 38 MB
+- maxRAM: 1823 MB
+- avgRAM: 752 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 21
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 99 MHz
+- maxCPU: 1503 MHz
+- avgCPU: 210 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 261 MB
+- maxRAM: 4652 MB
+- avgRAM: 692 MB
+
+# of TraceLog entries: 8346
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 22
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 12 MHz
+- maxCPU: 723 MHz
+- avgCPU: 27 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 24 MB
+- maxRAM: 1603 MB
+- avgRAM: 84 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 23
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 13 MHz
+- maxCPU: 711 MHz
+- avgCPU: 28 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2875 MB
+- avgRAM: 97 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 24
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 33 MHz
+- maxCPU: 55 MHz
+- avgCPU: 38 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 140 MB
+- avgRAM: 39 MB
+
+# of TraceLog entries: 8635
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 25
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 42 MHz
+- maxCPU: 2733 MHz
+- avgCPU: 59 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 81 MB
+- maxRAM: 3997 MB
+- avgRAM: 338 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 26
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 12 MHz
+- maxCPU: 1316 MHz
+- avgCPU: 174 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 92 MB
+- maxRAM: 1785 MB
+- avgRAM: 527 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 27
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 6 MHz
+- maxCPU: 24 MHz
+- avgCPU: 8 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 144 MB
+- avgRAM: 13 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 28
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 162 MHz
+- maxCPU: 6432 MHz
+- avgCPU: 393 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 654 MB
+- maxRAM: 8441 MB
+- avgRAM: 1389 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 29
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 218 MHz
+- maxCPU: 3871 MHz
+- avgCPU: 464 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 827 MB
+- maxRAM: 5972 MB
+- avgRAM: 1682 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 30
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 467 MHz
+- maxCPU: 6961 MHz
+- avgCPU: 634 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 642 MB
+- maxRAM: 5721 MB
+- avgRAM: 1433 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 31
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 24 MHz
+- maxCPU: 9878 MHz
+- avgCPU: 1706 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 11 MB
+- maxRAM: 7874 MB
+- avgRAM: 889 MB
+
+# of TraceLog entries: 8630
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 32
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 18 MHz
+- maxCPU: 737 MHz
+- avgCPU: 118 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 5 MB
+- maxRAM: 963 MB
+- avgRAM: 115 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 33
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 27 MHz
+- maxCPU: 3918 MHz
+- avgCPU: 86 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 7634 MB
+- avgRAM: 158 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 34
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 14 MHz
+- maxCPU: 3080 MHz
+- avgCPU: 27 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 6504 MB
+- avgRAM: 123 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 35
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 18 MHz
+- maxCPU: 213 MHz
+- avgCPU: 57 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 725 MB
+- avgRAM: 118 MB
+
+# of TraceLog entries: 8629
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 36
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 45 MHz
+- maxCPU: 647 MHz
+- avgCPU: 53 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 54 MB
+- maxRAM: 2981 MB
+- avgRAM: 249 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 37
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 95 MHz
+- maxCPU: 3895 MHz
+- avgCPU: 256 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 424 MB
+- maxRAM: 6486 MB
+- avgRAM: 1064 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 38
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 12 MHz
+- maxCPU: 4966 MHz
+- avgCPU: 497 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 24 MB
+- maxRAM: 3399 MB
+- avgRAM: 634 MB
+
+# of TraceLog entries: 92
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 39
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 52 MHz
+- maxCPU: 4699 MHz
+- avgCPU: 1565 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 991 MB
+- maxRAM: 6595 MB
+- avgRAM: 2874 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 40
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 55 MHz
+- maxCPU: 4984 MHz
+- avgCPU: 1555 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 1014 MB
+- maxRAM: 6431 MB
+- avgRAM: 2910 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 41
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 53 MHz
+- maxCPU: 5642 MHz
+- avgCPU: 1447 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 1122 MB
+- maxRAM: 6552 MB
+- avgRAM: 2836 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 42
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 51 MHz
+- maxCPU: 4457 MHz
+- avgCPU: 1402 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 1057 MB
+- maxRAM: 6814 MB
+- avgRAM: 2772 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 43
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 67 MHz
+- maxCPU: 2222 MHz
+- avgCPU: 154 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 98 MB
+- maxRAM: 5189 MB
+- avgRAM: 547 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 44
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 20 MHz
+- maxCPU: 44 MHz
+- avgCPU: 25 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 326 MB
+- avgRAM: 32 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 45
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 33 MHz
+- maxCPU: 663 MHz
+- avgCPU: 36 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 21 MB
+- maxRAM: 2019 MB
+- avgRAM: 356 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 46
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 23 MHz
+- maxCPU: 3227 MHz
+- avgCPU: 41 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 2936 MB
+- avgRAM: 84 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 47
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 45 MHz
+- maxCPU: 4298 MHz
+- avgCPU: 98 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 151 MB
+- maxRAM: 6093 MB
+- avgRAM: 992 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 48
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 46 MHz
+- maxCPU: 14372 MHz
+- avgCPU: 248 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 162 MB
+- maxRAM: 5700 MB
+- avgRAM: 985 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 49
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 198 MHz
+- maxCPU: 17183 MHz
+- avgCPU: 1117 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 3832 MB
+- avgRAM: 432 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 50
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 27 MHz
+- maxCPU: 277 MHz
+- avgCPU: 30 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 2292 MB
+- avgRAM: 44 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 51
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 27 MHz
+- maxCPU: 3384 MHz
+- avgCPU: 38 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 11008 MB
+- avgRAM: 180 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 52
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 147 MHz
+- maxCPU: 5475 MHz
+- avgCPU: 432 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 845 MB
+- maxRAM: 7197 MB
+- avgRAM: 2025 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 53
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 114 MHz
+- maxCPU: 4233 MHz
+- avgCPU: 268 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 381 MB
+- maxRAM: 7077 MB
+- avgRAM: 1087 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 54
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 287 MHz
+- maxCPU: 3350 MHz
+- avgCPU: 451 MHz
+
+RAM values:
+
+Provisioned RAM: 10 GB
+
+- minRAM: 374 MB
+- maxRAM: 3549 MB
+- avgRAM: 778 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 55
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 23 MHz
+- maxCPU: 50 MHz
+- avgCPU: 27 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 336 MB
+- avgRAM: 10 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 56
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 26 MHz
+- maxCPU: 56 MHz
+- avgCPU: 32 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 347 MB
+- avgRAM: 10 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 57
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 105 MHz
+- maxCPU: 1789 MHz
+- avgCPU: 132 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 157 MB
+- maxRAM: 3063 MB
+- avgRAM: 454 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 58
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 20 MHz
+- maxCPU: 57 MHz
+- avgCPU: 30 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 970 MB
+- avgRAM: 225 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 59
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 13 MHz
+- maxCPU: 20 MHz
+- avgCPU: 15 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 270 MB
+- avgRAM: 8 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 60
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 26 MHz
+- maxCPU: 65 MHz
+- avgCPU: 32 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 1134 MB
+- avgRAM: 249 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 61
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 59 MHz
+- maxCPU: 81 MHz
+- avgCPU: 69 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 642 MB
+- avgRAM: 111 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 62
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 1 MHz
+- maxCPU: 2903 MHz
+- avgCPU: 131 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 190 MB
+- maxRAM: 3106 MB
+- avgRAM: 519 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 63
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 106 MHz
+- maxCPU: 2566 MHz
+- avgCPU: 131 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 212 MB
+- maxRAM: 3346 MB
+- avgRAM: 529 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 64
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 20 MHz
+- maxCPU: 43 MHz
+- avgCPU: 25 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 272 MB
+- avgRAM: 18 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 65
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 30 MHz
+- maxCPU: 2522 MHz
+- avgCPU: 118 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 217 MB
+- maxRAM: 4395 MB
+- avgRAM: 906 MB
+
+# of TraceLog entries: 8916
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 66
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 24 MHz
+- maxCPU: 1640 MHz
+- avgCPU: 32 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 4029 MB
+- avgRAM: 230 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 67
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 13 MHz
+- maxCPU: 33 MHz
+- avgCPU: 16 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 249 MB
+- avgRAM: 7 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 68
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 39 MHz
+- maxCPU: 2737 MHz
+- avgCPU: 57 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 3931 MB
+- avgRAM: 330 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 69
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 56 MHz
+- maxCPU: 1429 MHz
+- avgCPU: 62 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 3734 MB
+- avgRAM: 139 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 70
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 104 MHz
+- maxCPU: 2912 MHz
+- avgCPU: 131 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 229 MB
+- maxRAM: 3505 MB
+- avgRAM: 515 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 71
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 107 MHz
+- maxCPU: 2554 MHz
+- avgCPU: 133 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 250 MB
+- maxRAM: 3543 MB
+- avgRAM: 553 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 72
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 22 MHz
+- maxCPU: 41 MHz
+- avgCPU: 26 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 245 MB
+- avgRAM: 20 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 73
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 11 MHz
+- maxCPU: 560 MHz
+- avgCPU: 15 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 7 MB
+- maxRAM: 6585 MB
+- avgRAM: 22 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 74
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 33 MHz
+- maxCPU: 388 MHz
+- avgCPU: 68 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 81 MB
+- maxRAM: 1162 MB
+- avgRAM: 355 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 75
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 30 MHz
+- maxCPU: 259 MHz
+- avgCPU: 65 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 81 MB
+- maxRAM: 1703 MB
+- avgRAM: 361 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 76
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 26 MHz
+- maxCPU: 1602 MHz
+- avgCPU: 144 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 294 MB
+- maxRAM: 5340 MB
+- avgRAM: 1100 MB
+
+# of TraceLog entries: 8636
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 77
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 4 MHz
+- maxCPU: 128 MHz
+- avgCPU: 11 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 16 MB
+- maxRAM: 209 MB
+- avgRAM: 75 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 78
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 156 MHz
+- maxCPU: 2363 MHz
+- avgCPU: 243 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 1064 MB
+- maxRAM: 5832 MB
+- avgRAM: 1573 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 79
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 34 MHz
+- maxCPU: 2078 MHz
+- avgCPU: 169 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 725 MB
+- maxRAM: 4865 MB
+- avgRAM: 1395 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 80
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 195 MHz
+- maxCPU: 2128 MHz
+- avgCPU: 333 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 1195 MB
+- maxRAM: 6711 MB
+- avgRAM: 2882 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 81
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 12 MHz
+- maxCPU: 29 MHz
+- avgCPU: 15 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 500 MB
+- avgRAM: 41 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 82
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 20 MHz
+- maxCPU: 2079 MHz
+- avgCPU: 37 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 5197 MB
+- avgRAM: 504 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 83
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 26 MHz
+- maxCPU: 707 MHz
+- avgCPU: 36 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 54 MB
+- maxRAM: 6672 MB
+- avgRAM: 529 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 84
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 21 MHz
+- maxCPU: 340 MHz
+- avgCPU: 29 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 30 MB
+- maxRAM: 984 MB
+- avgRAM: 87 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 85
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 21 MHz
+- maxCPU: 209 MHz
+- avgCPU: 28 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 28 MB
+- maxRAM: 1189 MB
+- avgRAM: 85 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 86
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 20 MHz
+- maxCPU: 1011 MHz
+- avgCPU: 26 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 1417 MB
+- avgRAM: 39 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 87
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 14 MHz
+- maxCPU: 446 MHz
+- avgCPU: 18 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 1419 MB
+- avgRAM: 97 MB
+
+# of TraceLog entries: 8916
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 88
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 19 MHz
+- maxCPU: 1972 MHz
+- avgCPU: 34 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 2489 MB
+- avgRAM: 208 MB
+
+# of TraceLog entries: 8632
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 89
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 15 MHz
+- maxCPU: 22 MHz
+- avgCPU: 18 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 228 MB
+- avgRAM: 7 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 90
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 17 MHz
+- maxCPU: 361 MHz
+- avgCPU: 25 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 16 MB
+- maxRAM: 920 MB
+- avgRAM: 80 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 91
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 11 MHz
+- maxCPU: 65 MHz
+- avgCPU: 17 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 8 MB
+- maxRAM: 210 MB
+- avgRAM: 71 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 92
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 17 MHz
+- maxCPU: 61 MHz
+- avgCPU: 22 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 343 MB
+- avgRAM: 28 MB
+
+# of TraceLog entries: 8630
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 93
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 160 MHz
+- maxCPU: 1419 MHz
+- avgCPU: 253 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 299 MB
+- maxRAM: 3074 MB
+- avgRAM: 700 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 94
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 104 MHz
+- maxCPU: 1393 MHz
+- avgCPU: 122 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 3931 MB
+- avgRAM: 231 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 95
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 372 MHz
+- maxCPU: 627 MHz
+- avgCPU: 516 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 991 MB
+- maxRAM: 2962 MB
+- avgRAM: 1352 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 96
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 129 MHz
+- maxCPU: 3361 MHz
+- avgCPU: 155 MHz
+
+RAM values:
+
+Provisioned RAM: 128 GB
+
+- minRAM: 79 MB
+- maxRAM: 4443 MB
+- avgRAM: 525 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 97
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 22 MHz
+- maxCPU: 2746 MHz
+- avgCPU: 56 MHz
+
+RAM values:
+
+Provisioned RAM: 128 GB
+
+- minRAM: 79 MB
+- maxRAM: 4443 MB
+- avgRAM: 229 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 98
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 13 MHz
+- maxCPU: 536 MHz
+- avgCPU: 17 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 14 MB
+- maxRAM: 1278 MB
+- avgRAM: 103 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 99
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 114 MHz
+- maxCPU: 471 MHz
+- avgCPU: 146 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 223 MB
+- maxRAM: 2129 MB
+- avgRAM: 594 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 100
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 100 MHz
+- maxCPU: 844 MHz
+- avgCPU: 114 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 16 MB
+- maxRAM: 3795 MB
+- avgRAM: 235 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 101
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 178 MHz
+- maxCPU: 836 MHz
+- avgCPU: 197 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 69 MB
+- maxRAM: 1806 MB
+- avgRAM: 164 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 102
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 20 MHz
+- maxCPU: 364 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 22 MB
+- maxRAM: 1287 MB
+- avgRAM: 72 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 103
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 12 MHz
+- maxCPU: 386 MHz
+- avgCPU: 21 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 23 MB
+- maxRAM: 1258 MB
+- avgRAM: 72 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 104
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 35 MHz
+- maxCPU: 2417 MHz
+- avgCPU: 76 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 303 MB
+- maxRAM: 3825 MB
+- avgRAM: 647 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 105
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 21 MHz
+- maxCPU: 2420 MHz
+- avgCPU: 51 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 120 MB
+- maxRAM: 3647 MB
+- avgRAM: 345 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 106
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 1068 MHz
+- maxCPU: 6279 MHz
+- avgCPU: 1515 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 65 MB
+- maxRAM: 6569 MB
+- avgRAM: 374 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 107
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 24 MHz
+- maxCPU: 2372 MHz
+- avgCPU: 79 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3364 MB
+- avgRAM: 145 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 108
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 19 MHz
+- maxCPU: 2749 MHz
+- avgCPU: 145 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3620 MB
+- avgRAM: 144 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 109
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 21 MHz
+- maxCPU: 516 MHz
+- avgCPU: 33 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 150 MB
+- maxRAM: 1835 MB
+- avgRAM: 437 MB
+
+# of TraceLog entries: 8916
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 110
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 124 MHz
+- maxCPU: 969 MHz
+- avgCPU: 163 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 196 MB
+- maxRAM: 2233 MB
+- avgRAM: 649 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 111
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 1124 MHz
+- maxCPU: 2817 MHz
+- avgCPU: 1279 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 3434 MB
+- maxRAM: 5897 MB
+- avgRAM: 4109 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 112
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 1 MHz
+- maxCPU: 14 MHz
+- avgCPU: 12 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 2 MB
+- maxRAM: 12288 MB
+- avgRAM: 9 MB
+
+# of TraceLog entries: 3769
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 113
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 55 MHz
+- maxCPU: 3049 MHz
+- avgCPU: 503 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 101 MB
+- maxRAM: 4505 MB
+- avgRAM: 1013 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 114
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 3 MHz
+- maxCPU: 324 MHz
+- avgCPU: 17 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 1237 MB
+- avgRAM: 129 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 115
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 1 MHz
+- maxCPU: 574 MHz
+- avgCPU: 43 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 52 MB
+- maxRAM: 1163 MB
+- avgRAM: 139 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 116
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 12 MHz
+- maxCPU: 1008 MHz
+- avgCPU: 30 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 5 MB
+- maxRAM: 568 MB
+- avgRAM: 137 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 117
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 62 MHz
+- maxCPU: 462 MHz
+- avgCPU: 96 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 27 MB
+- maxRAM: 1918 MB
+- avgRAM: 113 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 118
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 12 MHz
+- maxCPU: 838 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 30 MB
+- maxRAM: 725 MB
+- avgRAM: 108 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 119
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 13 MHz
+- maxCPU: 1131 MHz
+- avgCPU: 26 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 34 MB
+- maxRAM: 786 MB
+- avgRAM: 112 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 120
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 20 MHz
+- maxCPU: 647 MHz
+- avgCPU: 31 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 215 MB
+- maxRAM: 1772 MB
+- avgRAM: 440 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 121
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 4901 MHz
+- maxCPU: 9217 MHz
+- avgCPU: 5728 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 1080 MB
+- maxRAM: 10165 MB
+- avgRAM: 1647 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 122
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 34 MHz
+- maxCPU: 995 MHz
+- avgCPU: 37 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 7 MB
+- maxRAM: 7249 MB
+- avgRAM: 71 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 123
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 720 MHz
+- maxCPU: 2165 MHz
+- avgCPU: 986 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 627 MB
+- maxRAM: 4718 MB
+- avgRAM: 1061 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 124
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 35 MHz
+- maxCPU: 461 MHz
+- avgCPU: 38 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 3205 MB
+- avgRAM: 100 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 125
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 15 MHz
+- maxCPU: 68 MHz
+- avgCPU: 19 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 43 MB
+- maxRAM: 465 MB
+- avgRAM: 100 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 126
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 20 MHz
+- maxCPU: 4236 MHz
+- avgCPU: 1142 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2711 MB
+- avgRAM: 343 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 127
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 16 MHz
+- maxCPU: 408 MHz
+- avgCPU: 20 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 1818 MB
+- avgRAM: 56 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 128
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 16 MHz
+- maxCPU: 674 MHz
+- avgCPU: 19 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2034 MB
+- avgRAM: 54 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 129
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 478 MHz
+- maxCPU: 4995 MHz
+- avgCPU: 1144 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 483 MB
+- maxRAM: 3317 MB
+- avgRAM: 1089 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 130
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 19 MHz
+- maxCPU: 439 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2105 MB
+- avgRAM: 71 MB
+
+# of TraceLog entries: 8064
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 131
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 15 MHz
+- maxCPU: 561 MHz
+- avgCPU: 20 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 27 MB
+- maxRAM: 1602 MB
+- avgRAM: 142 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 132
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 54 MHz
+- maxCPU: 3028 MHz
+- avgCPU: 212 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 98 MB
+- maxRAM: 3063 MB
+- avgRAM: 562 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 133
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 55 MHz
+- maxCPU: 5062 MHz
+- avgCPU: 543 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 254 MB
+- maxRAM: 2828 MB
+- avgRAM: 682 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 134
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 18 MHz
+- maxCPU: 1032 MHz
+- avgCPU: 30 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 2664 MB
+- avgRAM: 48 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 135
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 67 MHz
+- maxCPU: 4636 MHz
+- avgCPU: 519 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 425 MB
+- maxRAM: 4264 MB
+- avgRAM: 1267 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 136
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 22 MHz
+- maxCPU: 515 MHz
+- avgCPU: 113 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 53 MB
+- maxRAM: 650 MB
+- avgRAM: 247 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 137
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 7 MHz
+- maxCPU: 23 MHz
+- avgCPU: 9 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 95 MB
+- avgRAM: 20 MB
+
+# of TraceLog entries: 8635
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 138
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 24 MHz
+- maxCPU: 4941 MHz
+- avgCPU: 81 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 131 MB
+- maxRAM: 3661 MB
+- avgRAM: 483 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 139
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 15 MHz
+- maxCPU: 32 MHz
+- avgCPU: 18 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 83 MB
+- maxRAM: 721 MB
+- avgRAM: 167 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 140
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 18 MHz
+- maxCPU: 37 MHz
+- avgCPU: 21 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 237 MB
+- avgRAM: 39 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 141
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 17 MHz
+- maxCPU: 23 MHz
+- avgCPU: 18 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 143 MB
+- avgRAM: 38 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 142
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 24 MHz
+- maxCPU: 1539 MHz
+- avgCPU: 468 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 3636 MB
+- avgRAM: 379 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 143
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 89 MHz
+- maxCPU: 643 MHz
+- avgCPU: 163 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 113 MB
+- maxRAM: 6798 MB
+- avgRAM: 3527 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 144
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 50 MHz
+- maxCPU: 796 MHz
+- avgCPU: 57 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 7 MB
+- maxRAM: 4282 MB
+- avgRAM: 48 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 145
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 479 MHz
+- maxCPU: 1442 MHz
+- avgCPU: 699 MHz
+
+RAM values:
+
+Provisioned RAM: 20 GB
+
+- minRAM: 1513 MB
+- maxRAM: 7561 MB
+- avgRAM: 2564 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 146
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 466 MHz
+- maxCPU: 1460 MHz
+- avgCPU: 687 MHz
+
+RAM values:
+
+Provisioned RAM: 20 GB
+
+- minRAM: 1473 MB
+- maxRAM: 8161 MB
+- avgRAM: 2590 MB
+
+# of TraceLog entries: 8352
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 147
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 199 MHz
+- maxCPU: 2539 MHz
+- avgCPU: 248 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 64 MB
+- maxRAM: 10648 MB
+- avgRAM: 522 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 148
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 163 MHz
+- maxCPU: 800 MHz
+- avgCPU: 177 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 11877 MB
+- avgRAM: 351 MB
+
+# of TraceLog entries: 7585
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 149
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 29 MHz
+- maxCPU: 1939 MHz
+- avgCPU: 200 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 8878 MB
+- avgRAM: 372 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 150
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 140 MHz
+- maxCPU: 2217 MHz
+- avgCPU: 560 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 354 MB
+- maxRAM: 6438 MB
+- avgRAM: 2612 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 151
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 11 MHz
+- maxCPU: 598 MHz
+- avgCPU: 56 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 14 MB
+- maxRAM: 2569 MB
+- avgRAM: 289 MB
+
+# of TraceLog entries: 8630
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 152
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 13 MHz
+- maxCPU: 351 MHz
+- avgCPU: 22 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 1040 MB
+- avgRAM: 87 MB
+
+# of TraceLog entries: 1152
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 153
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 16 MHz
+- maxCPU: 583 MHz
+- avgCPU: 22 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 2227 MB
+- avgRAM: 88 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 154
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 8 MHz
+- maxCPU: 1317 MHz
+- avgCPU: 38 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2367 MB
+- avgRAM: 185 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 155
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 1106 MHz
+- avgCPU: 16 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 852 MB
+- avgRAM: 27 MB
+
+# of TraceLog entries: 1152
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 156
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 124 MHz
+- maxCPU: 696 MHz
+- avgCPU: 150 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 152 MB
+- maxRAM: 3762 MB
+- avgRAM: 433 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 157
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 18 MHz
+- maxCPU: 2397 MHz
+- avgCPU: 155 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 32 MB
+- maxRAM: 4685 MB
+- avgRAM: 579 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 158
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 7 MHz
+- maxCPU: 2217 MHz
+- avgCPU: 26 MHz
+
+RAM values:
+
+Provisioned RAM: 1 GB
+
+- minRAM: 1 MB
+- maxRAM: 1325 MB
+- avgRAM: 70 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 159
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 7 MHz
+- maxCPU: 13 MHz
+- avgCPU: 8 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 71 MB
+- avgRAM: 21 MB
+
+# of TraceLog entries: 1152
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 160
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 53 MHz
+- maxCPU: 2745 MHz
+- avgCPU: 268 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 81 MB
+- maxRAM: 3735 MB
+- avgRAM: 418 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 161
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 10 MHz
+- maxCPU: 342 MHz
+- avgCPU: 20 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 3 MB
+- maxRAM: 1069 MB
+- avgRAM: 68 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 162
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 15 MHz
+- maxCPU: 41 MHz
+- avgCPU: 18 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 938 MB
+- avgRAM: 84 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 163
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 36 MHz
+- maxCPU: 646 MHz
+- avgCPU: 45 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 7 MB
+- maxRAM: 4201 MB
+- avgRAM: 222 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 164
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 29 MHz
+- maxCPU: 308 MHz
+- avgCPU: 35 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 2817 MB
+- avgRAM: 97 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 165
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 15 MHz
+- maxCPU: 693 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 7 MB
+- maxRAM: 4086 MB
+- avgRAM: 56 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 166
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 79 MHz
+- maxCPU: 654 MHz
+- avgCPU: 86 MHz
+
+RAM values:
+
+Provisioned RAM: 10 GB
+
+- minRAM: 13 MB
+- maxRAM: 593 MB
+- avgRAM: 213 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 167
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 67 MHz
+- maxCPU: 627 MHz
+- avgCPU: 73 MHz
+
+RAM values:
+
+Provisioned RAM: 10 GB
+
+- minRAM: 6 MB
+- maxRAM: 252 MB
+- avgRAM: 30 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 168
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 156 MHz
+- maxCPU: 919 MHz
+- avgCPU: 213 MHz
+
+RAM values:
+
+Provisioned RAM: 20 GB
+
+- minRAM: 762 MB
+- maxRAM: 6388 MB
+- avgRAM: 1882 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 169
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 103 MHz
+- maxCPU: 5204 MHz
+- avgCPU: 145 MHz
+
+RAM values:
+
+Provisioned RAM: 20 GB
+
+- minRAM: 244 MB
+- maxRAM: 8298 MB
+- avgRAM: 1391 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 170
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 135 MHz
+- maxCPU: 2471 MHz
+- avgCPU: 171 MHz
+
+RAM values:
+
+Provisioned RAM: 20 GB
+
+- minRAM: 297 MB
+- maxRAM: 6183 MB
+- avgRAM: 1319 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 171
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 115 MHz
+- maxCPU: 5248 MHz
+- avgCPU: 161 MHz
+
+RAM values:
+
+Provisioned RAM: 20 GB
+
+- minRAM: 420 MB
+- maxRAM: 8094 MB
+- avgRAM: 1583 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 172
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 254 MHz
+- maxCPU: 1372 MHz
+- avgCPU: 298 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 303 MB
+- maxRAM: 6246 MB
+- avgRAM: 1004 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 173
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 163 MHz
+- maxCPU: 459 MHz
+- avgCPU: 204 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 1932 MB
+- avgRAM: 388 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 174
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 541 MHz
+- maxCPU: 1243 MHz
+- avgCPU: 602 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 769 MB
+- maxRAM: 3096 MB
+- avgRAM: 1226 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 175
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 15 MHz
+- maxCPU: 2214 MHz
+- avgCPU: 244 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 38 MB
+- maxRAM: 6361 MB
+- avgRAM: 1503 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 176
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 562 MHz
+- maxCPU: 1256 MHz
+- avgCPU: 627 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 731 MB
+- maxRAM: 3473 MB
+- avgRAM: 1169 MB
+
+# of TraceLog entries: 8346
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 177
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 119 MHz
+- maxCPU: 4082 MHz
+- avgCPU: 626 MHz
+
+RAM values:
+
+Provisioned RAM: 5 GB
+
+- minRAM: 337 MB
+- maxRAM: 4563 MB
+- avgRAM: 1889 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 178
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 178 MHz
+- maxCPU: 1479 MHz
+- avgCPU: 192 MHz
+
+RAM values:
+
+Provisioned RAM: 3 GB
+
+- minRAM: 166 MB
+- maxRAM: 2562 MB
+- avgRAM: 318 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 179
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 215 MHz
+- maxCPU: 907 MHz
+- avgCPU: 251 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 97 MB
+- maxRAM: 6169 MB
+- avgRAM: 529 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 180
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 165 MHz
+- maxCPU: 423 MHz
+- avgCPU: 206 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 1974 MB
+- avgRAM: 377 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 181
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 9 MHz
+- maxCPU: 14 MHz
+- avgCPU: 10 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 113 MB
+- avgRAM: 23 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 182
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 16 MHz
+- maxCPU: 710 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 43 MB
+- maxRAM: 2337 MB
+- avgRAM: 168 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 183
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 14 MHz
+- maxCPU: 633 MHz
+- avgCPU: 22 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 41 MB
+- maxRAM: 2064 MB
+- avgRAM: 160 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 184
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 147 MHz
+- maxCPU: 1351 MHz
+- avgCPU: 846 MHz
+
+RAM values:
+
+Provisioned RAM: 3 GB
+
+- minRAM: 180 MB
+- maxRAM: 2574 MB
+- avgRAM: 467 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 185
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 15 MHz
+- maxCPU: 86 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 1 GB
+
+- minRAM: 11 MB
+- maxRAM: 116 MB
+- avgRAM: 35 MB
+
+# of TraceLog entries: 3456
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 186
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 15 MHz
+- maxCPU: 1480 MHz
+- avgCPU: 167 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 32 MB
+- maxRAM: 6678 MB
+- avgRAM: 1450 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 187
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 68 MHz
+- maxCPU: 102 MHz
+- avgCPU: 72 MHz
+
+RAM values:
+
+Provisioned RAM: 1 GB
+
+- minRAM: 10 MB
+- maxRAM: 147 MB
+- avgRAM: 38 MB
+
+# of TraceLog entries: 3452
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 188
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 70 MHz
+- maxCPU: 100 MHz
+- avgCPU: 75 MHz
+
+RAM values:
+
+Provisioned RAM: 1 GB
+
+- minRAM: 16 MB
+- maxRAM: 132 MB
+- avgRAM: 47 MB
+
+# of TraceLog entries: 3168
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 189
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 96 MHz
+- maxCPU: 3892 MHz
+- avgCPU: 126 MHz
+
+RAM values:
+
+Provisioned RAM: 10 GB
+
+- minRAM: 217 MB
+- maxRAM: 5119 MB
+- avgRAM: 1083 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 190
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 77 MHz
+- maxCPU: 4092 MHz
+- avgCPU: 103 MHz
+
+RAM values:
+
+Provisioned RAM: 10 GB
+
+- minRAM: 245 MB
+- maxRAM: 4935 MB
+- avgRAM: 997 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 191
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 113 MHz
+- maxCPU: 601 MHz
+- avgCPU: 123 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 315 MB
+- avgRAM: 79 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 192
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 136 MHz
+- maxCPU: 1395 MHz
+- avgCPU: 158 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 130 MB
+- maxRAM: 4333 MB
+- avgRAM: 429 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 193
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 99 MHz
+- maxCPU: 545 MHz
+- avgCPU: 103 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 4116 MB
+- maxRAM: 4955 MB
+- avgRAM: 4490 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 194
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 24 MHz
+- maxCPU: 1683 MHz
+- avgCPU: 236 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 5099 MB
+- avgRAM: 438 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 195
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 27 MHz
+- maxCPU: 1992 MHz
+- avgCPU: 200 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 3351 MB
+- avgRAM: 340 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 196
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 278 MHz
+- maxCPU: 2764 MHz
+- avgCPU: 364 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 315 MB
+- maxRAM: 5569 MB
+- avgRAM: 1007 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 197
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 9 MHz
+- maxCPU: 457 MHz
+- avgCPU: 11 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2509 MB
+- avgRAM: 22 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 198
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 593 MHz
+- maxCPU: 2892 MHz
+- avgCPU: 792 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 823 MB
+- maxRAM: 3047 MB
+- avgRAM: 1233 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 199
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 564 MHz
+- maxCPU: 1536 MHz
+- avgCPU: 759 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 769 MB
+- maxRAM: 3150 MB
+- avgRAM: 1170 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 200
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 202 MHz
+- maxCPU: 873 MHz
+- avgCPU: 238 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 205 MB
+- maxRAM: 5307 MB
+- avgRAM: 781 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 201
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 11 MHz
+- maxCPU: 64 MHz
+- avgCPU: 14 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 196 MB
+- avgRAM: 36 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 202
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 64 MHz
+- maxCPU: 668 MHz
+- avgCPU: 81 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 28 MB
+- maxRAM: 1859 MB
+- avgRAM: 140 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 203
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 25 MHz
+- avgCPU: 9 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 136 MB
+- avgRAM: 23 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 204
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 193 MHz
+- maxCPU: 1184 MHz
+- avgCPU: 234 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 761 MB
+- maxRAM: 2941 MB
+- avgRAM: 1348 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 205
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 93 MHz
+- maxCPU: 1486 MHz
+- avgCPU: 179 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 57 MB
+- maxRAM: 2662 MB
+- avgRAM: 256 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 206
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 81 MHz
+- maxCPU: 1901 MHz
+- avgCPU: 138 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 11 MB
+- maxRAM: 2547 MB
+- avgRAM: 167 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 207
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 82 MHz
+- maxCPU: 1368 MHz
+- avgCPU: 143 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 27 MB
+- maxRAM: 3047 MB
+- avgRAM: 184 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 208
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 9 MHz
+- maxCPU: 558 MHz
+- avgCPU: 10 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2233 MB
+- avgRAM: 23 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 209
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 43 MHz
+- maxCPU: 4528 MHz
+- avgCPU: 89 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 110 MB
+- maxRAM: 1704 MB
+- avgRAM: 250 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 210
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 145 MHz
+- maxCPU: 4239 MHz
+- avgCPU: 665 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 2313 MB
+- maxRAM: 12865 MB
+- avgRAM: 6237 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 211
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 18 MHz
+- maxCPU: 2734 MHz
+- avgCPU: 176 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 7235 MB
+- avgRAM: 608 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 212
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 3386 MHz
+- avgCPU: 32 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 7700 MB
+- avgRAM: 85 MB
+
+# of TraceLog entries: 8631
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 213
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 74 MHz
+- maxCPU: 2094 MHz
+- avgCPU: 114 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 7774 MB
+- avgRAM: 604 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 214
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 7 MHz
+- maxCPU: 2785 MHz
+- avgCPU: 53 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 7672 MB
+- avgRAM: 205 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 215
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 45 MHz
+- maxCPU: 1129 MHz
+- avgCPU: 80 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 8 MB
+- maxRAM: 3058 MB
+- avgRAM: 121 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 216
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 17 MHz
+- maxCPU: 636 MHz
+- avgCPU: 22 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 106 MB
+- maxRAM: 1577 MB
+- avgRAM: 186 MB
+
+# of TraceLog entries: 7227
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 217
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 132 MHz
+- maxCPU: 1199 MHz
+- avgCPU: 180 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 332 MB
+- maxRAM: 4587 MB
+- avgRAM: 938 MB
+
+# of TraceLog entries: 3163
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 218
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 11 MHz
+- maxCPU: 1757 MHz
+- avgCPU: 162 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 7317 MB
+- avgRAM: 744 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 219
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 17 MHz
+- maxCPU: 597 MHz
+- avgCPU: 19 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 166 MB
+- maxRAM: 2774 MB
+- avgRAM: 311 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 220
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 9 MHz
+- maxCPU: 456 MHz
+- avgCPU: 17 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 15 MB
+- maxRAM: 1043 MB
+- avgRAM: 85 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 221
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 21 MHz
+- maxCPU: 203 MHz
+- avgCPU: 44 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 41 MB
+- maxRAM: 467 MB
+- avgRAM: 242 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 222
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 9 MHz
+- maxCPU: 2330 MHz
+- avgCPU: 21 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 2484 MB
+- avgRAM: 21 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 223
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 7 MHz
+- maxCPU: 24 MHz
+- avgCPU: 13 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 4 MB
+- maxRAM: 198 MB
+- avgRAM: 63 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 224
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 79 MHz
+- maxCPU: 1528 MHz
+- avgCPU: 121 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 14 MB
+- maxRAM: 3131 MB
+- avgRAM: 160 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 225
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 16 MHz
+- maxCPU: 1320 MHz
+- avgCPU: 24 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 64 MB
+- maxRAM: 1610 MB
+- avgRAM: 144 MB
+
+# of TraceLog entries: 8504
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 226
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 128 MHz
+- maxCPU: 1670 MHz
+- avgCPU: 235 MHz
+
+RAM values:
+
+Provisioned RAM: 24 GB
+
+- minRAM: 96 MB
+- maxRAM: 10123 MB
+- avgRAM: 1494 MB
+
+# of TraceLog entries: 3163
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 227
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 10 MHz
+- maxCPU: 2124 MHz
+- avgCPU: 194 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 7372 MB
+- avgRAM: 699 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 228
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 299 MHz
+- maxCPU: 1691 MHz
+- avgCPU: 383 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 638 MB
+- maxRAM: 3218 MB
+- avgRAM: 1259 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 229
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 13 MHz
+- maxCPU: 1602 MHz
+- avgCPU: 28 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 6367 MB
+- avgRAM: 156 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 230
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 16 MHz
+- maxCPU: 600 MHz
+- avgCPU: 19 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 152 MB
+- maxRAM: 2394 MB
+- avgRAM: 313 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 231
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 38 MHz
+- maxCPU: 2347 MHz
+- avgCPU: 131 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 381 MB
+- maxRAM: 5258 MB
+- avgRAM: 1226 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 232
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 18 MHz
+- maxCPU: 1006 MHz
+- avgCPU: 31 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 8 MB
+- maxRAM: 1643 MB
+- avgRAM: 116 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 233
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 20 MHz
+- maxCPU: 968 MHz
+- avgCPU: 47 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 49 MB
+- maxRAM: 2774 MB
+- avgRAM: 589 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 234
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 27 MHz
+- maxCPU: 1186 MHz
+- avgCPU: 53 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 27 MB
+- maxRAM: 2728 MB
+- avgRAM: 555 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 235
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 20 MHz
+- maxCPU: 1295 MHz
+- avgCPU: 49 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 43 MB
+- maxRAM: 2692 MB
+- avgRAM: 628 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 236
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 20 MHz
+- maxCPU: 1235 MHz
+- avgCPU: 46 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 38 MB
+- maxRAM: 2932 MB
+- avgRAM: 555 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 237
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 206 MHz
+- maxCPU: 2359 MHz
+- avgCPU: 297 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 61 MB
+- maxRAM: 2268 MB
+- avgRAM: 237 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 238
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 152 MHz
+- maxCPU: 1331 MHz
+- avgCPU: 186 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 266 MB
+- maxRAM: 2555 MB
+- avgRAM: 610 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 239
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 98 MHz
+- maxCPU: 663 MHz
+- avgCPU: 121 MHz
+
+RAM values:
+
+Provisioned RAM: 1 GB
+
+- minRAM: 29 MB
+- maxRAM: 351 MB
+- avgRAM: 85 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 240
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 14 MHz
+- maxCPU: 432 MHz
+- avgCPU: 18 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 603 MB
+- avgRAM: 95 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 241
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 10 MHz
+- maxCPU: 529 MHz
+- avgCPU: 13 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 1572 MB
+- avgRAM: 56 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 242
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 26 MHz
+- maxCPU: 109 MHz
+- avgCPU: 33 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 414 MB
+- avgRAM: 161 MB
+
+# of TraceLog entries: 8628
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 243
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 28 MHz
+- maxCPU: 625 MHz
+- avgCPU: 34 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 21 MB
+- maxRAM: 2490 MB
+- avgRAM: 137 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 244
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 20 MHz
+- maxCPU: 413 MHz
+- avgCPU: 28 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 11 MB
+- maxRAM: 975 MB
+- avgRAM: 97 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 245
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 15 MHz
+- maxCPU: 384 MHz
+- avgCPU: 22 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 15 MB
+- maxRAM: 790 MB
+- avgRAM: 77 MB
+
+# of TraceLog entries: 8630
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 246
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 1 MHz
+- maxCPU: 2510 MHz
+- avgCPU: 17 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3323 MB
+- avgRAM: 93 MB
+
+# of TraceLog entries: 8916
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 247
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 225 MHz
+- maxCPU: 2023 MHz
+- avgCPU: 395 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 506 MB
+- maxRAM: 7445 MB
+- avgRAM: 2209 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 248
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 15 MHz
+- maxCPU: 951 MHz
+- avgCPU: 18 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 1581 MB
+- avgRAM: 35 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 249
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 60 MHz
+- maxCPU: 604 MHz
+- avgCPU: 66 MHz
+
+RAM values:
+
+Provisioned RAM: 1 GB
+
+- minRAM: 20 MB
+- maxRAM: 861 MB
+- avgRAM: 51 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 250
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 54 MHz
+- maxCPU: 2620 MHz
+- avgCPU: 434 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 79 MB
+- maxRAM: 1422 MB
+- avgRAM: 266 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 251
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 225 MHz
+- maxCPU: 2399 MHz
+- avgCPU: 325 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 1101 MB
+- maxRAM: 7556 MB
+- avgRAM: 2312 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 252
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 1798 MHz
+- avgCPU: 21 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 5965 MB
+- avgRAM: 59 MB
+
+# of TraceLog entries: 5261
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 253
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 19 MHz
+- maxCPU: 389 MHz
+- avgCPU: 35 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 41 MB
+- maxRAM: 920 MB
+- avgRAM: 122 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 254
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 7 MHz
+- maxCPU: 567 MHz
+- avgCPU: 14 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 7 MB
+- maxRAM: 1610 MB
+- avgRAM: 69 MB
+
+# of TraceLog entries: 8352
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 255
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 13 MHz
+- maxCPU: 51 MHz
+- avgCPU: 14 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 7 MB
+- maxRAM: 343 MB
+- avgRAM: 11 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 256
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 191 MHz
+- maxCPU: 3570 MHz
+- avgCPU: 1772 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 554 MB
+- maxRAM: 3375 MB
+- avgRAM: 1753 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 257
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 62 MHz
+- maxCPU: 258 MHz
+- avgCPU: 70 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 346 MB
+- maxRAM: 1993 MB
+- avgRAM: 556 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 258
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 105 MHz
+- maxCPU: 1930 MHz
+- avgCPU: 190 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 125 MB
+- maxRAM: 2482 MB
+- avgRAM: 405 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 259
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 108 MHz
+- maxCPU: 646 MHz
+- avgCPU: 117 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 147 MB
+- maxRAM: 2654 MB
+- avgRAM: 331 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 260
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 74 MHz
+- maxCPU: 922 MHz
+- avgCPU: 86 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 52 MB
+- maxRAM: 1806 MB
+- avgRAM: 140 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 261
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 23 MHz
+- maxCPU: 391 MHz
+- avgCPU: 38 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 39 MB
+- maxRAM: 1241 MB
+- avgRAM: 114 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 262
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 28 MHz
+- maxCPU: 397 MHz
+- avgCPU: 42 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 50 MB
+- maxRAM: 951 MB
+- avgRAM: 125 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 263
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 1662 MHz
+- avgCPU: 14 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 6144 MB
+- avgRAM: 26 MB
+
+# of TraceLog entries: 5554
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 264
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 25 MHz
+- maxCPU: 325 MHz
+- avgCPU: 40 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 41 MB
+- maxRAM: 1265 MB
+- avgRAM: 116 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 265
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 732 MHz
+- maxCPU: 1845 MHz
+- avgCPU: 914 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 491 MB
+- maxRAM: 5082 MB
+- avgRAM: 962 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 266
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 47 MHz
+- maxCPU: 1898 MHz
+- avgCPU: 54 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 57 MB
+- maxRAM: 2361 MB
+- avgRAM: 200 MB
+
+# of TraceLog entries: 8635
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 267
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 56 MHz
+- maxCPU: 665 MHz
+- avgCPU: 62 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 169 MB
+- avgRAM: 32 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 268
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 83 MHz
+- maxCPU: 307 MHz
+- avgCPU: 146 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 688 MB
+- maxRAM: 3919 MB
+- avgRAM: 2329 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 269
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 87 MHz
+- maxCPU: 1308 MHz
+- avgCPU: 183 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 937 MB
+- maxRAM: 4743 MB
+- avgRAM: 2646 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 270
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 118 MHz
+- maxCPU: 1454 MHz
+- avgCPU: 157 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 103 MB
+- maxRAM: 3192 MB
+- avgRAM: 264 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 271
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 443 MHz
+- avgCPU: 9 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 2943 MB
+- avgRAM: 11 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 272
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 7 MHz
+- maxCPU: 518 MHz
+- avgCPU: 10 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 3079 MB
+- avgRAM: 11 MB
+
+# of TraceLog entries: 8915
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 273
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 13 MHz
+- maxCPU: 285 MHz
+- avgCPU: 19 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 1484 MB
+- avgRAM: 15 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 274
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 6 MHz
+- maxCPU: 1747 MHz
+- avgCPU: 13 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 6144 MB
+- avgRAM: 25 MB
+
+# of TraceLog entries: 5555
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 275
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 9 MHz
+- maxCPU: 178 MHz
+- avgCPU: 17 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 1932 MB
+- avgRAM: 15 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 276
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 144 MHz
+- maxCPU: 1473 MHz
+- avgCPU: 374 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 332 MB
+- maxRAM: 4428 MB
+- avgRAM: 827 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 277
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 7 MHz
+- maxCPU: 1707 MHz
+- avgCPU: 19 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 1696 MB
+- avgRAM: 42 MB
+
+# of TraceLog entries: 8730
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 278
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 1 MHz
+- maxCPU: 2453 MHz
+- avgCPU: 182 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 24 MB
+- maxRAM: 3798 MB
+- avgRAM: 347 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 279
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 15 MHz
+- maxCPU: 2127 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 29 MB
+- maxRAM: 2460 MB
+- avgRAM: 132 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 280
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 29 MHz
+- maxCPU: 3204 MHz
+- avgCPU: 127 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 97 MB
+- maxRAM: 5706 MB
+- avgRAM: 1124 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 281
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 23 MHz
+- maxCPU: 2522 MHz
+- avgCPU: 33 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 4652 MB
+- avgRAM: 173 MB
+
+# of TraceLog entries: 8636
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 282
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 29 MHz
+- maxCPU: 5007 MHz
+- avgCPU: 47 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 73 MB
+- maxRAM: 1425 MB
+- avgRAM: 276 MB
+
+# of TraceLog entries: 8625
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 283
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 79 MHz
+- maxCPU: 782 MHz
+- avgCPU: 97 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3069 MB
+- avgRAM: 97 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 284
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 101 MHz
+- maxCPU: 1023 MHz
+- avgCPU: 117 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 73 MB
+- maxRAM: 2812 MB
+- avgRAM: 196 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 285
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 6 MHz
+- maxCPU: 1745 MHz
+- avgCPU: 13 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 6144 MB
+- avgRAM: 26 MB
+
+# of TraceLog entries: 5554
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 286
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 59 MHz
+- maxCPU: 631 MHz
+- avgCPU: 69 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3080 MB
+- avgRAM: 90 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 287
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 416 MHz
+- maxCPU: 3823 MHz
+- avgCPU: 462 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 16 MB
+- maxRAM: 4264 MB
+- avgRAM: 178 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 288
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 33 MHz
+- maxCPU: 1433 MHz
+- avgCPU: 46 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 82 MB
+- maxRAM: 701 MB
+- avgRAM: 205 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 289
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 1 MHz
+- maxCPU: 1581 MHz
+- avgCPU: 205 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 100 MB
+- maxRAM: 3432 MB
+- avgRAM: 357 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 290
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 12 MHz
+- maxCPU: 678 MHz
+- avgCPU: 16 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3350 MB
+- avgRAM: 73 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 291
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 7 MHz
+- maxCPU: 314 MHz
+- avgCPU: 9 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 1280 MB
+- avgRAM: 16 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 292
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 7 MHz
+- maxCPU: 314 MHz
+- avgCPU: 9 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 1572 MB
+- avgRAM: 17 MB
+
+# of TraceLog entries: 8921
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 293
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 50 MHz
+- maxCPU: 1658 MHz
+- avgCPU: 157 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 265 MB
+- maxRAM: 2789 MB
+- avgRAM: 1087 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 294
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 5 MHz
+- maxCPU: 11 MHz
+- avgCPU: 6 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 143 MB
+- avgRAM: 20 MB
+
+# of TraceLog entries: 8635
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 295
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 20 MHz
+- maxCPU: 527 MHz
+- avgCPU: 71 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 147 MB
+- maxRAM: 2118 MB
+- avgRAM: 971 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 296
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 10 MHz
+- maxCPU: 1891 MHz
+- avgCPU: 383 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 3686 MB
+- avgRAM: 391 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 297
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 34 MHz
+- maxCPU: 378 MHz
+- avgCPU: 38 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 87 MB
+- maxRAM: 950 MB
+- avgRAM: 177 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 298
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 16 MHz
+- maxCPU: 2196 MHz
+- avgCPU: 27 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 12 MB
+- maxRAM: 1507 MB
+- avgRAM: 107 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 299
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 13 MHz
+- maxCPU: 68 MHz
+- avgCPU: 15 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 303 MB
+- avgRAM: 66 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 300
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 19 MHz
+- maxCPU: 121 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 16 MB
+- maxRAM: 341 MB
+- avgRAM: 115 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 301
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 94 MHz
+- maxCPU: 685 MHz
+- avgCPU: 102 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2979 MB
+- avgRAM: 46 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 302
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 98 MHz
+- maxCPU: 699 MHz
+- avgCPU: 109 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2451 MB
+- avgRAM: 47 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 303
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 1 MHz
+- maxCPU: 420 MHz
+- avgCPU: 25 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 1717 MB
+- avgRAM: 82 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 304
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 22 MHz
+- maxCPU: 420 MHz
+- avgCPU: 26 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 5 MB
+- maxRAM: 1597 MB
+- avgRAM: 78 MB
+
+# of TraceLog entries: 8921
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 305
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 12 MHz
+- maxCPU: 567 MHz
+- avgCPU: 15 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2736 MB
+- avgRAM: 66 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 306
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 37 MHz
+- maxCPU: 1974 MHz
+- avgCPU: 173 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 242 MB
+- maxRAM: 3159 MB
+- avgRAM: 684 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 307
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 1 MHz
+- maxCPU: 1788 MHz
+- avgCPU: 22 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 6144 MB
+- avgRAM: 45 MB
+
+# of TraceLog entries: 5365
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 308
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 27 MHz
+- maxCPU: 1043 MHz
+- avgCPU: 38 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 74 MB
+- maxRAM: 1091 MB
+- avgRAM: 182 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 309
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 14 MHz
+- maxCPU: 365 MHz
+- avgCPU: 28 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 45 MB
+- maxRAM: 1478 MB
+- avgRAM: 106 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 310
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 14 MHz
+- maxCPU: 38 MHz
+- avgCPU: 20 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 91 MB
+- maxRAM: 353 MB
+- avgRAM: 172 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 311
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 18 MHz
+- maxCPU: 438 MHz
+- avgCPU: 27 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 19 MB
+- maxRAM: 534 MB
+- avgRAM: 108 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 312
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 431 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 28 MB
+- maxRAM: 1297 MB
+- avgRAM: 107 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 313
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 14 MHz
+- maxCPU: 26 MHz
+- avgCPU: 20 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 61 MB
+- maxRAM: 241 MB
+- avgRAM: 135 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 314
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 90 MHz
+- maxCPU: 680 MHz
+- avgCPU: 98 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 216 MB
+- avgRAM: 9 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 315
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 3088 MHz
+- maxCPU: 3842 MHz
+- avgCPU: 3384 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 1446 MB
+- maxRAM: 3620 MB
+- avgRAM: 2126 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 316
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 69 MHz
+- maxCPU: 2402 MHz
+- avgCPU: 126 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 736 MB
+- maxRAM: 4193 MB
+- avgRAM: 1182 MB
+
+# of TraceLog entries: 8631
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 317
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 62 MHz
+- maxCPU: 1884 MHz
+- avgCPU: 94 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 725 MB
+- maxRAM: 4603 MB
+- avgRAM: 1135 MB
+
+# of TraceLog entries: 8636
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 318
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 1855 MHz
+- avgCPU: 20 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 5668 MB
+- avgRAM: 43 MB
+
+# of TraceLog entries: 5371
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 319
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 66 MHz
+- maxCPU: 510 MHz
+- avgCPU: 77 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 19 MB
+- maxRAM: 1736 MB
+- avgRAM: 71 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 320
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 63 MHz
+- maxCPU: 417 MHz
+- avgCPU: 72 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 19 MB
+- maxRAM: 1868 MB
+- avgRAM: 70 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 321
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 9 MHz
+- maxCPU: 867 MHz
+- avgCPU: 20 MHz
+
+RAM values:
+
+Provisioned RAM: 1 GB
+
+- minRAM: 18 MB
+- maxRAM: 609 MB
+- avgRAM: 57 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 322
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 66 MHz
+- maxCPU: 2129 MHz
+- avgCPU: 207 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 19 MB
+- maxRAM: 1914 MB
+- avgRAM: 98 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 323
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 65 MHz
+- maxCPU: 458 MHz
+- avgCPU: 109 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 270 MB
+- avgRAM: 56 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 324
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 261 MHz
+- maxCPU: 2270 MHz
+- avgCPU: 553 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 1326 MB
+- maxRAM: 8739 MB
+- avgRAM: 3612 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 325
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 23 MHz
+- maxCPU: 548 MHz
+- avgCPU: 31 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 2965 MB
+- avgRAM: 140 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 326
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 29 MHz
+- maxCPU: 668 MHz
+- avgCPU: 40 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 75 MB
+- maxRAM: 4215 MB
+- avgRAM: 366 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 327
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 13 MHz
+- maxCPU: 713 MHz
+- avgCPU: 17 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 38 MB
+- maxRAM: 1156 MB
+- avgRAM: 100 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 328
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 12 MHz
+- maxCPU: 712 MHz
+- avgCPU: 17 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 31 MB
+- maxRAM: 1524 MB
+- avgRAM: 100 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 329
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 544 MHz
+- avgCPU: 12 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 3303 MB
+- avgRAM: 42 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 330
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 16 MHz
+- maxCPU: 784 MHz
+- avgCPU: 21 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 4046 MB
+- avgRAM: 76 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 331
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 14 MHz
+- maxCPU: 716 MHz
+- avgCPU: 19 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 4788 MB
+- avgRAM: 35 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 332
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 23 MHz
+- maxCPU: 2119 MHz
+- avgCPU: 195 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 12209 MB
+- avgRAM: 1492 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 333
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 15 MHz
+- maxCPU: 3470 MHz
+- avgCPU: 512 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 14285 MB
+- avgRAM: 3096 MB
+
+# of TraceLog entries: 5839
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 334
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 13 MHz
+- maxCPU: 10304 MHz
+- avgCPU: 3942 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 16 MB
+- maxRAM: 2130 MB
+- avgRAM: 109 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 335
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 13 MHz
+- maxCPU: 10293 MHz
+- avgCPU: 2579 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 5 MB
+- maxRAM: 2173 MB
+- avgRAM: 110 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 336
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 17 MHz
+- maxCPU: 584 MHz
+- avgCPU: 25 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 28 MB
+- maxRAM: 1440 MB
+- avgRAM: 77 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 337
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 15 MHz
+- maxCPU: 560 MHz
+- avgCPU: 27 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 24 MB
+- maxRAM: 1312 MB
+- avgRAM: 79 MB
+
+# of TraceLog entries: 8921
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 338
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 11 MHz
+- maxCPU: 1836 MHz
+- avgCPU: 22 MHz
+
+RAM values:
+
+Provisioned RAM: 32 GB
+
+- minRAM: 20 MB
+- maxRAM: 24048 MB
+- avgRAM: 9 MB
+
+# of TraceLog entries: 7901
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 339
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 2006 MHz
+- avgCPU: 11 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3031 MB
+- avgRAM: 17 MB
+
+# of TraceLog entries: 7900
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 340
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 7 MHz
+- maxCPU: 349 MHz
+- avgCPU: 10 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 3636 MB
+- avgRAM: 30 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 341
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 96 MHz
+- maxCPU: 993 MHz
+- avgCPU: 124 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3836 MB
+- avgRAM: 105 MB
+
+# of TraceLog entries: 8916
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 342
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 17 MHz
+- maxCPU: 775 MHz
+- avgCPU: 22 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3082 MB
+- avgRAM: 44 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 343
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 10 MHz
+- maxCPU: 309 MHz
+- avgCPU: 12 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 770 MB
+- avgRAM: 49 MB
+
+# of TraceLog entries: 1440
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 344
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 402 MHz
+- maxCPU: 1094 MHz
+- avgCPU: 435 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 577 MB
+- maxRAM: 1487 MB
+- avgRAM: 718 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 345
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 91 MHz
+- maxCPU: 590 MHz
+- avgCPU: 106 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 75 MB
+- maxRAM: 763 MB
+- avgRAM: 149 MB
+
+# of TraceLog entries: 8632
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 346
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 19 MHz
+- maxCPU: 29 MHz
+- avgCPU: 22 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 180 MB
+- avgRAM: 67 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 347
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 11 MHz
+- maxCPU: 20 MHz
+- avgCPU: 14 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 158 MB
+- avgRAM: 55 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 348
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 1630 MHz
+- maxCPU: 4522 MHz
+- avgCPU: 2077 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 1020 MB
+- maxRAM: 4968 MB
+- avgRAM: 2022 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 349
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 112 MHz
+- maxCPU: 1424 MHz
+- avgCPU: 254 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 152 MB
+- maxRAM: 2232 MB
+- avgRAM: 556 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 350
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 76 MHz
+- maxCPU: 566 MHz
+- avgCPU: 98 MHz
+
+RAM values:
+
+Provisioned RAM: 3 GB
+
+- minRAM: 217 MB
+- maxRAM: 1144 MB
+- avgRAM: 460 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 351
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 6 MHz
+- maxCPU: 537 MHz
+- avgCPU: 7 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 1152 MB
+- avgRAM: 26 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 352
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 33 MHz
+- maxCPU: 159 MHz
+- avgCPU: 56 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 174 MB
+- maxRAM: 1206 MB
+- avgRAM: 415 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 353
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 109 MHz
+- maxCPU: 742 MHz
+- avgCPU: 131 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 204 MB
+- maxRAM: 2676 MB
+- avgRAM: 424 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 354
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 111 MHz
+- maxCPU: 1676 MHz
+- avgCPU: 168 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 376 MB
+- maxRAM: 4794 MB
+- avgRAM: 903 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 355
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 1 MHz
+- maxCPU: 1411 MHz
+- avgCPU: 117 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 168 MB
+- maxRAM: 4712 MB
+- avgRAM: 709 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 356
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 161 MHz
+- maxCPU: 3466 MHz
+- avgCPU: 613 MHz
+
+RAM values:
+
+Provisioned RAM: 24 GB
+
+- minRAM: 686 MB
+- maxRAM: 19019 MB
+- avgRAM: 3506 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 357
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 16 MHz
+- maxCPU: 26 MHz
+- avgCPU: 21 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 7 MB
+- maxRAM: 220 MB
+- avgRAM: 20 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 358
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 185 MHz
+- maxCPU: 2607 MHz
+- avgCPU: 410 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 518 MB
+- maxRAM: 6323 MB
+- avgRAM: 1156 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 359
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 162 MHz
+- maxCPU: 2872 MHz
+- avgCPU: 377 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 981 MB
+- maxRAM: 12319 MB
+- avgRAM: 3627 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 360
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 8 MHz
+- maxCPU: 661 MHz
+- avgCPU: 13 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 1521 MB
+- avgRAM: 50 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 361
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 7 MHz
+- maxCPU: 648 MHz
+- avgCPU: 11 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 1604 MB
+- avgRAM: 47 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 362
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 6 MHz
+- maxCPU: 376 MHz
+- avgCPU: 7 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 1306 MB
+- avgRAM: 26 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 363
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 108 MHz
+- maxCPU: 922 MHz
+- avgCPU: 135 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 251 MB
+- maxRAM: 3156 MB
+- avgRAM: 548 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 364
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 122 MHz
+- maxCPU: 4658 MHz
+- avgCPU: 234 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 44 MB
+- maxRAM: 3821 MB
+- avgRAM: 355 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 365
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 53 MHz
+- maxCPU: 2474 MHz
+- avgCPU: 81 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 4 MB
+- maxRAM: 5594 MB
+- avgRAM: 123 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 366
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 18 MHz
+- maxCPU: 749 MHz
+- avgCPU: 24 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 215 MB
+- avgRAM: 73 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 367
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 42 MHz
+- maxCPU: 1397 MHz
+- avgCPU: 79 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 24 MB
+- maxRAM: 3157 MB
+- avgRAM: 203 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 368
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 157 MHz
+- maxCPU: 1934 MHz
+- avgCPU: 241 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 671 MB
+- maxRAM: 5263 MB
+- avgRAM: 1227 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 369
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 12 MHz
+- maxCPU: 396 MHz
+- avgCPU: 14 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2315 MB
+- avgRAM: 77 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 370
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 12 MHz
+- maxCPU: 353 MHz
+- avgCPU: 15 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 1881 MB
+- avgRAM: 67 MB
+
+# of TraceLog entries: 8631
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 371
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 9 MHz
+- maxCPU: 6181 MHz
+- avgCPU: 28 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2880 MB
+- avgRAM: 33 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 372
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 207 MHz
+- maxCPU: 1927 MHz
+- avgCPU: 300 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 1058 MB
+- maxRAM: 4859 MB
+- avgRAM: 1757 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 373
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 91 MHz
+- avgCPU: 9 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 166 MB
+- avgRAM: 29 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 374
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 12 MHz
+- maxCPU: 160 MHz
+- avgCPU: 13 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 9173 MB
+- avgRAM: 9 MB
+
+# of TraceLog entries: 3889
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 375
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 263 MHz
+- maxCPU: 3689 MHz
+- avgCPU: 1940 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 1031 MB
+- maxRAM: 6028 MB
+- avgRAM: 2451 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 376
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 162 MHz
+- maxCPU: 4066 MHz
+- avgCPU: 1042 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 1932 MB
+- maxRAM: 10476 MB
+- avgRAM: 4138 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 377
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 23 MHz
+- maxCPU: 4002 MHz
+- avgCPU: 690 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 1129 MB
+- maxRAM: 9968 MB
+- avgRAM: 3024 MB
+
+# of TraceLog entries: 8635
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 378
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 38 MHz
+- maxCPU: 3967 MHz
+- avgCPU: 460 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 678 MB
+- maxRAM: 11500 MB
+- avgRAM: 2459 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 379
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 1 MHz
+- maxCPU: 645 MHz
+- avgCPU: 112 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 49 MB
+- maxRAM: 1555 MB
+- avgRAM: 134 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 380
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 26 MHz
+- maxCPU: 729 MHz
+- avgCPU: 112 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 53 MB
+- maxRAM: 1536 MB
+- avgRAM: 196 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 381
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 22 MHz
+- maxCPU: 1332 MHz
+- avgCPU: 30 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 49 MB
+- maxRAM: 1217 MB
+- avgRAM: 174 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 382
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 5 MHz
+- maxCPU: 318 MHz
+- avgCPU: 7 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2544 MB
+- avgRAM: 14 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 383
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 59 MHz
+- maxCPU: 465 MHz
+- avgCPU: 94 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 95 MB
+- maxRAM: 1487 MB
+- avgRAM: 179 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 384
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 8 MHz
+- maxCPU: 91 MHz
+- avgCPU: 9 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 164 MB
+- avgRAM: 28 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 385
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 82 MHz
+- maxCPU: 376 MHz
+- avgCPU: 90 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 101 MB
+- maxRAM: 1548 MB
+- avgRAM: 177 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 386
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 10 MHz
+- maxCPU: 1909 MHz
+- avgCPU: 24 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2820 MB
+- avgRAM: 111 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 387
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 160 MHz
+- maxCPU: 2271 MHz
+- avgCPU: 211 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 343 MB
+- maxRAM: 4821 MB
+- avgRAM: 1003 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 388
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 36 MHz
+- maxCPU: 1735 MHz
+- avgCPU: 177 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 99 MB
+- maxRAM: 1941 MB
+- avgRAM: 190 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 389
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 223 MHz
+- maxCPU: 4860 MHz
+- avgCPU: 593 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 908 MB
+- maxRAM: 9927 MB
+- avgRAM: 3571 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 390
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 172 MHz
+- maxCPU: 5248 MHz
+- avgCPU: 234 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 334 MB
+- maxRAM: 9903 MB
+- avgRAM: 900 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 391
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 45 MHz
+- maxCPU: 2569 MHz
+- avgCPU: 125 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 130 MB
+- maxRAM: 3287 MB
+- avgRAM: 482 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 392
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 39 MHz
+- maxCPU: 1321 MHz
+- avgCPU: 134 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 172 MB
+- maxRAM: 1572 MB
+- avgRAM: 407 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 393
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 45 MHz
+- maxCPU: 4249 MHz
+- avgCPU: 606 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 119 MB
+- maxRAM: 7836 MB
+- avgRAM: 1859 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 394
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 6 MHz
+- maxCPU: 1539 MHz
+- avgCPU: 9 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 6144 MB
+- avgRAM: 18 MB
+
+# of TraceLog entries: 5318
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 395
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 9 MHz
+- maxCPU: 324 MHz
+- avgCPU: 12 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 12 MB
+- maxRAM: 1549 MB
+- avgRAM: 64 MB
+
+# of TraceLog entries: 8629
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 396
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 46 MHz
+- maxCPU: 706 MHz
+- avgCPU: 54 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 65 MB
+- maxRAM: 4046 MB
+- avgRAM: 245 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 397
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 40 MHz
+- maxCPU: 2017 MHz
+- avgCPU: 48 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 32 MB
+- maxRAM: 4013 MB
+- avgRAM: 197 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 398
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 32 MHz
+- maxCPU: 603 MHz
+- avgCPU: 52 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 16 MB
+- maxRAM: 1774 MB
+- avgRAM: 203 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 399
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 111 MHz
+- maxCPU: 3642 MHz
+- avgCPU: 359 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 155 MB
+- maxRAM: 3227 MB
+- avgRAM: 497 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 400
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 83 MHz
+- maxCPU: 770 MHz
+- avgCPU: 94 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 97 MB
+- maxRAM: 1626 MB
+- avgRAM: 175 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 401
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 23 MHz
+- maxCPU: 321 MHz
+- avgCPU: 26 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 33 MB
+- maxRAM: 737 MB
+- avgRAM: 93 MB
+
+# of TraceLog entries: 8635
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 402
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 14 MHz
+- maxCPU: 2339 MHz
+- avgCPU: 15 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 1491 MB
+- avgRAM: 33 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 403
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 7 MHz
+- maxCPU: 19 MHz
+- avgCPU: 8 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 138 MB
+- avgRAM: 18 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 404
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 11 MHz
+- maxCPU: 37 MHz
+- avgCPU: 18 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 242 MB
+- avgRAM: 57 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 405
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 18 MHz
+- maxCPU: 162 MHz
+- avgCPU: 41 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 349 MB
+- avgRAM: 101 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 406
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 6 MHz
+- maxCPU: 501 MHz
+- avgCPU: 7 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 1 MB
+- maxRAM: 1319 MB
+- avgRAM: 25 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 407
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 33 MHz
+- maxCPU: 1591 MHz
+- avgCPU: 43 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 155 MB
+- maxRAM: 972 MB
+- avgRAM: 316 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 408
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 11 MHz
+- maxCPU: 425 MHz
+- avgCPU: 16 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 3483 MB
+- avgRAM: 110 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 409
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 155 MHz
+- maxCPU: 3665 MHz
+- avgCPU: 1066 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 305 MB
+- maxRAM: 5308 MB
+- avgRAM: 1548 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 410
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 133 MHz
+- maxCPU: 1812 MHz
+- avgCPU: 267 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 310 MB
+- maxRAM: 4112 MB
+- avgRAM: 900 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 411
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 115 MHz
+- maxCPU: 1903 MHz
+- avgCPU: 154 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 48 MB
+- maxRAM: 2735 MB
+- avgRAM: 272 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 412
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 82 MHz
+- maxCPU: 250 MHz
+- avgCPU: 159 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 469 MB
+- avgRAM: 155 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 413
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 87 MHz
+- maxCPU: 2045 MHz
+- avgCPU: 246 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 11 MB
+- maxRAM: 3615 MB
+- avgRAM: 1698 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 414
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 88 MHz
+- maxCPU: 714 MHz
+- avgCPU: 113 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3121 MB
+- avgRAM: 139 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 415
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 95 MHz
+- maxCPU: 2657 MHz
+- avgCPU: 308 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 348 MB
+- maxRAM: 4521 MB
+- avgRAM: 1260 MB
+
+# of TraceLog entries: 8914
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 416
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 107 MHz
+- maxCPU: 778 MHz
+- avgCPU: 132 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 65 MB
+- maxRAM: 3423 MB
+- avgRAM: 447 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 417
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 12 MHz
+- maxCPU: 1248 MHz
+- avgCPU: 19 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 19 MB
+- maxRAM: 1334 MB
+- avgRAM: 70 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 418
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 92 MHz
+- maxCPU: 157 MHz
+- avgCPU: 114 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 223 MB
+- maxRAM: 688 MB
+- avgRAM: 376 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 419
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 47 MHz
+- maxCPU: 97 MHz
+- avgCPU: 55 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 319 MB
+- maxRAM: 969 MB
+- avgRAM: 495 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 420
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 55 MHz
+- maxCPU: 3898 MHz
+- avgCPU: 396 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 589 MB
+- maxRAM: 6766 MB
+- avgRAM: 1899 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 421
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 57 MHz
+- maxCPU: 3618 MHz
+- avgCPU: 338 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 512 MB
+- maxRAM: 6880 MB
+- avgRAM: 1646 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 422
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 214 MHz
+- maxCPU: 3594 MHz
+- avgCPU: 680 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 720 MB
+- maxRAM: 7798 MB
+- avgRAM: 1862 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 423
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 68 MHz
+- maxCPU: 709 MHz
+- avgCPU: 175 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 71 MB
+- maxRAM: 1708 MB
+- avgRAM: 309 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 424
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 163 MHz
+- maxCPU: 3218 MHz
+- avgCPU: 544 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 655 MB
+- maxRAM: 6056 MB
+- avgRAM: 1795 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 425
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 29 MHz
+- maxCPU: 537 MHz
+- avgCPU: 97 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 41 MB
+- maxRAM: 1299 MB
+- avgRAM: 120 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 426
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 30 MHz
+- maxCPU: 543 MHz
+- avgCPU: 92 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 35 MB
+- maxRAM: 1215 MB
+- avgRAM: 123 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 427
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 318 MHz
+- maxCPU: 3306 MHz
+- avgCPU: 1176 MHz
+
+RAM values:
+
+Provisioned RAM: 10 GB
+
+- minRAM: 1277 MB
+- maxRAM: 9190 MB
+- avgRAM: 2809 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 428
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 11 MHz
+- maxCPU: 548 MHz
+- avgCPU: 15 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 8 MB
+- maxRAM: 1376 MB
+- avgRAM: 66 MB
+
+# of TraceLog entries: 8631
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 429
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 365 MHz
+- maxCPU: 3889 MHz
+- avgCPU: 612 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 1501 MB
+- maxRAM: 6144 MB
+- avgRAM: 1985 MB
+
+# of TraceLog entries: 3243
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 430
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 9 MHz
+- maxCPU: 501 MHz
+- avgCPU: 17 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 1138 MB
+- avgRAM: 79 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 431
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 338 MHz
+- maxCPU: 5394 MHz
+- avgCPU: 1136 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 1760 MB
+- maxRAM: 11344 MB
+- avgRAM: 3157 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 432
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 24 MHz
+- maxCPU: 1997 MHz
+- avgCPU: 58 MHz
+
+RAM values:
+
+Provisioned RAM: 32 GB
+
+- minRAM: 20 MB
+- maxRAM: 11443 MB
+- avgRAM: 797 MB
+
+# of TraceLog entries: 8914
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 433
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 17 MHz
+- maxCPU: 698 MHz
+- avgCPU: 27 MHz
+
+RAM values:
+
+Provisioned RAM: 32 GB
+
+- minRAM: 20 MB
+- maxRAM: 783 MB
+- avgRAM: 68 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 434
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 39 MHz
+- maxCPU: 4928 MHz
+- avgCPU: 95 MHz
+
+RAM values:
+
+Provisioned RAM: 32 GB
+
+- minRAM: 20 MB
+- maxRAM: 22213 MB
+- avgRAM: 1029 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 435
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 16 MHz
+- maxCPU: 1854 MHz
+- avgCPU: 21 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 6070 MB
+- avgRAM: 81 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 436
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 32 MHz
+- maxCPU: 2016 MHz
+- avgCPU: 82 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 43 MB
+- maxRAM: 5826 MB
+- avgRAM: 562 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 437
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 11 MHz
+- maxCPU: 576 MHz
+- avgCPU: 14 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 23 MB
+- maxRAM: 1448 MB
+- avgRAM: 70 MB
+
+# of TraceLog entries: 8920
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 438
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 14 MHz
+- maxCPU: 164 MHz
+- avgCPU: 30 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 5 MB
+- maxRAM: 368 MB
+- avgRAM: 126 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 439
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 43 MHz
+- maxCPU: 3050 MHz
+- avgCPU: 79 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 201 MB
+- maxRAM: 7088 MB
+- avgRAM: 666 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 440
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 14 MHz
+- maxCPU: 1835 MHz
+- avgCPU: 18 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3596 MB
+- avgRAM: 99 MB
+
+# of TraceLog entries: 6991
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 441
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 17 MHz
+- maxCPU: 976 MHz
+- avgCPU: 20 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 24 MB
+- maxRAM: 3072 MB
+- avgRAM: 150 MB
+
+# of TraceLog entries: 7279
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 442
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 88 MHz
+- maxCPU: 736 MHz
+- avgCPU: 127 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 884 MB
+- maxRAM: 4030 MB
+- avgRAM: 1396 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 443
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 2545 MHz
+- maxCPU: 3042 MHz
+- avgCPU: 2604 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 704 MB
+- maxRAM: 4352 MB
+- avgRAM: 1197 MB
+
+# of TraceLog entries: 8636
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 444
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 73 MHz
+- maxCPU: 2672 MHz
+- avgCPU: 145 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 680 MB
+- maxRAM: 2875 MB
+- avgRAM: 1002 MB
+
+# of TraceLog entries: 8918
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 445
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 20 MHz
+- maxCPU: 600 MHz
+- avgCPU: 29 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 3358 MB
+- avgRAM: 143 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 446
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 11 MHz
+- maxCPU: 251 MHz
+- avgCPU: 19 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2449 MB
+- avgRAM: 91 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 447
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 67 MHz
+- maxCPU: 1015 MHz
+- avgCPU: 107 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 294 MB
+- maxRAM: 6052 MB
+- avgRAM: 860 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 448
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 37 MHz
+- maxCPU: 579 MHz
+- avgCPU: 48 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 122 MB
+- maxRAM: 4914 MB
+- avgRAM: 526 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 449
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 26 MHz
+- maxCPU: 5072 MHz
+- avgCPU: 36 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 65 MB
+- maxRAM: 3713 MB
+- avgRAM: 253 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 450
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 249 MHz
+- maxCPU: 3467 MHz
+- avgCPU: 372 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 498 MB
+- maxRAM: 7969 MB
+- avgRAM: 1938 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 451
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 21 MHz
+- maxCPU: 5065 MHz
+- avgCPU: 30 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 4898 MB
+- avgRAM: 153 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 452
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 256 MHz
+- maxCPU: 2979 MHz
+- avgCPU: 413 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 802 MB
+- maxRAM: 6853 MB
+- avgRAM: 1895 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 453
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 484 MHz
+- maxCPU: 3802 MHz
+- avgCPU: 951 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 1916 MB
+- maxRAM: 9157 MB
+- avgRAM: 4588 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 454
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 21 MHz
+- maxCPU: 587 MHz
+- avgCPU: 36 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 35 MB
+- maxRAM: 1522 MB
+- avgRAM: 97 MB
+
+# of TraceLog entries: 8629
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 455
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 21 MHz
+- maxCPU: 614 MHz
+- avgCPU: 36 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 41 MB
+- maxRAM: 1211 MB
+- avgRAM: 106 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 456
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 21 MHz
+- maxCPU: 370 MHz
+- avgCPU: 86 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 150 MB
+- maxRAM: 3457 MB
+- avgRAM: 635 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 457
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 13 MHz
+- maxCPU: 515 MHz
+- avgCPU: 83 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 169 MB
+- maxRAM: 3003 MB
+- avgRAM: 599 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 458
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 10 MHz
+- maxCPU: 202 MHz
+- avgCPU: 17 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 4 MB
+- maxRAM: 1324 MB
+- avgRAM: 54 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 459
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 24 MHz
+- maxCPU: 934 MHz
+- avgCPU: 232 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 43 MB
+- maxRAM: 1283 MB
+- avgRAM: 117 MB
+
+# of TraceLog entries: 8921
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 460
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 22 MHz
+- maxCPU: 2542 MHz
+- avgCPU: 569 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 179 MB
+- maxRAM: 4423 MB
+- avgRAM: 979 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 461
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 56 MHz
+- maxCPU: 3581 MHz
+- avgCPU: 126 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 233 MB
+- maxRAM: 7225 MB
+- avgRAM: 781 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 462
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 12 MHz
+- maxCPU: 647 MHz
+- avgCPU: 15 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 2542 MB
+- avgRAM: 80 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 463
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 88 MHz
+- maxCPU: 890 MHz
+- avgCPU: 142 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 315 MB
+- maxRAM: 3915 MB
+- avgRAM: 824 MB
+
+# of TraceLog entries: 8636
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 464
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 270 MHz
+- maxCPU: 1218 MHz
+- avgCPU: 333 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 326 MB
+- maxRAM: 10692 MB
+- avgRAM: 1936 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 465
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 18 MHz
+- maxCPU: 462 MHz
+- avgCPU: 24 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 2986 MB
+- avgRAM: 142 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 466
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 9 MHz
+- maxCPU: 347 MHz
+- avgCPU: 13 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 16 MB
+- maxRAM: 1492 MB
+- avgRAM: 62 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 467
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 10 MHz
+- maxCPU: 405 MHz
+- avgCPU: 13 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 16 MB
+- maxRAM: 1536 MB
+- avgRAM: 64 MB
+
+# of TraceLog entries: 8921
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 468
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 434 MHz
+- maxCPU: 3545 MHz
+- avgCPU: 673 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 327 MB
+- maxRAM: 5340 MB
+- avgRAM: 884 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 469
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 127 MHz
+- maxCPU: 729 MHz
+- avgCPU: 180 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 829 MB
+- maxRAM: 3592 MB
+- avgRAM: 1376 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 470
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 78 MHz
+- maxCPU: 865 MHz
+- avgCPU: 116 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 502 MB
+- maxRAM: 2859 MB
+- avgRAM: 759 MB
+
+# of TraceLog entries: 8923
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 471
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 305 MHz
+- maxCPU: 1953 MHz
+- avgCPU: 663 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 647 MB
+- maxRAM: 2195 MB
+- avgRAM: 887 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 472
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 74 MHz
+- maxCPU: 4478 MHz
+- avgCPU: 209 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 12952 MB
+- avgRAM: 440 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 473
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 29 MHz
+- maxCPU: 1926 MHz
+- avgCPU: 44 MHz
+
+RAM values:
+
+Provisioned RAM: 24 GB
+
+- minRAM: 15 MB
+- maxRAM: 995 MB
+- avgRAM: 159 MB
+
+# of TraceLog entries: 1445
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 474
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 1 MHz
+- maxCPU: 2240 MHz
+- avgCPU: 119 MHz
+
+RAM values:
+
+Provisioned RAM: 48 GB
+
+- minRAM: 29 MB
+- maxRAM: 36864 MB
+- avgRAM: 156 MB
+
+# of TraceLog entries: 3539
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 475
+CPU values:
+
+Provisioned CPU Cores: 8
+
+- minCPU: 1 MHz
+- maxCPU: 3761 MHz
+- avgCPU: 166 MHz
+
+RAM values:
+
+Provisioned RAM: 48 GB
+
+- minRAM: 29 MB
+- maxRAM: 36864 MB
+- avgRAM: 506 MB
+
+# of TraceLog entries: 3326
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 476
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 6 MHz
+- maxCPU: 867 MHz
+- avgCPU: 15 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 3 MB
+- maxRAM: 1581 MB
+- avgRAM: 55 MB
+
+# of TraceLog entries: 8924
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 477
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 125 MHz
+- maxCPU: 1674 MHz
+- avgCPU: 327 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 343 MB
+- maxRAM: 6328 MB
+- avgRAM: 2185 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 478
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 76 MHz
+- maxCPU: 2524 MHz
+- avgCPU: 605 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 31 MB
+- maxRAM: 1795 MB
+- avgRAM: 217 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 479
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 87 MHz
+- maxCPU: 2315 MHz
+- avgCPU: 513 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 188 MB
+- maxRAM: 3719 MB
+- avgRAM: 944 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 480
+CPU values:
+
+Provisioned CPU Cores: 1
+
+- minCPU: 26 MHz
+- maxCPU: 2427 MHz
+- avgCPU: 128 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 76 MB
+- maxRAM: 3367 MB
+- avgRAM: 364 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 481
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 111 MHz
+- maxCPU: 3716 MHz
+- avgCPU: 155 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 65 MB
+- maxRAM: 6848 MB
+- avgRAM: 338 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 482
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 10 MHz
+- maxCPU: 2960 MHz
+- avgCPU: 506 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 9239 MB
+- avgRAM: 242 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 483
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 28 MHz
+- maxCPU: 4834 MHz
+- avgCPU: 785 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 130 MB
+- maxRAM: 6684 MB
+- avgRAM: 4912 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 484
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 14 MHz
+- maxCPU: 1992 MHz
+- avgCPU: 18 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 10 MB
+- maxRAM: 4029 MB
+- avgRAM: 15 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 485
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 12 MHz
+- maxCPU: 29 MHz
+- avgCPU: 13 MHz
+
+RAM values:
+
+Provisioned RAM: 10 GB
+
+- minRAM: 6 MB
+- maxRAM: 204 MB
+- avgRAM: 11 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 486
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 38 MHz
+- maxCPU: 65 MHz
+- avgCPU: 41 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 16 MB
+- maxRAM: 1386 MB
+- avgRAM: 278 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 487
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 33 MHz
+- maxCPU: 2038 MHz
+- avgCPU: 47 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 11 MB
+- maxRAM: 2615 MB
+- avgRAM: 273 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 488
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 21 MHz
+- maxCPU: 61 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 267 MB
+- avgRAM: 53 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 489
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 20 MHz
+- maxCPU: 1907 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 39 MB
+- maxRAM: 1152 MB
+- avgRAM: 90 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 490
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 819 MHz
+- maxCPU: 3032 MHz
+- avgCPU: 1179 MHz
+
+RAM values:
+
+Provisioned RAM: 14 GB
+
+- minRAM: 1002 MB
+- maxRAM: 6421 MB
+- avgRAM: 2296 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 491
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 863 MHz
+- maxCPU: 4537 MHz
+- avgCPU: 2184 MHz
+
+RAM values:
+
+Provisioned RAM: 14 GB
+
+- minRAM: 1393 MB
+- maxRAM: 7740 MB
+- avgRAM: 4699 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 492
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 50 MHz
+- maxCPU: 3976 MHz
+- avgCPU: 1363 MHz
+
+RAM values:
+
+Provisioned RAM: 14 GB
+
+- minRAM: 1174 MB
+- maxRAM: 7128 MB
+- avgRAM: 2869 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 493
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 854 MHz
+- maxCPU: 3267 MHz
+- avgCPU: 1197 MHz
+
+RAM values:
+
+Provisioned RAM: 14 GB
+
+- minRAM: 1193 MB
+- maxRAM: 6984 MB
+- avgRAM: 2464 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 494
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 119 MHz
+- maxCPU: 801 MHz
+- avgCPU: 157 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 331 MB
+- maxRAM: 3460 MB
+- avgRAM: 592 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 495
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 89 MHz
+- maxCPU: 1011 MHz
+- avgCPU: 153 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 339 MB
+- maxRAM: 2998 MB
+- avgRAM: 611 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 496
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 31 MHz
+- maxCPU: 3184 MHz
+- avgCPU: 226 MHz
+
+RAM values:
+
+Provisioned RAM: 20 GB
+
+- minRAM: 12 MB
+- maxRAM: 13597 MB
+- avgRAM: 1070 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 497
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 61 MHz
+- maxCPU: 518 MHz
+- avgCPU: 70 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 4 MB
+- maxRAM: 106 MB
+- avgRAM: 8 MB
+
+# of TraceLog entries: 2016
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 498
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 71 MHz
+- maxCPU: 525 MHz
+- avgCPU: 75 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 4 MB
+- maxRAM: 106 MB
+- avgRAM: 9 MB
+
+# of TraceLog entries: 2016
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 499
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 68 MHz
+- maxCPU: 522 MHz
+- avgCPU: 73 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 4 MB
+- maxRAM: 122 MB
+- avgRAM: 8 MB
+
+# of TraceLog entries: 2016
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 500
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 71 MHz
+- maxCPU: 532 MHz
+- avgCPU: 75 MHz
+
+RAM values:
+
+Provisioned RAM: 6 GB
+
+- minRAM: 4 MB
+- maxRAM: 85 MB
+- avgRAM: 9 MB
+
+# of TraceLog entries: 2016
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 501
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 5485 MHz
+- maxCPU: 7347 MHz
+- avgCPU: 6221 MHz
+
+RAM values:
+
+Provisioned RAM: 20 GB
+
+- minRAM: 2128 MB
+- maxRAM: 8135 MB
+- avgRAM: 3742 MB
+
+# of TraceLog entries: 8634
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 502
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 1186 MHz
+- maxCPU: 3931 MHz
+- avgCPU: 2234 MHz
+
+RAM values:
+
+Provisioned RAM: 20 GB
+
+- minRAM: 1868 MB
+- maxRAM: 8149 MB
+- avgRAM: 3515 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 503
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 5266 MHz
+- maxCPU: 7389 MHz
+- avgCPU: 5551 MHz
+
+RAM values:
+
+Provisioned RAM: 20 GB
+
+- minRAM: 1458 MB
+- maxRAM: 7096 MB
+- avgRAM: 2546 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 504
+CPU values:
+
+Provisioned CPU Cores: 6
+
+- minCPU: 750 MHz
+- maxCPU: 3428 MHz
+- avgCPU: 1146 MHz
+
+RAM values:
+
+Provisioned RAM: 20 GB
+
+- minRAM: 1432 MB
+- maxRAM: 7617 MB
+- avgRAM: 2596 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 505
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 67 MHz
+- maxCPU: 3533 MHz
+- avgCPU: 1305 MHz
+
+RAM values:
+
+Provisioned RAM: 24 GB
+
+- minRAM: 226 MB
+- maxRAM: 12236 MB
+- avgRAM: 2786 MB
+
+# of TraceLog entries: 8640
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 506
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 59 MHz
+- maxCPU: 2846 MHz
+- avgCPU: 102 MHz
+
+RAM values:
+
+Provisioned RAM: 24 GB
+
+- minRAM: 81 MB
+- maxRAM: 11121 MB
+- avgRAM: 1099 MB
+
+# of TraceLog entries: 8346
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 507
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 59 MHz
+- maxCPU: 3457 MHz
+- avgCPU: 1291 MHz
+
+RAM values:
+
+Provisioned RAM: 24 GB
+
+- minRAM: 1177 MB
+- maxRAM: 10597 MB
+- avgRAM: 4192 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 508
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 51 MHz
+- maxCPU: 4097 MHz
+- avgCPU: 104 MHz
+
+RAM values:
+
+Provisioned RAM: 24 GB
+
+- minRAM: 882 MB
+- maxRAM: 11138 MB
+- avgRAM: 3156 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 509
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 196 MHz
+- maxCPU: 1435 MHz
+- avgCPU: 210 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 163 MB
+- maxRAM: 2891 MB
+- avgRAM: 349 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 510
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 90 MHz
+- maxCPU: 1001 MHz
+- avgCPU: 113 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 441 MB
+- maxRAM: 4512 MB
+- avgRAM: 880 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 511
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 100 MHz
+- maxCPU: 1431 MHz
+- avgCPU: 116 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 490 MB
+- maxRAM: 2710 MB
+- avgRAM: 1040 MB
+
+# of TraceLog entries: 8926
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 512
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 86 MHz
+- maxCPU: 1310 MHz
+- avgCPU: 118 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 223 MB
+- maxRAM: 2959 MB
+- avgRAM: 570 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 513
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 115 MHz
+- maxCPU: 1753 MHz
+- avgCPU: 147 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 796 MB
+- maxRAM: 3456 MB
+- avgRAM: 1251 MB
+
+# of TraceLog entries: 8926
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 514
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 19 MHz
+- maxCPU: 1167 MHz
+- avgCPU: 23 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 8 MB
+- maxRAM: 2613 MB
+- avgRAM: 90 MB
+
+# of TraceLog entries: 8926
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 515
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 14 MHz
+- maxCPU: 910 MHz
+- avgCPU: 17 MHz
+
+RAM values:
+
+Provisioned RAM: 4 GB
+
+- minRAM: 2 MB
+- maxRAM: 3074 MB
+- avgRAM: 58 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 516
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 38 MHz
+- maxCPU: 564 MHz
+- avgCPU: 48 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 37 MB
+- maxRAM: 1223 MB
+- avgRAM: 100 MB
+
+# of TraceLog entries: 8917
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 517
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 160 MHz
+- maxCPU: 952 MHz
+- avgCPU: 191 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 75 MB
+- maxRAM: 1437 MB
+- avgRAM: 161 MB
+
+# of TraceLog entries: 8919
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 518
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 153 MHz
+- maxCPU: 710 MHz
+- avgCPU: 189 MHz
+
+RAM values:
+
+Provisioned RAM: 2 GB
+
+- minRAM: 65 MB
+- maxRAM: 1401 MB
+- avgRAM: 154 MB
+
+# of TraceLog entries: 8921
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 519
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 43 MHz
+- maxCPU: 1957 MHz
+- avgCPU: 188 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 162 MB
+- maxRAM: 9108 MB
+- avgRAM: 2403 MB
+
+# of TraceLog entries: 8916
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 520
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 46 MHz
+- maxCPU: 2064 MHz
+- avgCPU: 190 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 162 MB
+- maxRAM: 9304 MB
+- avgRAM: 2403 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 521
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 32 MHz
+- maxCPU: 1111 MHz
+- avgCPU: 48 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 523 MB
+- avgRAM: 143 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 522
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 28 MHz
+- maxCPU: 1161 MHz
+- avgCPU: 46 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 556 MB
+- avgRAM: 154 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 523
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 28 MHz
+- maxCPU: 1230 MHz
+- avgCPU: 71 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 655 MB
+- avgRAM: 205 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 524
+CPU values:
+
+Provisioned CPU Cores: 4
+
+- minCPU: 55 MHz
+- maxCPU: 2387 MHz
+- avgCPU: 244 MHz
+
+RAM values:
+
+Provisioned RAM: 16 GB
+
+- minRAM: 293 MB
+- maxRAM: 7568 MB
+- avgRAM: 2965 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 525
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 33 MHz
+- maxCPU: 1042 MHz
+- avgCPU: 54 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 16 MB
+- maxRAM: 2309 MB
+- avgRAM: 423 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 526
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 32 MHz
+- maxCPU: 1022 MHz
+- avgCPU: 52 MHz
+
+RAM values:
+
+Provisioned RAM: 12 GB
+
+- minRAM: 7 MB
+- maxRAM: 2260 MB
+- avgRAM: 380 MB
+
+# of TraceLog entries: 8928
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+Trace File: 527
+CPU values:
+
+Provisioned CPU Cores: 2
+
+- minCPU: 25 MHz
+- maxCPU: 662 MHz
+- avgCPU: 36 MHz
+
+RAM values:
+
+Provisioned RAM: 8 GB
+
+- minRAM: 5 MB
+- maxRAM: 397 MB
+- avgRAM: 146 MB
+
+# of TraceLog entries: 8922
+
+Time where VM is turned off: 0min. (0h., 0d.)
+
+
+Total CPU usage:
+Total CPU values:
+
+# of total Cores provisioned (2,6 GHz each): 1348 (max: 3504.8 GHz)
+
+- minTotalCPU: 43496 MHz (43 GHz) / 1 % of max GHz
+- maxTotalCPU: 189431 MHz (189 GHz)) / 5 % of max GHz
+- avgTotalCPU: 136182 MHz (136 GHz) / 4 % of max GHz
+
+Total RAM values:
+
+Total provisioned RAM: 4311 GB
+
+- minTotalRAM: 130216 MB (127 GB ) / 3 % of max RAM
+- maxTotalRAM: 540789 MB (528 GB) / 12 % of max RAM
+- avgTotalRAM: 344272 MB (336 GB) / 8 % of max RAM
+
+# traces <= 8300 entries: 35
+# traces > 8300 and <= 10.000 entries: 492
+# traces > 10.000 and <= 20.000 entries: 0
+# traces > 20.000 entries: 0
+
+Trace-File-Count: 527
