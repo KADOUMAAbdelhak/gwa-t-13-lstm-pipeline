@@ -1,0 +1,126 @@
+{
+  "wall_seconds": 7.395243333070539,
+  "cpu_drift_count_dist": {
+    "min": 0.0,
+    "p25": 0.0,
+    "median": 2.0,
+    "p75": 5.0,
+    "p95": 14.0,
+    "max": 61.0
+  },
+  "mem_drift_count_dist": {
+    "min": 0.0,
+    "p25": 0.0,
+    "median": 1.0,
+    "p75": 4.0,
+    "p95": 11.0,
+    "max": 43.0
+  },
+  "n_zero_cpu_drift": 429,
+  "n_zero_mem_drift": 547,
+  "by_tier_cpu_drift_dist": {
+    "high": {
+      "min": 0.0,
+      "p25": 2.0,
+      "median": 4.0,
+      "p75": 8.0,
+      "p95": 19.0,
+      "max": 61.0
+    },
+    "low": {
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 1.0,
+      "p75": 2.0,
+      "p95": 6.0,
+      "max": 29.0
+    },
+    "medium": {
+      "min": 0.0,
+      "p25": 1.0,
+      "median": 2.0,
+      "p75": 4.0,
+      "p95": 13.799999999999955,
+      "max": 42.0
+    }
+  },
+  "by_tier_mem_drift_dist": {
+    "high": {
+      "min": 0.0,
+      "p25": 1.0,
+      "median": 3.0,
+      "p75": 6.0,
+      "p95": 13.0,
+      "max": 43.0
+    },
+    "low": {
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 0.0,
+      "p75": 1.0,
+      "p95": 5.0,
+      "max": 30.0
+    },
+    "medium": {
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 1.0,
+      "p75": 4.0,
+      "p95": 12.0,
+      "max": 40.0
+    }
+  },
+  "by_trace_cpu_drift_dist": {
+    "Materna-Trace-1": {
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 2.0,
+      "p75": 5.0,
+      "p95": 13.0,
+      "max": 54.0
+    },
+    "Materna-Trace-2": {
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 1.0,
+      "p75": 3.0,
+      "p95": 14.0,
+      "max": 61.0
+    },
+    "Materna-Trace-3": {
+      "min": 0.0,
+      "p25": 1.0,
+      "median": 3.0,
+      "p75": 6.0,
+      "p95": 17.850000000000023,
+      "max": 42.0
+    }
+  },
+  "by_trace_mem_drift_dist": {
+    "Materna-Trace-1": {
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 1.0,
+      "p75": 3.0,
+      "p95": 9.5,
+      "max": 33.0
+    },
+    "Materna-Trace-2": {
+      "min": 0.0,
+      "p25": 0.0,
+      "median": 1.0,
+      "p75": 3.0,
+      "p95": 10.0,
+      "max": 43.0
+    },
+    "Materna-Trace-3": {
+      "min": 0.0,
+      "p25": 1.0,
+      "median": 2.0,
+      "p75": 5.0,
+      "p95": 13.0,
+      "max": 40.0
+    }
+  },
+  "figure_path": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_04/drift_event_examples.png"
+}

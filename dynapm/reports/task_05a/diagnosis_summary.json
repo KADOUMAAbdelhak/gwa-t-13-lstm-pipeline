@@ -1,0 +1,304 @@
+{
+  "top10_gap_stats": [
+    {
+      "trace": "Materna-Trace-1",
+      "vm_id": "400",
+      "mode_delta_s": 300.0,
+      "count_delta_not_300": 6,
+      "longest_gap_h": 255.08333333333334,
+      "longest_gap_timestamp": "2015-11-30 15:00:00",
+      "distinct_gap_points_delta_gt_600s": 6,
+      "longest_gap_in_24h_windows": 10.628472222222223,
+      "n_skipped_windows": 19,
+      "streaming_days": 23.59375
+    },
+    {
+      "trace": "Materna-Trace-3",
+      "vm_id": "364",
+      "mode_delta_s": 300.0,
+      "count_delta_not_300": 4,
+      "longest_gap_h": 94.58333333333333,
+      "longest_gap_timestamp": "2016-01-28 22:30:00",
+      "distinct_gap_points_delta_gt_600s": 4,
+      "longest_gap_in_24h_windows": 3.940972222222222,
+      "n_skipped_windows": 6,
+      "streaming_days": 15.631944444444445
+    },
+    {
+      "trace": "Materna-Trace-3",
+      "vm_id": "281",
+      "mode_delta_s": 300.0,
+      "count_delta_not_300": 23,
+      "longest_gap_h": 61.083333333333336,
+      "longest_gap_timestamp": "2016-01-24 13:00:00",
+      "distinct_gap_points_delta_gt_600s": 23,
+      "longest_gap_in_24h_windows": 2.545138888888889,
+      "n_skipped_windows": 3,
+      "streaming_days": 26.07638888888889
+    },
+    {
+      "trace": "Materna-Trace-1",
+      "vm_id": "197",
+      "mode_delta_s": 300.0,
+      "count_delta_not_300": 1,
+      "longest_gap_h": 48.083333333333336,
+      "longest_gap_timestamp": "2015-11-16 00:00:00",
+      "distinct_gap_points_delta_gt_600s": 1,
+      "longest_gap_in_24h_windows": 2.0034722222222223,
+      "n_skipped_windows": 2,
+      "streaming_days": 20.899305555555557
+    },
+    {
+      "trace": "Materna-Trace-2",
+      "vm_id": "209",
+      "mode_delta_s": 300.0,
+      "count_delta_not_300": 2,
+      "longest_gap_h": 48.083333333333336,
+      "longest_gap_timestamp": "2015-12-15 00:00:00",
+      "distinct_gap_points_delta_gt_600s": 2,
+      "longest_gap_in_24h_windows": 2.0034722222222223,
+      "n_skipped_windows": 2,
+      "streaming_days": 22.59722222222222
+    },
+    {
+      "trace": "Materna-Trace-1",
+      "vm_id": "278",
+      "mode_delta_s": 300.0,
+      "count_delta_not_300": 2,
+      "longest_gap_h": 35.25,
+      "longest_gap_timestamp": "2015-11-27 11:10:00",
+      "distinct_gap_points_delta_gt_600s": 2,
+      "longest_gap_in_24h_windows": 1.46875,
+      "n_skipped_windows": 1,
+      "streaming_days": 14.065972222222221
+    },
+    {
+      "trace": "Materna-Trace-2",
+      "vm_id": "104",
+      "mode_delta_s": 300.0,
+      "count_delta_not_300": 1,
+      "longest_gap_h": 24.083333333333332,
+      "longest_gap_timestamp": "2015-12-22 00:00:00",
+      "distinct_gap_points_delta_gt_600s": 1,
+      "longest_gap_in_24h_windows": 1.003472222222222,
+      "n_skipped_windows": 1,
+      "streaming_days": 21.99652777777778
+    },
+    {
+      "trace": "Materna-Trace-2",
+      "vm_id": "132",
+      "mode_delta_s": 300.0,
+      "count_delta_not_300": 1,
+      "longest_gap_h": 24.083333333333332,
+      "longest_gap_timestamp": "2015-12-19 00:00:00",
+      "distinct_gap_points_delta_gt_600s": 1,
+      "longest_gap_in_24h_windows": 1.003472222222222,
+      "n_skipped_windows": 1,
+      "streaming_days": 21.99652777777778
+    },
+    {
+      "trace": "Materna-Trace-2",
+      "vm_id": "167",
+      "mode_delta_s": 300.0,
+      "count_delta_not_300": 1,
+      "longest_gap_h": 24.083333333333332,
+      "longest_gap_timestamp": "2015-12-20 00:00:00",
+      "distinct_gap_points_delta_gt_600s": 1,
+      "longest_gap_in_24h_windows": 1.003472222222222,
+      "n_skipped_windows": 1,
+      "streaming_days": 21.99652777777778
+    },
+    {
+      "trace": "Materna-Trace-2",
+      "vm_id": "174",
+      "mode_delta_s": 300.0,
+      "count_delta_not_300": 5,
+      "longest_gap_h": 24.083333333333332,
+      "longest_gap_timestamp": "2015-12-31 00:00:00",
+      "distinct_gap_points_delta_gt_600s": 4,
+      "longest_gap_in_24h_windows": 1.003472222222222,
+      "n_skipped_windows": 1,
+      "streaming_days": 21.99652777777778
+    }
+  ],
+  "vm400_empty_windows": [
+    {
+      "timestamp": "2015-11-20 09:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-20 21:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-21 09:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-21 21:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-22 09:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-22 21:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-23 09:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-23 21:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-24 09:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-24 21:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-25 09:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-25 21:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-26 09:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-26 21:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-27 09:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-27 21:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-28 09:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-28 21:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    },
+    {
+      "timestamp": "2015-11-29 09:40:00",
+      "closest_before_t": "2015-11-19 23:55:00",
+      "closest_after_t": "2015-11-30 15:00:00",
+      "gap_encompassing_t_h": 255.08333333333334,
+      "closest_before_t_plus_24h": "2015-11-19 23:55:00",
+      "closest_after_t_plus_24h": "2015-11-30 15:00:00"
+    }
+  ],
+  "corpus_gap_stats": {
+    "vms_with_gap_gt_30m": 342,
+    "vms_with_gap_gt_1h": 265,
+    "vms_with_gap_gt_24h": 243,
+    "largest_gap_h_dist": {
+      "min": 0.08333333333333333,
+      "p50": 0.08333333333333333,
+      "p95": 24.083333333333332,
+      "p99": 24.083333333333332,
+      "max": 255.08333333333334
+    }
+  },
+  "skip_fraction": 0.0016051121307106408,
+  "skip_total": 106,
+  "candidate_eval_total": 66039,
+  "n_vms_with_skip": 79,
+  "corr_skip_vs_gapcount_gt24h": 0.24768116554327427,
+  "corr_skip_vs_hasgap_gt24h": 0.28518429319158595,
+  "sanity_trace1_501": {
+    "n_eval": 40,
+    "all_within_5min_of_data_row": false,
+    "max_nearest_sec": 34800.0,
+    "all_le_streaming_end_minus_24h": true,
+    "interval_exactly_12h": true
+  },
+  "largest_gap_histogram_path": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_05a/largest_gap_histogram.png"
+}

@@ -1,0 +1,123 @@
+{
+  "n_unique_vms": 100,
+  "n_runs": 400,
+  "wall_seconds": 65.16880825010594,
+  "aggregate_table": [
+    {
+      "method": "full_rewrite_v2",
+      "cpu_class_accuracy_mean": 0.7328894118088657,
+      "cpu_class_accuracy_median": 0.756578947368421,
+      "memory_class_accuracy_mean": 0.74969764471424,
+      "memory_class_accuracy_median": 0.7669956140350878,
+      "cpu_p95_mae_mean": 1.371531102037377,
+      "cpu_p95_mae_median": 0.29174342105263174,
+      "mem_p95_mae_mean": 1.6246812023404391,
+      "mem_p95_mae_median": 0.8339836328626438,
+      "total_updates_mean": 1293.46,
+      "total_updates_median": 1330.5
+    },
+    {
+      "method": "periodic_6h_v2",
+      "cpu_class_accuracy_mean": 0.7085452111279874,
+      "cpu_class_accuracy_median": 0.7304369918699187,
+      "memory_class_accuracy_mean": 0.7275010860251472,
+      "memory_class_accuracy_median": 0.7376485303314572,
+      "cpu_p95_mae_mean": 1.5225460567018916,
+      "cpu_p95_mae_median": 0.3051250000000004,
+      "mem_p95_mae_mean": 1.824835388522377,
+      "mem_p95_mae_median": 1.0549127086007695,
+      "total_updates_mean": 141.22,
+      "total_updates_median": 148.0
+    },
+    {
+      "method": "reactive_v2",
+      "cpu_class_accuracy_mean": 0.6157854777067441,
+      "cpu_class_accuracy_median": 0.6626016260162602,
+      "memory_class_accuracy_mean": 0.5813794664987767,
+      "memory_class_accuracy_median": 0.5583670715249662,
+      "cpu_p95_mae_mean": 2.501237271703452,
+      "cpu_p95_mae_median": 0.4337439024390167,
+      "mem_p95_mae_mean": 2.707929410537663,
+      "mem_p95_mae_median": 1.393189024390242,
+      "total_updates_mean": 571.96,
+      "total_updates_median": 575.5
+    },
+    {
+      "method": "static_v2",
+      "cpu_class_accuracy_mean": 0.42068198975542614,
+      "cpu_class_accuracy_median": 0.35365853658536583,
+      "memory_class_accuracy_mean": 0.5408499822195343,
+      "memory_class_accuracy_median": 0.6145833333333333,
+      "cpu_p95_mae_mean": 3.786417520539116,
+      "cpu_p95_mae_median": 0.4068211875843467,
+      "mem_p95_mae_mean": 3.4472384566472654,
+      "mem_p95_mae_median": 0.9789478498074542,
+      "total_updates_mean": 0.0,
+      "total_updates_median": 0.0
+    }
+  ],
+  "per_tier_cpu_accuracy": [
+    {
+      "method": "full_rewrite_v2",
+      "high": 0.7046141779759956,
+      "low": 0.7406885755311831,
+      "medium": 0.754222307187081
+    },
+    {
+      "method": "periodic_6h_v2",
+      "high": 0.6819278301874027,
+      "low": 0.7148838336320895,
+      "medium": 0.7296305568657
+    },
+    {
+      "method": "reactive_v2",
+      "high": 0.5865199981403473,
+      "low": 0.6876184464020039,
+      "medium": 0.5741048212920146
+    },
+    {
+      "method": "static_v2",
+      "high": 0.5183168761996191,
+      "low": 0.3295890196264143,
+      "medium": 0.4111814405176936
+    }
+  ],
+  "snapshot_drop": {
+    "mean_snapshots_dropped_unverified": 0.0,
+    "max_snapshots_dropped_unverified": 0,
+    "mean_n_eval_points_verified": 40.6,
+    "max_n_eval_points_verified": 48,
+    "drop_to_verified_ratio_mean": 0.0
+  },
+  "checkpoint": {
+    "Q1": {
+      "status": "PASS",
+      "gap_fullrewrite_minus_static_cpu_acc": 0.31220742205343954
+    },
+    "Q2": {
+      "status": "PASS",
+      "periodic_6h_mean_total_updates": 141.22
+    },
+    "Q3": {
+      "status": "PASS",
+      "full_rewrite_mean_total_updates": 1293.46
+    },
+    "Q4": {
+      "status": "PASS",
+      "abs_diff_periodic6h_vs_fullrewrite_cpu_acc": 0.02434420068087828,
+      "periodic_6h_cpu_acc": 0.7085452111279874,
+      "full_rewrite_cpu_acc": 0.7328894118088657
+    },
+    "Q5": {
+      "status": "FAIL",
+      "spread_low": 0.41109955590476877,
+      "spread_high": 0.1862973017763765,
+      "spread_medium": 0.34304086666938743
+    }
+  },
+  "figures": {
+    "accuracy_by_method": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_08/baselines_v2_accuracy_by_method.png",
+    "accuracy_by_tier": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_08/baselines_v2_accuracy_by_tier.png"
+  },
+  "summary_parquet": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/data/eval_sample_v2_summary.parquet"
+}

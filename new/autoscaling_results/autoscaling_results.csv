@@ -1,0 +1,9 @@
+Metric,Reactive,Predictive
+SLA Violation Rate (%),0.26650514839491213,0.25439127801332523
+Violation Episodes,8.0,7.0
+Mean Violation Length,2.75,3.0
+Mean Replicas,1.309993943064809,1.311932162325863
+Max Replicas,7.0,7.0
+Scale-Up Events,11.0,12.0
+Scale-Down Events,11.0,12.0
+Mean Overprovision,18.29425498298493,18.332875546912984

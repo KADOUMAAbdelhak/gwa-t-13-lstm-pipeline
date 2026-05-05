@@ -1,0 +1,8 @@
+{
+  "n_total": 1576,
+  "n_ok": 1576,
+  "n_failed": 0,
+  "wall_seconds": 782.9420761250658,
+  "summary_path": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/data/predictor_summary.parquet",
+  "failures_path": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/data/predictor_failures.json"
+}

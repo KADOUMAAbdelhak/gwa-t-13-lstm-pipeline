@@ -1,0 +1,90 @@
+{
+  "candidate_eval_total": 66039,
+  "skipped_total": 106,
+  "skipped_fraction": 0.0016051121307106408,
+  "n_vms_with_skips": 79,
+  "n_vms_with_non_tail_skips": 79,
+  "non_tail_skips_total": 106,
+  "top10_skipped_vms": [
+    {
+      "trace": "Materna-Trace-1",
+      "vm_id": "400",
+      "skipped": 19,
+      "non_tail": 19,
+      "streaming_days": 23.59375,
+      "candidate_eval": 46
+    },
+    {
+      "trace": "Materna-Trace-3",
+      "vm_id": "364",
+      "skipped": 6,
+      "non_tail": 6,
+      "streaming_days": 15.631944444444445,
+      "candidate_eval": 30
+    },
+    {
+      "trace": "Materna-Trace-3",
+      "vm_id": "281",
+      "skipped": 3,
+      "non_tail": 3,
+      "streaming_days": 26.07638888888889,
+      "candidate_eval": 51
+    },
+    {
+      "trace": "Materna-Trace-1",
+      "vm_id": "197",
+      "skipped": 2,
+      "non_tail": 2,
+      "streaming_days": 20.899305555555557,
+      "candidate_eval": 40
+    },
+    {
+      "trace": "Materna-Trace-2",
+      "vm_id": "209",
+      "skipped": 2,
+      "non_tail": 2,
+      "streaming_days": 22.59722222222222,
+      "candidate_eval": 44
+    },
+    {
+      "trace": "Materna-Trace-1",
+      "vm_id": "278",
+      "skipped": 1,
+      "non_tail": 1,
+      "streaming_days": 14.065972222222221,
+      "candidate_eval": 27
+    },
+    {
+      "trace": "Materna-Trace-2",
+      "vm_id": "104",
+      "skipped": 1,
+      "non_tail": 1,
+      "streaming_days": 21.99652777777778,
+      "candidate_eval": 42
+    },
+    {
+      "trace": "Materna-Trace-2",
+      "vm_id": "132",
+      "skipped": 1,
+      "non_tail": 1,
+      "streaming_days": 21.99652777777778,
+      "candidate_eval": 42
+    },
+    {
+      "trace": "Materna-Trace-2",
+      "vm_id": "167",
+      "skipped": 1,
+      "non_tail": 1,
+      "streaming_days": 21.99652777777778,
+      "candidate_eval": 42
+    },
+    {
+      "trace": "Materna-Trace-2",
+      "vm_id": "174",
+      "skipped": 1,
+      "non_tail": 1,
+      "streaming_days": 21.99652777777778,
+      "candidate_eval": 42
+    }
+  ]
+}

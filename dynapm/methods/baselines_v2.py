@@ -1,0 +1,134 @@
+"""Forecast-based baseline policies (v2)."""
+from __future__ import annotations
+
+import pandas as pd
+
+from dynapm.core.forecasting import forecast_class_from_window, forecast_p95_from_window
+
+
+def _window_last_hours(series: pd.Series, t: pd.Timestamp, hours: float) -> pd.Series:
+    t = pd.Timestamp(t)
+    start = t - pd.Timedelta(hours=float(hours))
+    return series.loc[(series.index >= start) & (series.index <= t)]
+
+
+class _BasePolicyV2:
+    def __init__(self, profile, cpu_thresholds, mem_thresholds, **kwargs):
+        self.profile = profile
+        self.cpu_thresholds = cpu_thresholds
+        self.mem_thresholds = mem_thresholds
+        self._update_log = []
+
+    @property
+    def update_log(self):
+        return self._update_log
+
+    def _set_initial_forecast(self, cpu_values, mem_values, t: pd.Timestamp):
+        self.profile.dynamic.cpu_class = forecast_class_from_window(cpu_values, self.cpu_thresholds)
+        self.profile.dynamic.memory_class = forecast_class_from_window(mem_values, self.mem_thresholds)
+        self.profile.dynamic.predicted_cpu_p95_next_24h = forecast_p95_from_window(cpu_values)
+        self.profile.dynamic.predicted_mem_p95_next_24h = forecast_p95_from_window(mem_values)
+        self.profile.last_updated["cpu_class"] = pd.Timestamp(t)
+        self.profile.last_updated["memory_class"] = pd.Timestamp(t)
+        self.profile.last_updated["predicted_cpu_p95_next_24h"] = pd.Timestamp(t)
+        self.profile.last_updated["predicted_mem_p95_next_24h"] = pd.Timestamp(t)
+
+    def _commit_forecast(self, t: pd.Timestamp, cpu_values, mem_values):
+        t = pd.Timestamp(t)
+        new_vals = {
+            "cpu_class": forecast_class_from_window(cpu_values, self.cpu_thresholds),
+            "memory_class": forecast_class_from_window(mem_values, self.mem_thresholds),
+            "predicted_cpu_p95_next_24h": forecast_p95_from_window(cpu_values),
+            "predicted_mem_p95_next_24h": forecast_p95_from_window(mem_values),
+        }
+        for field, new_value in new_vals.items():
+            old_value = getattr(self.profile.dynamic, field)
+            if (pd.isna(old_value) and pd.isna(new_value)) or old_value == new_value:
+                continue
+            setattr(self.profile.dynamic, field, new_value)
+            self.profile.last_updated[field] = t
+            self._update_log.append(
+                {
+                    "timestamp": t,
+                    "field": field,
+                    "old_value": old_value,
+                    "new_value": new_value,
+                    "p_commit": 1.0,
+                }
+            )
+
+    def step(self, t, cpu_obs_window, mem_obs_window, cpu_pred_window, mem_pred_window):
+        raise NotImplementedError
+
+
+class StaticPolicyV2(_BasePolicyV2):
+    def __init__(self, profile, cpu_thresholds, mem_thresholds, **kwargs):
+        super().__init__(profile, cpu_thresholds, mem_thresholds, **kwargs)
+        cpu_boot = kwargs["bootstrap_cpu_series"]
+        mem_boot = kwargs["bootstrap_mem_series"]
+        self._set_initial_forecast(cpu_boot, mem_boot, t=profile.static.bootstrap_end)
+
+    def step(self, t, cpu_obs_window, mem_obs_window, cpu_pred_window, mem_pred_window):
+        return
+
+
+class PeriodicPolicyV2(_BasePolicyV2):
+    def __init__(self, profile, cpu_thresholds, mem_thresholds, **kwargs):
+        super().__init__(profile, cpu_thresholds, mem_thresholds, **kwargs)
+        self._period_hours = float(kwargs["period_hours"])
+        self._period = pd.Timedelta(hours=self._period_hours)
+        cpu_boot = kwargs["bootstrap_cpu_series"]
+        mem_boot = kwargs["bootstrap_mem_series"]
+        t0 = pd.Timestamp(cpu_boot.index[-1])
+        cpu_init = _window_last_hours(cpu_boot, t0, self._period_hours)
+        mem_init = _window_last_hours(mem_boot, t0, self._period_hours)
+        self._set_initial_forecast(cpu_init, mem_init, t=t0)
+        self._last_refresh = t0
+
+    def step(self, t, cpu_obs_window, mem_obs_window, cpu_pred_window, mem_pred_window):
+        t = pd.Timestamp(t)
+        if (t - self._last_refresh) < self._period:
+            return
+        self._commit_forecast(t, cpu_obs_window, mem_obs_window)
+        self._last_refresh = t
+
+
+class ReactiveThresholdPolicyV2(_BasePolicyV2):
+    def __init__(self, profile, cpu_thresholds, mem_thresholds, **kwargs):
+        super().__init__(profile, cpu_thresholds, mem_thresholds, **kwargs)
+        cpu_boot = kwargs["bootstrap_cpu_series"]
+        mem_boot = kwargs["bootstrap_mem_series"]
+        t0 = pd.Timestamp(cpu_boot.index[-1])
+        cpu_init = _window_last_hours(cpu_boot, t0, 24.0)
+        mem_init = _window_last_hours(mem_boot, t0, 24.0)
+        self._set_initial_forecast(cpu_init, mem_init, t=t0)
+
+    def step(self, t, cpu_obs_window, mem_obs_window, cpu_pred_window, mem_pred_window):
+        t = pd.Timestamp(t)
+        cpu_candidate = _window_last_hours(cpu_obs_window, t, 6.0)
+        mem_candidate = _window_last_hours(mem_obs_window, t, 6.0)
+
+        candidate_cpu_class = forecast_class_from_window(cpu_candidate, self.cpu_thresholds)
+        candidate_mem_class = forecast_class_from_window(mem_candidate, self.mem_thresholds)
+        if (
+            candidate_cpu_class != self.profile.dynamic.cpu_class
+            or candidate_mem_class != self.profile.dynamic.memory_class
+        ):
+            self._commit_forecast(t, cpu_candidate, mem_candidate)
+
+
+class FullRewritePolicyV2(_BasePolicyV2):
+    def __init__(self, profile, cpu_thresholds, mem_thresholds, **kwargs):
+        super().__init__(profile, cpu_thresholds, mem_thresholds, **kwargs)
+        cpu_boot = kwargs["bootstrap_cpu_series"]
+        mem_boot = kwargs["bootstrap_mem_series"]
+        t0 = pd.Timestamp(cpu_boot.index[-1])
+        cpu_init = _window_last_hours(cpu_boot, t0, 24.0)
+        mem_init = _window_last_hours(mem_boot, t0, 24.0)
+        self._set_initial_forecast(cpu_init, mem_init, t=t0)
+
+    def step(self, t, cpu_obs_window, mem_obs_window, cpu_pred_window, mem_pred_window):
+        t = pd.Timestamp(t)
+        cpu_now = _window_last_hours(cpu_obs_window, t, 24.0)
+        mem_now = _window_last_hours(mem_obs_window, t, 24.0)
+        self._commit_forecast(t, cpu_now, mem_now)

@@ -1,0 +1,693 @@
+{
+  "wall_seconds": 57.20155250001699,
+  "cpu_class_accuracy": [
+    {
+      "method": "dynapm_alpha_0.1",
+      "mean": 0.36524636586143594,
+      "median": 0.29057017543859653
+    },
+    {
+      "method": "dynapm_alpha_0.3",
+      "mean": 0.36524636586143594,
+      "median": 0.29057017543859653
+    },
+    {
+      "method": "dynapm_alpha_0.5",
+      "mean": 0.36524636586143594,
+      "median": 0.29057017543859653
+    },
+    {
+      "method": "dynapm_alpha_0.7",
+      "mean": 0.36524636586143594,
+      "median": 0.29057017543859653
+    },
+    {
+      "method": "dynapm_alpha_0.9",
+      "mean": 0.36524636586143594,
+      "median": 0.29057017543859653
+    },
+    {
+      "method": "dynapm_no_churn_alpha_0.5",
+      "mean": 0.38149931476719223,
+      "median": 0.30208333333333337
+    },
+    {
+      "method": "dynapm_no_learner_alpha_0.5",
+      "mean": 0.36524636586143594,
+      "median": 0.29057017543859653
+    },
+    {
+      "method": "full_rewrite",
+      "mean": 0.41024101652442646,
+      "median": 0.3164313222079589
+    },
+    {
+      "method": "periodic_1h",
+      "mean": 0.4039204131868141,
+      "median": 0.31009615384615385
+    },
+    {
+      "method": "periodic_24h",
+      "mean": 0.3990267098579603,
+      "median": 0.34178433889602056
+    },
+    {
+      "method": "periodic_6h",
+      "mean": 0.4044063173493865,
+      "median": 0.3164313222079589
+    },
+    {
+      "method": "reactive_threshold",
+      "mean": 0.3709827044272221,
+      "median": 0.2517543859649123
+    },
+    {
+      "method": "static",
+      "mean": 0.35742795550627976,
+      "median": 0.2375
+    }
+  ],
+  "memory_class_accuracy": [
+    {
+      "method": "dynapm_alpha_0.1",
+      "mean": 0.2587430688380813,
+      "median": 0.050706033376123234
+    },
+    {
+      "method": "dynapm_alpha_0.3",
+      "mean": 0.2587430688380813,
+      "median": 0.050706033376123234
+    },
+    {
+      "method": "dynapm_alpha_0.5",
+      "mean": 0.2587430688380813,
+      "median": 0.050706033376123234
+    },
+    {
+      "method": "dynapm_alpha_0.7",
+      "mean": 0.2587430688380813,
+      "median": 0.050706033376123234
+    },
+    {
+      "method": "dynapm_alpha_0.9",
+      "mean": 0.2587430688380813,
+      "median": 0.050706033376123234
+    },
+    {
+      "method": "dynapm_no_churn_alpha_0.5",
+      "mean": 0.28649627458018534,
+      "median": 0.15789473684210525
+    },
+    {
+      "method": "dynapm_no_learner_alpha_0.5",
+      "mean": 0.2587430688380813,
+      "median": 0.050706033376123234
+    },
+    {
+      "method": "full_rewrite",
+      "mean": 0.3354200177764218,
+      "median": 0.2631578947368421
+    },
+    {
+      "method": "periodic_1h",
+      "mean": 0.3361624281260209,
+      "median": 0.2631578947368421
+    },
+    {
+      "method": "periodic_24h",
+      "mean": 0.3119569849423343,
+      "median": 0.24695121951219512
+    },
+    {
+      "method": "periodic_6h",
+      "mean": 0.3191757845948781,
+      "median": 0.25
+    },
+    {
+      "method": "reactive_threshold",
+      "mean": 0.16429398089073957,
+      "median": 0.0
+    },
+    {
+      "method": "static",
+      "mean": 0.2437551147190296,
+      "median": 0.041666666666666664
+    }
+  ],
+  "total_updates": [
+    {
+      "method": "dynapm_alpha_0.1",
+      "mean": 81.55,
+      "median": 82.0
+    },
+    {
+      "method": "dynapm_alpha_0.3",
+      "mean": 81.55,
+      "median": 82.0
+    },
+    {
+      "method": "dynapm_alpha_0.5",
+      "mean": 81.55,
+      "median": 82.0
+    },
+    {
+      "method": "dynapm_alpha_0.7",
+      "mean": 81.55,
+      "median": 82.0
+    },
+    {
+      "method": "dynapm_alpha_0.9",
+      "mean": 81.55,
+      "median": 82.0
+    },
+    {
+      "method": "dynapm_no_churn_alpha_0.5",
+      "mean": 84.44,
+      "median": 83.0
+    },
+    {
+      "method": "dynapm_no_learner_alpha_0.5",
+      "mean": 81.56,
+      "median": 82.0
+    },
+    {
+      "method": "full_rewrite",
+      "mean": 6588.26,
+      "median": 6783.0
+    },
+    {
+      "method": "periodic_1h",
+      "mean": 525.71,
+      "median": 552.0
+    },
+    {
+      "method": "periodic_24h",
+      "mean": 24.71,
+      "median": 26.0
+    },
+    {
+      "method": "periodic_6h",
+      "mean": 97.65,
+      "median": 105.0
+    },
+    {
+      "method": "reactive_threshold",
+      "mean": 82.53,
+      "median": 83.0
+    },
+    {
+      "method": "static",
+      "mean": 0.0,
+      "median": 0.0
+    }
+  ],
+  "cpu_p95_mae": [
+    {
+      "method": "dynapm_alpha_0.1",
+      "mean": 1.3967912238193556,
+      "median": 0.24054123323532278
+    },
+    {
+      "method": "dynapm_alpha_0.3",
+      "mean": 1.3967912238193556,
+      "median": 0.24054123323532278
+    },
+    {
+      "method": "dynapm_alpha_0.5",
+      "mean": 1.3967912238193556,
+      "median": 0.24054123323532278
+    },
+    {
+      "method": "dynapm_alpha_0.7",
+      "mean": 1.3967912238193556,
+      "median": 0.24054123323532278
+    },
+    {
+      "method": "dynapm_alpha_0.9",
+      "mean": 1.3967912238193556,
+      "median": 0.24054123323532278
+    },
+    {
+      "method": "dynapm_no_churn_alpha_0.5",
+      "mean": 1.3967912238193556,
+      "median": 0.24054123323532278
+    },
+    {
+      "method": "dynapm_no_learner_alpha_0.5",
+      "mean": 1.3967912238193556,
+      "median": 0.24054123323532278
+    },
+    {
+      "method": "full_rewrite",
+      "mean": 1.3967912238193556,
+      "median": 0.24054123323532278
+    },
+    {
+      "method": "periodic_1h",
+      "mean": 3.121371537272405,
+      "median": 0.4071956639566391
+    },
+    {
+      "method": "periodic_24h",
+      "mean": 3.121371537272405,
+      "median": 0.4071956639566391
+    },
+    {
+      "method": "periodic_6h",
+      "mean": 3.121371537272405,
+      "median": 0.4071956639566391
+    },
+    {
+      "method": "reactive_threshold",
+      "mean": 1.3967912238193556,
+      "median": 0.24054123323532278
+    },
+    {
+      "method": "static",
+      "mean": 3.121371537272405,
+      "median": 0.4071956639566391
+    }
+  ],
+  "mem_p95_mae": [
+    {
+      "method": "dynapm_alpha_0.1",
+      "mean": 1.2111244455919976,
+      "median": 0.6390374223019102
+    },
+    {
+      "method": "dynapm_alpha_0.3",
+      "mean": 1.2111244455919976,
+      "median": 0.6390374223019102
+    },
+    {
+      "method": "dynapm_alpha_0.5",
+      "mean": 1.2111244455919976,
+      "median": 0.6390374223019102
+    },
+    {
+      "method": "dynapm_alpha_0.7",
+      "mean": 1.2111244455919976,
+      "median": 0.6390374223019102
+    },
+    {
+      "method": "dynapm_alpha_0.9",
+      "mean": 1.2111244455919976,
+      "median": 0.6390374223019102
+    },
+    {
+      "method": "dynapm_no_churn_alpha_0.5",
+      "mean": 1.2111244455919976,
+      "median": 0.6390374223019102
+    },
+    {
+      "method": "dynapm_no_learner_alpha_0.5",
+      "mean": 1.2111244455919976,
+      "median": 0.6390374223019102
+    },
+    {
+      "method": "full_rewrite",
+      "mean": 1.2111244455919976,
+      "median": 0.6390374223019102
+    },
+    {
+      "method": "periodic_1h",
+      "mean": 3.483444592941254,
+      "median": 0.972094766260162
+    },
+    {
+      "method": "periodic_24h",
+      "mean": 3.483444592941254,
+      "median": 0.972094766260162
+    },
+    {
+      "method": "periodic_6h",
+      "mean": 3.483444592941254,
+      "median": 0.972094766260162
+    },
+    {
+      "method": "reactive_threshold",
+      "mean": 1.2111244455919976,
+      "median": 0.6390374223019102
+    },
+    {
+      "method": "static",
+      "mean": 3.483444592941254,
+      "median": 0.972094766260162
+    }
+  ],
+  "per_tier": [
+    {
+      "method": "dynapm_alpha_0.1",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.36191731932302995,
+      "memory_class_accuracy_mean": 0.22137967183632262,
+      "total_updates_mean": 79.55882352941177,
+      "cpu_p95_mae_mean": 2.7236496070768736,
+      "mem_p95_mae_mean": 2.2150883140066457
+    },
+    {
+      "method": "dynapm_alpha_0.1",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.41442023106224707,
+      "memory_class_accuracy_mean": 0.3094254020120516,
+      "total_updates_mean": 81.54545454545455,
+      "cpu_p95_mae_mean": 0.13510974292739397,
+      "mem_p95_mae_mean": 0.5808722337063316
+    },
+    {
+      "method": "dynapm_alpha_0.1",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.3195024273971642,
+      "memory_class_accuracy_mean": 0.24655635681743815,
+      "total_updates_mean": 83.60606060606061,
+      "cpu_p95_mae_mean": 1.291406491658117,
+      "mem_p95_mae_mean": 0.8069896415352988
+    },
+    {
+      "method": "dynapm_alpha_0.3",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.36191731932302995,
+      "memory_class_accuracy_mean": 0.22137967183632262,
+      "total_updates_mean": 79.55882352941177,
+      "cpu_p95_mae_mean": 2.7236496070768736,
+      "mem_p95_mae_mean": 2.2150883140066457
+    },
+    {
+      "method": "dynapm_alpha_0.3",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.41442023106224707,
+      "memory_class_accuracy_mean": 0.3094254020120516,
+      "total_updates_mean": 81.54545454545455,
+      "cpu_p95_mae_mean": 0.13510974292739397,
+      "mem_p95_mae_mean": 0.5808722337063316
+    },
+    {
+      "method": "dynapm_alpha_0.3",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.3195024273971642,
+      "memory_class_accuracy_mean": 0.24655635681743815,
+      "total_updates_mean": 83.60606060606061,
+      "cpu_p95_mae_mean": 1.291406491658117,
+      "mem_p95_mae_mean": 0.8069896415352988
+    },
+    {
+      "method": "dynapm_alpha_0.5",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.36191731932302995,
+      "memory_class_accuracy_mean": 0.22137967183632262,
+      "total_updates_mean": 79.55882352941177,
+      "cpu_p95_mae_mean": 2.7236496070768736,
+      "mem_p95_mae_mean": 2.2150883140066457
+    },
+    {
+      "method": "dynapm_alpha_0.5",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.41442023106224707,
+      "memory_class_accuracy_mean": 0.3094254020120516,
+      "total_updates_mean": 81.54545454545455,
+      "cpu_p95_mae_mean": 0.13510974292739397,
+      "mem_p95_mae_mean": 0.5808722337063316
+    },
+    {
+      "method": "dynapm_alpha_0.5",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.3195024273971642,
+      "memory_class_accuracy_mean": 0.24655635681743815,
+      "total_updates_mean": 83.60606060606061,
+      "cpu_p95_mae_mean": 1.291406491658117,
+      "mem_p95_mae_mean": 0.8069896415352988
+    },
+    {
+      "method": "dynapm_alpha_0.7",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.36191731932302995,
+      "memory_class_accuracy_mean": 0.22137967183632262,
+      "total_updates_mean": 79.55882352941177,
+      "cpu_p95_mae_mean": 2.7236496070768736,
+      "mem_p95_mae_mean": 2.2150883140066457
+    },
+    {
+      "method": "dynapm_alpha_0.7",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.41442023106224707,
+      "memory_class_accuracy_mean": 0.3094254020120516,
+      "total_updates_mean": 81.54545454545455,
+      "cpu_p95_mae_mean": 0.13510974292739397,
+      "mem_p95_mae_mean": 0.5808722337063316
+    },
+    {
+      "method": "dynapm_alpha_0.7",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.3195024273971642,
+      "memory_class_accuracy_mean": 0.24655635681743815,
+      "total_updates_mean": 83.60606060606061,
+      "cpu_p95_mae_mean": 1.291406491658117,
+      "mem_p95_mae_mean": 0.8069896415352988
+    },
+    {
+      "method": "dynapm_alpha_0.9",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.36191731932302995,
+      "memory_class_accuracy_mean": 0.22137967183632262,
+      "total_updates_mean": 79.55882352941177,
+      "cpu_p95_mae_mean": 2.7236496070768736,
+      "mem_p95_mae_mean": 2.2150883140066457
+    },
+    {
+      "method": "dynapm_alpha_0.9",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.41442023106224707,
+      "memory_class_accuracy_mean": 0.3094254020120516,
+      "total_updates_mean": 81.54545454545455,
+      "cpu_p95_mae_mean": 0.13510974292739397,
+      "mem_p95_mae_mean": 0.5808722337063316
+    },
+    {
+      "method": "dynapm_alpha_0.9",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.3195024273971642,
+      "memory_class_accuracy_mean": 0.24655635681743815,
+      "total_updates_mean": 83.60606060606061,
+      "cpu_p95_mae_mean": 1.291406491658117,
+      "mem_p95_mae_mean": 0.8069896415352988
+    },
+    {
+      "method": "dynapm_no_churn_alpha_0.5",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.3781533614563839,
+      "memory_class_accuracy_mean": 0.25801046258118576,
+      "total_updates_mean": 83.55882352941177,
+      "cpu_p95_mae_mean": 2.7236496070768736,
+      "mem_p95_mae_mean": 2.2150883140066457
+    },
+    {
+      "method": "dynapm_no_churn_alpha_0.5",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.43847253199195485,
+      "memory_class_accuracy_mean": 0.3193189459235672,
+      "total_updates_mean": 83.15151515151516,
+      "cpu_p95_mae_mean": 0.13510974292739397,
+      "mem_p95_mae_mean": 0.5808722337063316
+    },
+    {
+      "method": "dynapm_no_churn_alpha_0.5",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.327973443377808,
+      "memory_class_accuracy_mean": 0.2830226216600151,
+      "total_updates_mean": 86.63636363636364,
+      "cpu_p95_mae_mean": 1.291406491658117,
+      "mem_p95_mae_mean": 0.8069896415352988
+    },
+    {
+      "method": "dynapm_no_learner_alpha_0.5",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.36191731932302995,
+      "memory_class_accuracy_mean": 0.22137967183632262,
+      "total_updates_mean": 79.58823529411765,
+      "cpu_p95_mae_mean": 2.7236496070768736,
+      "mem_p95_mae_mean": 2.2150883140066457
+    },
+    {
+      "method": "dynapm_no_learner_alpha_0.5",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.41442023106224707,
+      "memory_class_accuracy_mean": 0.3094254020120516,
+      "total_updates_mean": 81.54545454545455,
+      "cpu_p95_mae_mean": 0.13510974292739397,
+      "mem_p95_mae_mean": 0.5808722337063316
+    },
+    {
+      "method": "dynapm_no_learner_alpha_0.5",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.3195024273971642,
+      "memory_class_accuracy_mean": 0.24655635681743815,
+      "total_updates_mean": 83.60606060606061,
+      "cpu_p95_mae_mean": 1.291406491658117,
+      "mem_p95_mae_mean": 0.8069896415352988
+    },
+    {
+      "method": "full_rewrite",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.3583043080447011,
+      "memory_class_accuracy_mean": 0.3592960200775242,
+      "total_updates_mean": 6050.617647058823,
+      "cpu_p95_mae_mean": 2.7236496070768736,
+      "mem_p95_mae_mean": 2.2150883140066457
+    },
+    {
+      "method": "full_rewrite",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.4572144374078292,
+      "memory_class_accuracy_mean": 0.33702499927314344,
+      "total_updates_mean": 7255.393939393939,
+      "cpu_p95_mae_mean": 0.13510974292739397,
+      "mem_p95_mae_mean": 0.5808722337063316
+    },
+    {
+      "method": "full_rewrite",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.4167781437716498,
+      "memory_class_accuracy_mean": 0.30921551875735215,
+      "total_updates_mean": 6475.060606060606,
+      "cpu_p95_mae_mean": 1.291406491658117,
+      "mem_p95_mae_mean": 0.8069896415352988
+    },
+    {
+      "method": "periodic_1h",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.36140028327689927,
+      "memory_class_accuracy_mean": 0.3595071092979014,
+      "total_updates_mean": 519.9705882352941,
+      "cpu_p95_mae_mean": 7.232027392734055,
+      "mem_p95_mae_mean": 4.85896414410112
+    },
+    {
+      "method": "periodic_1h",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.4473727600436871,
+      "memory_class_accuracy_mean": 0.343171185136916,
+      "total_updates_mean": 529.6969696969697,
+      "cpu_p95_mae_mean": 0.16120098539745228,
+      "mem_p95_mae_mean": 0.6083391143724611
+    },
+    {
+      "method": "periodic_1h",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.40427668502500486,
+      "memory_class_accuracy_mean": 0.3051015753622791,
+      "total_updates_mean": 527.6363636363636,
+      "cpu_p95_mae_mean": 1.8463209047323255,
+      "mem_p95_mae_mean": 4.941348109708972
+    },
+    {
+      "method": "periodic_24h",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.36810864656577974,
+      "memory_class_accuracy_mean": 0.3243585735029095,
+      "total_updates_mean": 24.58823529411765,
+      "cpu_p95_mae_mean": 7.232027392734055,
+      "mem_p95_mae_mean": 4.85896414410112
+    },
+    {
+      "method": "periodic_24h",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.4610682930211869,
+      "memory_class_accuracy_mean": 0.3104324677418666,
+      "total_updates_mean": 24.78787878787879,
+      "cpu_p95_mae_mean": 0.16120098539745228,
+      "mem_p95_mae_mean": 0.6083391143724611
+    },
+    {
+      "method": "periodic_24h",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.3688401009957681,
+      "memory_class_accuracy_mean": 0.30070410786827007,
+      "total_updates_mean": 24.757575757575758,
+      "cpu_p95_mae_mean": 1.8463209047323255,
+      "mem_p95_mae_mean": 4.941348109708972
+    },
+    {
+      "method": "periodic_6h",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.3679187704513031,
+      "memory_class_accuracy_mean": 0.32862759479255055,
+      "total_updates_mean": 96.97058823529412,
+      "cpu_p95_mae_mean": 7.232027392734055,
+      "mem_p95_mae_mean": 4.85896414410112
+    },
+    {
+      "method": "periodic_6h",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.45409581829183326,
+      "memory_class_accuracy_mean": 0.318322236388877,
+      "total_updates_mean": 94.12121212121212,
+      "cpu_p95_mae_mean": 0.16120098539745228,
+      "mem_p95_mae_mean": 0.6083391143724611
+    },
+    {
+      "method": "periodic_6h",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.39231004654435897,
+      "memory_class_accuracy_mean": 0.3102911041123682,
+      "total_updates_mean": 101.87878787878788,
+      "cpu_p95_mae_mean": 1.8463209047323255,
+      "mem_p95_mae_mean": 4.941348109708972
+    },
+    {
+      "method": "reactive_threshold",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.3311256551633212,
+      "memory_class_accuracy_mean": 0.1790520253991522,
+      "total_updates_mean": 80.32352941176471,
+      "cpu_p95_mae_mean": 2.7236496070768736,
+      "mem_p95_mae_mean": 2.2150883140066457
+    },
+    {
+      "method": "reactive_threshold",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.3630506300456627,
+      "memory_class_accuracy_mean": 0.14078120745322284,
+      "total_updates_mean": 82.6969696969697,
+      "cpu_p95_mae_mean": 0.13510974292739397,
+      "mem_p95_mae_mean": 0.5808722337063316
+    },
+    {
+      "method": "reactive_threshold",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.4199796174443157,
+      "memory_class_accuracy_mean": 0.17260149634989175,
+      "total_updates_mean": 84.63636363636364,
+      "cpu_p95_mae_mean": 1.291406491658117,
+      "mem_p95_mae_mean": 0.8069896415352988
+    },
+    {
+      "method": "static",
+      "volatility_tier": "high",
+      "cpu_class_accuracy_mean": 0.33711726772344275,
+      "memory_class_accuracy_mean": 0.19784683212701235,
+      "total_updates_mean": 0.0,
+      "cpu_p95_mae_mean": 7.232027392734055,
+      "mem_p95_mae_mean": 4.85896414410112
+    },
+    {
+      "method": "static",
+      "volatility_tier": "low",
+      "cpu_class_accuracy_mean": 0.42990401628287433,
+      "memory_class_accuracy_mean": 0.30626883635548596,
+      "total_updates_mean": 0.0,
+      "cpu_p95_mae_mean": 0.16120098539745228,
+      "mem_p95_mae_mean": 0.6083391143724611
+    },
+    {
+      "method": "static",
+      "volatility_tier": "medium",
+      "cpu_class_accuracy_mean": 0.30587805789988076,
+      "memory_class_accuracy_mean": 0.22854083575313658,
+      "total_updates_mean": 0.0,
+      "cpu_p95_mae_mean": 1.8463209047323255,
+      "mem_p95_mae_mean": 4.941348109708972
+    }
+  ],
+  "figure_alpha_pareto": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_05/alpha_pareto.png",
+  "figure_dynapm_vs_static_delta": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_05/dynapm_vs_static_delta.png"
+}

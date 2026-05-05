@@ -1,0 +1,2 @@
+base_capacity,th_up,th_down,k_up,k_down,min_replicas,max_replicas,window_size,total_samples,simulated_steps
+20.0,0.8,0.3,2,4,1,10,96,8352,8255
