@@ -1,0 +1,59 @@
+{
+  "wall_seconds": 6.327840292011388,
+  "summary_parquet": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/data/eval_sample_v2_periodic_predictor_summary.parquet",
+  "agg_periodic_predictor": {
+    "cpu_class_accuracy_mean": 0.8877743179437688,
+    "memory_class_accuracy_mean": 0.8730236415985101,
+    "cpu_p95_mae_mean": 1.4980945301202713,
+    "mem_p95_mae_mean": 1.315698478776486,
+    "total_updates_mean": 189.72,
+    "cpu_class_accuracy_median": 0.9321646341463414,
+    "memory_class_accuracy_median": 0.8947368421052632,
+    "cpu_p95_mae_median": 0.2658285821077763,
+    "mem_p95_mae_median": 0.7275098478123726,
+    "total_updates_median": 188.0
+  },
+  "agg_periodic_6h_ref": {
+    "cpu_class_accuracy_mean": 0.7085452111279874,
+    "memory_class_accuracy_mean": 0.7275010860251472,
+    "cpu_p95_mae_mean": 1.5225460567018916,
+    "mem_p95_mae_mean": 1.8248353885223767,
+    "total_updates_mean": 141.22,
+    "cpu_class_accuracy_median": 0.7304369918699187,
+    "memory_class_accuracy_median": 0.7376485303314572,
+    "cpu_p95_mae_median": 0.3051250000000004,
+    "mem_p95_mae_median": 1.0549127086007695,
+    "total_updates_median": 148.0
+  },
+  "mean_gap_cpu": 0.1792291068157814,
+  "mean_gap_mem": 0.1455225555733629,
+  "pairwise": {
+    "mean_delta_cpu": 0.17922910681578139,
+    "median_delta_cpu": 0.1794642857142857,
+    "mean_delta_mem": 0.14552255557336302,
+    "median_delta_mem": 0.13157894736842102,
+    "count_cpu_gt_0": 85,
+    "count_cpu_lt_neg_005": 3,
+    "count_mem_gt_0": 83,
+    "count_mem_lt_neg_005": 4
+  },
+  "per_tier": {
+    "periodic_predictor": {
+      "high": 0.8720312869570135,
+      "low": 0.9043433159524022,
+      "medium": 0.8874254124669438
+    },
+    "periodic_6h": {
+      "high": 0.6819278301874027,
+      "low": 0.7148838336320895,
+      "medium": 0.7296305568657
+    }
+  },
+  "checkpoint": {
+    "Q1": true,
+    "Q2": true,
+    "Q3": true,
+    "Q4": true,
+    "Q5": false
+  }
+}

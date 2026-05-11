@@ -1,0 +1,17 @@
+{
+  "wall_seconds_null_run": 6.91023358295206,
+  "mean_cpu_acc": {
+    "static_v2": 0.4206819897554261,
+    "periodic_6h_v2": 0.7085452111279874,
+    "periodic_predictor_6h_v2": 0.8877743179437688,
+    "periodic_null_pred_6h_v2": 0.4206819897554261
+  },
+  "mean_total_updates": {
+    "static_v2": 0.0,
+    "periodic_6h_v2": 141.22,
+    "periodic_predictor_6h_v2": 189.72,
+    "periodic_null_pred_6h_v2": 172.31
+  },
+  "null_minus_static_cpu_acc_abs": 0.0,
+  "verdict_automated": "AUDIT_PASS"
+}

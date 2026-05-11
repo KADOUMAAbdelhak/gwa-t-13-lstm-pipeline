@@ -1,0 +1,201 @@
+{
+  "wall_seconds_100vm": 8.388700167066418,
+  "summary_parquet": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/data/eval_sample_v2_dynapm_v3_summary.parquet",
+  "vm501_json": "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_14/dynapm_v3_vm501.json",
+  "headline_table_sorted": [
+    {
+      "method": "static_v2",
+      "cpu_class_accuracy_mean": 0.4206819897554261,
+      "memory_class_accuracy_mean": 0.5408499822195343,
+      "cpu_p95_mae_mean": 3.786417520539116,
+      "mem_p95_mae_mean": 3.4472384566472654,
+      "total_updates_mean": 0.0,
+      "cpu_class_accuracy_median": 0.35365853658536583,
+      "memory_class_accuracy_median": 0.6145833333333333,
+      "cpu_p95_mae_median": 0.4068211875843467,
+      "mem_p95_mae_median": 0.9789478498074542,
+      "total_updates_median": 0.0
+    },
+    {
+      "method": "dynapm_v2",
+      "cpu_class_accuracy_mean": 0.5452497747076384,
+      "memory_class_accuracy_mean": 0.6387426130611932,
+      "cpu_p95_mae_mean": 2.5167718111259876,
+      "mem_p95_mae_mean": 2.653879364975995,
+      "total_updates_mean": 8.61,
+      "cpu_class_accuracy_median": 0.5707236842105263,
+      "memory_class_accuracy_median": 0.6858552631578947,
+      "cpu_p95_mae_median": 0.4116353117084605,
+      "mem_p95_mae_median": 0.9672590211988397,
+      "total_updates_median": 6.0
+    },
+    {
+      "method": "periodic_6h_v2",
+      "cpu_class_accuracy_mean": 0.7085452111279874,
+      "memory_class_accuracy_mean": 0.7275010860251472,
+      "cpu_p95_mae_mean": 1.5225460567018916,
+      "mem_p95_mae_mean": 1.8248353885223767,
+      "total_updates_mean": 141.22,
+      "cpu_class_accuracy_median": 0.7304369918699187,
+      "memory_class_accuracy_median": 0.7376485303314572,
+      "cpu_p95_mae_median": 0.3051250000000004,
+      "mem_p95_mae_median": 1.0549127086007695,
+      "total_updates_median": 148.0
+    },
+    {
+      "method": "full_rewrite_v2",
+      "cpu_class_accuracy_mean": 0.7328894118088658,
+      "memory_class_accuracy_mean": 0.7496976447142397,
+      "cpu_p95_mae_mean": 1.371531102037377,
+      "mem_p95_mae_mean": 1.624681202340439,
+      "total_updates_mean": 1293.46,
+      "cpu_class_accuracy_median": 0.756578947368421,
+      "memory_class_accuracy_median": 0.7669956140350878,
+      "cpu_p95_mae_median": 0.29174342105263174,
+      "mem_p95_mae_median": 0.8339836328626438,
+      "total_updates_median": 1330.5
+    },
+    {
+      "method": "periodic_predictor_6h_v2",
+      "cpu_class_accuracy_mean": 0.8877743179437688,
+      "memory_class_accuracy_mean": 0.8730236415985101,
+      "cpu_p95_mae_mean": 1.4980945301202713,
+      "mem_p95_mae_mean": 1.315698478776486,
+      "total_updates_mean": 189.72,
+      "cpu_class_accuracy_median": 0.9321646341463414,
+      "memory_class_accuracy_median": 0.8947368421052632,
+      "cpu_p95_mae_median": 0.2658285821077763,
+      "mem_p95_mae_median": 0.7275098478123726,
+      "total_updates_median": 188.0
+    },
+    {
+      "method": "dynapm_v3",
+      "cpu_class_accuracy_mean": 0.8922733457320343,
+      "memory_class_accuracy_mean": 0.8767604256399361,
+      "cpu_p95_mae_mean": 1.4805127870012107,
+      "mem_p95_mae_mean": 1.300230838399588,
+      "total_updates_mean": 364.6,
+      "cpu_class_accuracy_median": 0.9375,
+      "memory_class_accuracy_median": 0.8947368421052632,
+      "cpu_p95_mae_median": 0.2605039510955607,
+      "mem_p95_mae_median": 0.7197395526972681,
+      "total_updates_median": 352.0
+    }
+  ],
+  "single_vm_table": [
+    {
+      "method": "periodic_6h_v2 (window)",
+      "cpu_class_accuracy": 0.7714285714285715,
+      "memory_class_accuracy": 0.4,
+      "total_updates": 145,
+      "n_periodic_refreshes": NaN,
+      "n_drift_refreshes": NaN
+    },
+    {
+      "method": "periodic_predictor_6h_v2",
+      "cpu_class_accuracy": 0.8857142857142857,
+      "memory_class_accuracy": 0.7714285714285715,
+      "total_updates": 183,
+      "n_periodic_refreshes": NaN,
+      "n_drift_refreshes": NaN
+    },
+    {
+      "method": "dynapm_v2",
+      "cpu_class_accuracy": 0.8857142857142857,
+      "memory_class_accuracy": 0.3142857142857143,
+      "total_updates": 21,
+      "n_periodic_refreshes": NaN,
+      "n_drift_refreshes": NaN
+    },
+    {
+      "method": "dynapm_v3",
+      "cpu_class_accuracy": 0.9142857142857143,
+      "memory_class_accuracy": 0.7714285714285715,
+      "total_updates": 380,
+      "n_periodic_refreshes": 78.0,
+      "n_drift_refreshes": 17.0
+    }
+  ],
+  "per_tier_cpu": [
+    {
+      "volatility_tier": "low",
+      "static_v2": 0.3295890196264143,
+      "periodic_6h_v2": 0.7148838336320894,
+      "periodic_predictor_6h_v2": 0.9043433159524022,
+      "dynapm_v2": 0.4456532148682062,
+      "dynapm_v3": 0.9059382122841407,
+      "full_rewrite_v2": 0.7406885755311831
+    },
+    {
+      "volatility_tier": "medium",
+      "static_v2": 0.4111814405176936,
+      "periodic_6h_v2": 0.7296305568656999,
+      "periodic_predictor_6h_v2": 0.8874254124669438,
+      "dynapm_v2": 0.5616390458023774,
+      "dynapm_v3": 0.8900777094303862,
+      "full_rewrite_v2": 0.7542223071870809
+    },
+    {
+      "volatility_tier": "high",
+      "static_v2": 0.5183168761996191,
+      "periodic_6h_v2": 0.6819278301874027,
+      "periodic_predictor_6h_v2": 0.8720312869570135,
+      "dynapm_v2": 0.6260097902539585,
+      "dynapm_v3": 0.8811414457830601,
+      "full_rewrite_v2": 0.7046141779759956
+    }
+  ],
+  "pairwise": {
+    "mean_delta_cpu": 0.004499027788265499,
+    "median_delta_cpu": 0.0,
+    "mean_delta_mem": 0.0037367840414261155,
+    "median_delta_mem": 0.0,
+    "count_cpu_gt_0": 11,
+    "count_cpu_lt_neg_002": 1,
+    "count_cpu_tied_0_to_001": 88,
+    "count_cpu_ge_001": 11,
+    "count_mem_gt_0": 12,
+    "count_mem_lt_neg_002": 2,
+    "count_mem_tied_0_to_001": 86,
+    "count_mem_ge_001": 12
+  },
+  "refresh_reasons_vm501": {
+    "periodic": 78,
+    "drift": 17
+  },
+  "checkpoint": {
+    "Q1_headline_cpu_ge_pp_1pp": {
+      "pass": false,
+      "mean_v3": 0.8922733457320343,
+      "mean_pp": 0.8877743179437688,
+      "gap": 0.004499027788265497
+    },
+    "Q2_headline_mem_ge_pp_1pp": {
+      "pass": false,
+      "mean_v3": 0.8767604256399361,
+      "mean_pp": 0.8730236415985101,
+      "gap": 0.0037367840414259668
+    },
+    "Q3_at_least_50vm_delta_cpu_ge_0": {
+      "pass": true,
+      "count": 99
+    },
+    "Q4_high_tier_cpu_v3_gt_pp": {
+      "pass": true,
+      "tier_high_v3": 0.8811414457830601,
+      "tier_high_pp": 0.8720312869570135
+    },
+    "Q5_total_updates_within_50pct_pp": {
+      "pass": false,
+      "mean_v3_tu": 364.6,
+      "mean_pp_tu": 189.72,
+      "ratio": 1.9217794644739619
+    },
+    "Q6_v3_within_05_of_fullrewrite": {
+      "pass": false,
+      "mean_v3_cpu": 0.8922733457320343,
+      "mean_fr_cpu": 0.7328894118088658,
+      "abs_gap": 0.15938393392316852
+    }
+  }
+}

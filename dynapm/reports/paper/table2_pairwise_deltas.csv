@@ -1,0 +1,13 @@
+comparison,metric,mean_delta,ci_low,ci_high,wilcoxon_p,cohen_d,n_pairs
+Periodic-Predictor vs Periodic-window,cpu_acc,0.13048404,0.12082397,0.14032743,5.17154e-148,0.691773,1576
+Periodic-Predictor vs Periodic-window,mem_acc,0.14542521,0.13714282,0.15309575,1.50055e-190,0.891774,1576
+Periodic-Predictor vs Periodic-window,cpu_p95_mae,-0.3383894,-0.48713828,-0.18758474,1.19551e-42,-0.115704,1576
+Periodic-Predictor vs Periodic-window,mem_p95_mae,-0.52455803,-0.62634316,-0.42372903,2.37783e-22,-0.24798,1576
+DynAPM-V3 vs Periodic-Predictor,cpu_acc,0.00236181,0.00186906,0.00284539,2.75927e-18,0.234422,1576
+DynAPM-V3 vs Periodic-Predictor,mem_acc,0.00318647,0.00257673,0.00373098,2.37303e-25,0.277161,1576
+DynAPM-V3 vs Periodic-Predictor,cpu_p95_mae,-0.01980611,-0.02505921,-0.01514227,1.53029e-39,-0.198382,1576
+DynAPM-V3 vs Periodic-Predictor,mem_p95_mae,-0.01661361,-0.02171819,-0.0125437,1.8689e-09,-0.170987,1576
+Periodic-Predictor vs Periodic-window,cpu_under_rate,-0.02393593,-0.03069289,-0.01671844,7.05737e-62,-0.165622,1576
+Periodic-Predictor vs Periodic-window,mem_under_rate,-0.01545303,-0.02239241,-0.00841579,1.858e-57,-0.109174,1576
+DynAPM-V3 vs Periodic-Predictor,cpu_under_rate,-0.00015561,-0.00042888,0.00010243,0.207246,-0.02761,1576
+DynAPM-V3 vs Periodic-Predictor,cpu_over_rate,-0.00312661,-0.00365901,-0.00261682,1.2418e-26,-0.300567,1576

@@ -1,4 +1,10 @@
-"""Evaluation runner v2: snapshot-then-verify protocol."""
+"""Evaluation runner v2: snapshot-then-verify protocol.
+
+Return dict includes optional policy audit fields: ``update_log`` (list of entries from
+``method.update_log``), ``n_periodic_refreshes``, ``n_drift_refreshes`` when the log records
+reasons; ``decision_head_stats`` when the policy exposes a ``decision_head`` with ``stats()``.
+Policies may implement ``verify_pending_commits``, invoked at evaluation timestamps along the
+ground-truth grid before snapshots are finalized."""
 from __future__ import annotations
 
 from copy import deepcopy
@@ -86,6 +92,7 @@ def run_method_on_vm(trace, vm_id, method_factory, **kwargs) -> dict:
     eval_set = set(gt_map.index)
     snapshot_queue = []
     records = []
+    verifier = getattr(method, "verify_pending_commits", None)
 
     for pos, t in enumerate(common_idx):
         cpu_obs_window = _series_window(cpu_obs_s, pos, lookback_steps)
@@ -100,6 +107,15 @@ def run_method_on_vm(trace, vm_id, method_factory, **kwargs) -> dict:
             cpu_pred_window=cpu_pred_window,
             mem_pred_window=mem_pred_window,
         )
+
+        if verifier is not None and t in eval_set:
+            gx = gt_map.loc[t]
+            if isinstance(gx, pd.DataFrame):
+                gx = gx.iloc[0]
+            verifier(
+                t,
+                {"cpu_class": gx["cpu_class"], "memory_class": gx["memory_class"]},
+            )
 
         if t in eval_set:
             snapshot_queue.append(
@@ -120,6 +136,8 @@ def run_method_on_vm(trace, vm_id, method_factory, **kwargs) -> dict:
             if ts not in gt_map.index:
                 continue
             g = gt_map.loc[ts]
+            if isinstance(g, pd.DataFrame):
+                g = g.iloc[0]
             snap = row["snapshot"]
             records.append(
                 {
@@ -157,7 +175,14 @@ def run_method_on_vm(trace, vm_id, method_factory, **kwargs) -> dict:
 
     stream_days = float((pd.Timestamp(df_stream.index[-1]) - pd.Timestamp(df_stream.index[0])).total_seconds() / 86400.0)
 
-    return {
+    n_periodic = 0
+    n_drift = 0
+    if len(log_df) > 0 and "reason" in log_df.columns:
+        rr = log_df[["timestamp", "reason"]].drop_duplicates()
+        n_periodic = int((rr["reason"] == "periodic").sum())
+        n_drift = int((rr["reason"] == "drift").sum())
+
+    out = {
         "trace": trace,
         "vm_id": str(vm_id),
         **agg,
@@ -171,4 +196,10 @@ def run_method_on_vm(trace, vm_id, method_factory, **kwargs) -> dict:
         "n_streaming_steps": int(len(common_idx)),
         "stream_days": stream_days,
         "update_log": list(method.update_log),
+        "n_periodic_refreshes": n_periodic,
+        "n_drift_refreshes": n_drift,
     }
+    dh = getattr(method, "decision_head", None)
+    if dh is not None and hasattr(dh, "stats"):
+        out["decision_head_stats"] = dh.stats()
+    return out

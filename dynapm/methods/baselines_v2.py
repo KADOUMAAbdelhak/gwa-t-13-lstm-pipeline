@@ -132,3 +132,100 @@ class FullRewritePolicyV2(_BasePolicyV2):
         cpu_now = _window_last_hours(cpu_obs_window, t, 24.0)
         mem_now = _window_last_hours(mem_obs_window, t, 24.0)
         self._commit_forecast(t, cpu_now, mem_now)
+
+
+class PeriodicPredictorPolicyV2(_BasePolicyV2):
+    """
+    Same refresh cadence as PeriodicPolicyV2 (every ``period_hours``) but
+    forecasts from the predictor lookahead (next 288 steps of ``y_pred``), not
+    from recent observed windows.
+    """
+
+    def __init__(self, profile, cpu_thresholds, mem_thresholds, **kwargs):
+        super().__init__(profile, cpu_thresholds, mem_thresholds, **kwargs)
+        self._cpu_pred_full = kwargs["cpu_pred_full"]
+        self._mem_pred_full = kwargs["mem_pred_full"]
+        self._period_hours = float(kwargs["period_hours"])
+        self._period = pd.Timedelta(hours=self._period_hours)
+        cpu_boot = kwargs["bootstrap_cpu_series"]
+        mem_boot = kwargs["bootstrap_mem_series"]
+        t0 = pd.Timestamp(cpu_boot.index[-1])
+        cpu_init = _window_last_hours(cpu_boot, t0, self._period_hours)
+        mem_init = _window_last_hours(mem_boot, t0, self._period_hours)
+        self._set_initial_forecast(cpu_init, mem_init, t=t0)
+        self._last = t0
+
+    def step(self, t, cpu_obs_window, mem_obs_window, cpu_pred_window, mem_pred_window):
+        t = pd.Timestamp(t)
+        if (t - self._last) < self._period:
+            return
+
+        pos_cpu = int(self._cpu_pred_full.index.searchsorted(t))
+        pos_mem = int(self._mem_pred_full.index.searchsorted(t))
+        cpu_lookahead = self._cpu_pred_full.iloc[pos_cpu : pos_cpu + 288]
+        mem_lookahead = self._mem_pred_full.iloc[pos_mem : pos_mem + 288]
+
+        if len(cpu_lookahead) == 0:
+            return
+
+        old_cpu_cls = self.profile.dynamic.cpu_class
+        old_mem_cls = self.profile.dynamic.memory_class
+        old_cpu_p95 = self.profile.dynamic.predicted_cpu_p95_next_24h
+        old_mem_p95 = self.profile.dynamic.predicted_mem_p95_next_24h
+
+        new_cpu_cls = forecast_class_from_window(cpu_lookahead, self.cpu_thresholds)
+        new_mem_cls = forecast_class_from_window(mem_lookahead, self.mem_thresholds)
+        new_cpu_p95 = forecast_p95_from_window(cpu_lookahead)
+        new_mem_p95 = forecast_p95_from_window(mem_lookahead)
+
+        self.profile.dynamic.cpu_class = new_cpu_cls
+        self.profile.dynamic.memory_class = new_mem_cls
+        self.profile.dynamic.predicted_cpu_p95_next_24h = new_cpu_p95
+        self.profile.dynamic.predicted_mem_p95_next_24h = new_mem_p95
+
+        self.profile.last_updated["cpu_class"] = t
+        self.profile.last_updated["memory_class"] = t
+        self.profile.last_updated["predicted_cpu_p95_next_24h"] = t
+        self.profile.last_updated["predicted_mem_p95_next_24h"] = t
+
+        self._last = t
+
+        if old_cpu_cls != new_cpu_cls:
+            self._update_log.append(
+                {
+                    "timestamp": t,
+                    "field": "cpu_class",
+                    "old_value": old_cpu_cls,
+                    "new_value": new_cpu_cls,
+                    "p_commit": 1.0,
+                }
+            )
+        if old_mem_cls != new_mem_cls:
+            self._update_log.append(
+                {
+                    "timestamp": t,
+                    "field": "memory_class",
+                    "old_value": old_mem_cls,
+                    "new_value": new_mem_cls,
+                    "p_commit": 1.0,
+                }
+            )
+        self._update_log.append(
+            {
+                "timestamp": t,
+                "field": "predicted_cpu_p95_next_24h",
+                "old_value": old_cpu_p95,
+                "new_value": new_cpu_p95,
+                "p_commit": 1.0,
+            }
+        )
+        self._update_log.append(
+            {
+                "timestamp": t,
+                "field": "predicted_mem_p95_next_24h",
+                "old_value": old_mem_p95,
+                "new_value": new_mem_p95,
+                "p_commit": 1.0,
+            }
+        )
+
