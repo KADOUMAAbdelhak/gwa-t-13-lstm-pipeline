@@ -2,7 +2,7 @@
   "n_total": 1576,
   "n_ok": 1576,
   "n_failed": 0,
-  "wall_seconds": 29.815128749934956,
+  "wall_seconds": 35.208570249999866,
   "mean_eval_points": 41.54187817258883,
   "total_skipped_empty_windows": 0,
   "n_candidates_total": 66039,

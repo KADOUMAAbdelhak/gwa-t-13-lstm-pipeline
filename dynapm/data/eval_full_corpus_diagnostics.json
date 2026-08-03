@@ -1,9 +1,9 @@
 {
-  "wall_seconds_total": 1161.975917667034,
+  "wall_seconds_total": 2129.990558,
   "tier_counts": {
-    "high": 526,
+    "low": 526,
     "medium": 525,
-    "low": 525
+    "high": 525
   },
   "total_jobs": 9456,
   "per_method_status": {
@@ -154,51 +154,51 @@
   "per_tier_means": [
     {
       "volatility_tier": "low",
-      "n_vms_in_tier": 525,
-      "static_v2_cpu": 0.4134123021404823,
-      "static_v2_mem": 0.6975408781859836,
-      "periodic_6h_v2_cpu": 0.7357822225716083,
-      "periodic_6h_v2_mem": 0.7845006059562294,
-      "reactive_v2_cpu": 0.6956575480144958,
-      "reactive_v2_mem": 0.7097271133179245,
-      "full_rewrite_v2_cpu": 0.7560807025056974,
-      "full_rewrite_v2_mem": 0.8005920180432378,
-      "periodic_predictor_6h_v2_cpu": 0.8760071258749661,
-      "periodic_predictor_6h_v2_mem": 0.9126269768463217,
-      "dynapm_v3_v2_cpu": 0.8768138130342116,
-      "dynapm_v3_v2_mem": 0.9136675779155589
+      "n_vms_in_tier": 526,
+      "static_v2_cpu": 0.4145274878778578,
+      "static_v2_mem": 0.6970068967952625,
+      "periodic_6h_v2_cpu": 0.736284537737822,
+      "periodic_6h_v2_mem": 0.784474622548201,
+      "reactive_v2_cpu": 0.6962361458319586,
+      "reactive_v2_mem": 0.7097244635460908,
+      "full_rewrite_v2_cpu": 0.7565444274058767,
+      "full_rewrite_v2_mem": 0.800614656792205,
+      "periodic_predictor_6h_v2_cpu": 0.8762428537725422,
+      "periodic_predictor_6h_v2_mem": 0.9127930852553591,
+      "dynapm_v3_v2_cpu": 0.8770480073060096,
+      "dynapm_v3_v2_mem": 0.9138317079955673
     },
     {
       "volatility_tier": "medium",
       "n_vms_in_tier": 525,
-      "static_v2_cpu": 0.47467499812516184,
-      "static_v2_mem": 0.5754920758931468,
-      "periodic_6h_v2_cpu": 0.7367280037631266,
-      "periodic_6h_v2_mem": 0.7389221669380704,
-      "reactive_v2_cpu": 0.6197430895313154,
-      "reactive_v2_mem": 0.6012707868869911,
-      "full_rewrite_v2_cpu": 0.7554925697401417,
-      "full_rewrite_v2_mem": 0.7573439564317628,
-      "periodic_predictor_6h_v2_cpu": 0.8503580314061779,
-      "periodic_predictor_6h_v2_mem": 0.8751642569240543,
-      "dynapm_v3_v2_cpu": 0.8523845284896603,
-      "dynapm_v3_v2_mem": 0.8791697739235989
+      "static_v2_cpu": 0.4733741851170317,
+      "static_v2_mem": 0.5760456957150591,
+      "periodic_6h_v2_cpu": 0.7359846820441951,
+      "periodic_6h_v2_mem": 0.7385224379407804,
+      "reactive_v2_cpu": 0.6191391406346836,
+      "reactive_v2_mem": 0.6007578174715827,
+      "full_rewrite_v2_cpu": 0.7549350784509432,
+      "full_rewrite_v2_mem": 0.7565861167105085,
+      "periodic_predictor_6h_v2_cpu": 0.8501722009764451,
+      "periodic_predictor_6h_v2_mem": 0.8746067656348557,
+      "dynapm_v3_v2_cpu": 0.8521986980599275,
+      "dynapm_v3_v2_mem": 0.8786122826344
     },
     {
       "volatility_tier": "high",
-      "n_vms_in_tier": 526,
-      "static_v2_cpu": 0.5353660370758812,
-      "static_v2_mem": 0.49373981169923875,
-      "periodic_6h_v2_cpu": 0.7383883527125827,
-      "periodic_6h_v2_mem": 0.7094257002541264,
-      "reactive_v2_cpu": 0.6180704777840095,
-      "reactive_v2_mem": 0.5792141190622151,
-      "full_rewrite_v2_cpu": 0.7615689581390582,
-      "full_rewrite_v2_mem": 0.7313114147910483,
-      "periodic_predictor_6h_v2_cpu": 0.8759720281313732,
-      "periodic_predictor_6h_v2_mem": 0.8812825190867368,
-      "dynapm_v3_v2_cpu": 0.8802206679564729,
-      "dynapm_v3_v2_mem": 0.8857932819163943
+      "n_vms_in_tier": 525,
+      "static_v2_cpu": 0.5357818330117747,
+      "static_v2_mem": 0.4933329978678645,
+      "periodic_6h_v2_cpu": 0.7386333665319192,
+      "periodic_6h_v2_mem": 0.7097084623312657,
+      "reactive_v2_cpu": 0.6179469418764203,
+      "reactive_v2_mem": 0.5794811471171071,
+      "full_rewrite_v2_cpu": 0.7616722950628074,
+      "full_rewrite_v2_mem": 0.7319146095880953,
+      "periodic_predictor_6h_v2_cpu": 0.8759216148051657,
+      "periodic_predictor_6h_v2_mem": 0.8816138818408626,
+      "dynapm_v3_v2_cpu": 0.8801783472775514,
+      "dynapm_v3_v2_mem": 0.8861332365997194
     }
   ],
   "pair_predictor_minus_window": {
@@ -214,16 +214,16 @@
     "wilcoxon_p_mem": 1.5005462018108586e-190,
     "per_tier": {
       "low": {
-        "mean_delta_cpu": 0.1402249033033578,
-        "mean_delta_mem": 0.12812637089009246
+        "mean_delta_cpu": 0.13995831603472025,
+        "mean_delta_mem": 0.12831846270715816
       },
       "medium": {
-        "mean_delta_cpu": 0.11363002764305136,
-        "mean_delta_mem": 0.13624208998598383
+        "mean_delta_cpu": 0.11418751893224997,
+        "mean_delta_mem": 0.1360843276940752
       },
       "high": {
-        "mean_delta_cpu": 0.13758367541879032,
-        "mean_delta_mem": 0.17185681883261036
+        "mean_delta_cpu": 0.1372882482732466,
+        "mean_delta_mem": 0.171905419509597
       }
     }
   },
@@ -240,16 +240,16 @@
     "wilcoxon_p_mem": 2.373026661254757e-25,
     "per_tier": {
       "low": {
-        "mean_delta_cpu": 0.0008066871592453841,
-        "mean_delta_mem": 0.0010406010692370815
+        "mean_delta_cpu": 0.000805153533467351,
+        "mean_delta_mem": 0.0010386227402081137
       },
       "medium": {
         "mean_delta_cpu": 0.0020264970834823056,
         "mean_delta_mem": 0.004005516999544478
       },
       "high": {
-        "mean_delta_cpu": 0.004248639825099698,
-        "mean_delta_mem": 0.0045107628296574
+        "mean_delta_cpu": 0.004256732472385602,
+        "mean_delta_mem": 0.004519354758856747
       }
     }
   },

@@ -18,7 +18,7 @@ from dynapm.data.loader import load_vm_csv
 from dynapm.core.discretization import classify_value, compute_thresholds
 from dynapm.data.provisioning import extract_provisioning
 
-REPO = Path("/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline")
+REPO = Path(__file__).resolve().parents[2]
 TRACE1_501 = REPO / "old/data/raw/Materna-Trace-1/501.csv"
 KEPT_VMS = REPO / "dynapm/data/kept_vms.json"
 
@@ -150,14 +150,20 @@ def test_derive_ground_truth_v2_returns_4_keys():
     }
 
 
-def test_derive_ground_truth_v2_backward_window_uses_past_only():
+def test_derive_ground_truth_v2_class_matches_forward_window_mean():
+    """Class GT must use the same forward horizon as predicted class (not backward 1h)."""
     idx = pd.date_range("2021-01-01", periods=600, freq="5min")
+    # Past is idle (10); future is burst (95). Forward-mean class must be burst.
     cpu = np.concatenate([np.full(300, 10.0), np.full(300, 95.0)])
     mem = np.concatenate([np.full(300, 15.0), np.full(300, 90.0)])
     df = pd.DataFrame({CPU_M: cpu, MEM_M: mem}, index=idx)
     th = {"p20": 20.0, "p40": 40.0, "p60": 60.0, "p80": 80.0, "p95": 95.0}
     t = idx[299]
     out_v1 = derive_ground_truth_at_t(df, t, window_hours=24, cpu_thresholds=th, mem_thresholds=th)
-    out_v2 = derive_ground_truth_at_t_v2(df, t, backward_window_hours=1.0, forward_window_hours=24, cpu_thresholds=th, mem_thresholds=th)
-    assert out_v2["cpu_class"] == "idle"
+    out_v2 = derive_ground_truth_at_t_v2(
+        df, t, backward_window_hours=1.0, forward_window_hours=24, cpu_thresholds=th, mem_thresholds=th
+    )
     assert out_v1["cpu_class"] == "burst"
+    assert out_v2["cpu_class"] == "burst"
+    assert out_v2["cpu_class"] == out_v1["cpu_class"]
+    assert out_v2["p95_cpu_next_24h"] == out_v1["p95_cpu_next_24h"]

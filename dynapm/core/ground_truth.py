@@ -17,9 +17,10 @@ def derive_ground_truth_at_t(
     mem_thresholds: dict | None = None,
 ) -> dict:
     """
-    DEPRECATED: v1 semantics using a forward 24h window for all fields.
+    Forward-24h ground truth for class and p95 fields.
 
-    Kept for reference. Prefer ``derive_ground_truth_at_t_v2``.
+    Prefer ``derive_ground_truth_at_t_v2``, which uses the same forward-window
+    semantics (retained name for call-site compatibility).
     """
     if cpu_thresholds is None or mem_thresholds is None:
         raise ValueError("cpu_thresholds and mem_thresholds are required")
@@ -52,37 +53,36 @@ def derive_ground_truth_at_t_v2(
     mem_thresholds: dict | None = None,
 ) -> dict:
     """
-    v2 semantics: categorical fields from backward 1h state, continuous fields from forward 24h forecast.
+    Snapshot-and-verify ground truth aligned to the profile forecast horizon.
 
-    - cpu_class/memory_class: classify mean over [t-backward_window_hours, t]
-    - p95_cpu_next_24h/p95_mem_next_24h: p95 over [t, t+forward_window_hours)
-    If backward window is empty, falls back to smallest available backward window (1 row at/before t).
+    Both class and p95 labels are derived from the same forward window
+    ``[t, t+forward_window_hours)``, matching how predictor-grounded methods
+    populate profile fields from the predicted next-24h window:
+
+    - cpu_class/memory_class: classify the mean over the forward window
+    - p95_cpu_next_24h/p95_mem_next_24h: empirical p95 over the forward window
+
+    ``backward_window_hours`` is retained for call-site compatibility but is
+    unused: an earlier mismatched protocol used a backward 1h mean for class
+    labels while profiles predicted a forward 24h class.
     """
     if cpu_thresholds is None or mem_thresholds is None:
         raise ValueError("cpu_thresholds and mem_thresholds are required")
 
+    del backward_window_hours  # unused; kept for API compatibility
+
     t0 = pd.Timestamp(t)
-
-    b0 = t0 - pd.Timedelta(hours=float(backward_window_hours))
-    wb = df.loc[(df.index >= b0) & (df.index <= t0)]
-    if len(wb) == 0:
-        wb = df.loc[df.index <= t0].tail(1)
-    if len(wb) == 0:
-        raise ValueError(f"empty backward window for t={t0}")
-
     f1 = t0 + pd.Timedelta(hours=int(forward_window_hours))
     wf = df.loc[(df.index >= t0) & (df.index < f1)]
     if len(wf) == 0:
         raise ValueError(f"empty forward window for t={t0}, window_hours={forward_window_hours}")
 
-    cpu_b = wb[CPU_METRIC]
-    mem_b = wb[MEM_METRIC]
     cpu_f = wf[CPU_METRIC]
     mem_f = wf[MEM_METRIC]
 
     return {
-        "cpu_class": classify_value(float(cpu_b.mean()), cpu_thresholds),
-        "memory_class": classify_value(float(mem_b.mean()), mem_thresholds),
+        "cpu_class": classify_value(float(cpu_f.mean()), cpu_thresholds),
+        "memory_class": classify_value(float(mem_f.mean()), mem_thresholds),
         "p95_cpu_next_24h": float(cpu_f.quantile(0.95)),
         "p95_mem_next_24h": float(mem_f.quantile(0.95)),
     }

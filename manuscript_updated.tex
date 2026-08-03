@@ -1,0 +1,1656 @@
+\documentclass[manuscript,screen,review,anonymous]{acmart}
+
+\acmJournal{TOCS}
+
+\begin{document}
+
+% ============================================================
+% Title
+% ============================================================
+\title[DynAPM: Drift-Aware Profile Maintenance]{DynAPM: Drift-Aware Profile Maintenance with
+                    Predictor-Grounded Forecasting in the
+                    Cloud-Edge Continuum}
+
+% ============================================================
+% Authors (anonymized for double-anonymous review)
+% ============================================================
+\author{Anonymous Author(s)}
+\renewcommand{\shortauthors}{Anonymous Author(s)}
+
+% ============================================================
+% Abstract
+% ============================================================
+\begin{abstract}
+The Cloud-Edge Continuum (CECC) motivates lifecycle management (LCM)
+consumers---schedulers, autoscalers, and capacity planners---that read
+accurate, current application profiles for placement and provisioning.
+Existing profile representations are either static, fixed at deployment,
+or refreshed from recent observation windows on a fixed schedule or in
+response to threshold crossings; all mis-track applications whose
+behavior drifts. We propose DynAPM, a profile-maintenance methodology
+intended for CECC LCM systems, whose dynamic fields encode forecasts of
+near-future application behavior rather than current state, evaluated
+under a snapshot-and-verify protocol with 24-hour ground-truth horizons.
+The methodological contribution combines two mechanisms: predictor-grounded
+refresh, in which profile fields are populated from per-application
+forecasting models rather than recent observations; and drift-augmented
+refresh, in which the periodic schedule is augmented with refreshes
+triggered by online drift detection on prediction residuals. We instantiate
+these mechanisms as Periodic-Predictor and DynAPM-V3 and evaluate them
+against four observation-window baselines (Static, Periodic-Window,
+Reactive, and Full-Rewrite)---six methods in total---via offline replay of
+CPU and memory traces from 1{,}576 production VMs in the Materna
+enterprise data-center corpus, representing the data-center/cloud tier of
+the continuum. Predictor-grounded refresh improves CPU profile class
+accuracy by 13.0 percentage points (95\% confidence interval [12.1, 14.0])
+and memory class accuracy by 14.5 percentage points (95\% confidence
+interval [13.8, 15.3]) over a matched-schedule observation-window baseline
+(paired asymptotic Wilcoxon $p = 5.17 \times 10^{-148}$). On a downstream
+resource-provisioning task, predictor-grounded profiles reduce SLA-risk
+events by 28\% in relative terms. Drift-augmented refresh adds a small but
+statistically robust further improvement (asymptotic Wilcoxon
+$p = 2.76 \times 10^{-18}$), with larger gains on high-volatility
+workloads. Edge-tier, containerized, heterogeneous, and live-system
+validation remain future work.
+\end{abstract}
+
+% ============================================================
+% CCS Concepts
+% ============================================================
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10010520.10010521.10010537.10003100</concept_id>
+       <concept_desc>Computer systems organization~Cloud computing</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10003033.10003068.10003073.10003074</concept_id>
+       <concept_desc>Networks~Network resources allocation</concept_desc>
+       <concept_significance>300</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10010147.10010257.10010258.10010259.10010264</concept_id>
+       <concept_desc>Computing methodologies~Supervised learning by regression</concept_desc>
+       <concept_significance>300</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10002950.10003648.10003688.10003693</concept_id>
+       <concept_desc>Mathematics of computing~Time series analysis</concept_desc>
+       <concept_significance>300</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10010147.10010257.10010282.10010284</concept_id>
+       <concept_desc>Computing methodologies~Online learning settings</concept_desc>
+       <concept_significance>100</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Computer systems organization~Cloud computing}
+\ccsdesc[300]{Networks~Network resources allocation}
+\ccsdesc[300]{Computing methodologies~Supervised learning by regression}
+\ccsdesc[300]{Mathematics of computing~Time series analysis}
+\ccsdesc[100]{Computing methodologies~Online learning settings}
+
+% ============================================================
+% Keywords
+% ============================================================
+\keywords{cloud-edge continuum, application profile, profile maintenance, concept drift, workload forecasting, resource provisioning, lifecycle management, online adaptation}
+
+\maketitle
+
+% ============================================================
+% 1. Introduction
+% ============================================================
+\section{Introduction}\label{sec:intro}
+
+The Cloud-Edge Continuum (CECC) is the operational regime in which
+applications may be deployed across a heterogeneous fabric of cloud
+regions, edge sites, and on-premises infrastructure, with workloads
+flowing dynamically between them in response to demand, latency
+requirements, and energy constraints~\citep{ullah_cecc_survey_2023}.
+Effective lifecycle management (LCM) in this regime depends on a
+continually accurate picture of each application's behavior: how loaded
+it is, how variable it is, and what resources it likely needs over the
+next operational window. This information is conventionally stored in an
+\emph{application profile}---a structured representation of the
+application's static identity (provisioning, region, tenant) and its
+dynamic behavior (load class, expected resource usage, variability
+indicators)~\citep{nfv_sdn_apm}. LCM consumers, including placement
+schedulers, autoscalers, capacity planners, and SLA monitors, read these
+profiles to make per-application decisions.
+
+The accuracy of these decisions is bounded by the accuracy of the profile.
+A profile that says ``this application is currently in a low-load state''
+when in reality the next 24 hours will see a sustained burst leads
+downstream consumers astray: the autoscaler under-provisions, the placement
+engine packs aggressively, the capacity planner over-commits. In production
+deployments---including the data-center and cloud tiers that populate
+CECC systems---applications drift through behavioral regimes over hours
+and days, driven by user activity, batch schedules, and external events.
+A profile representation that does not adapt to this drift becomes
+progressively misaligned with reality.
+
+Existing approaches to profile maintenance are limited in two ways.
+\emph{Static profiles}, set at application deployment and never updated,
+miss all post-deployment drift. \emph{Reactive update policies}, which
+refresh profile fields when an instantaneous metric crosses a threshold,
+chatter under noise and miss slow drift. \emph{Periodic refresh policies},
+which update profile fields on a fixed schedule (e.g., every six hours)
+from a recent observation window, are more stable but ground their update
+content in past observations only---they extrapolate from what just
+happened to predict what comes next, even when a per-application
+forecasting model could provide a more informed prediction. The space of
+profile-maintenance designs is large, but the question of \emph{where}
+the update content should come from---whether observed history or
+model-based forecast---has received little systematic attention in the
+LCM literature.
+
+This paper addresses that gap. We propose DynAPM, a profile-maintenance
+methodology intended for CECC LCM systems, in which dynamic fields encode
+forecasts of near-future application behavior, validated under a
+snapshot-and-verify protocol with 24-hour ground-truth horizons. The
+framework combines two refresh mechanisms: predictor-grounded periodic
+refresh, in which scheduled updates are populated from per-application
+forecasting models rather than recent observation windows; and
+drift-augmented refresh, in which the periodic schedule is supplemented
+by refreshes triggered by an online drift detector running on the
+prediction residual stream. DynAPM is not a predictive autoscaler: it
+maintains a persistent, multi-consumer profile artifact rather than
+directly issuing scaling actuations.
+
+We evaluate DynAPM via offline replay of CPU and memory traces from
+1{,}576 production VMs in the Materna enterprise data-center corpus,
+which we treat as representative of the data-center/cloud tier of the
+continuum. We compare two proposed methods---Periodic-Predictor and
+DynAPM-V3---against four observation-window baselines (Static,
+Periodic-Window, Reactive, and Full-Rewrite): six methods in total. The
+evaluation uses an explicit snapshot-and-verify protocol with paired
+bootstrap confidence intervals and asymptotic Wilcoxon signed-rank tests.
+To assess operational consequence, we additionally evaluate a downstream
+resource-provisioning recommendation task in which an LCM consumer
+recommends provisioned capacity from each method's profile snapshot and
+we measure the resulting rate of SLA-risk events. We do not claim
+empirical coverage of edge-tier, containerized, or live orchestrated
+deployments; those settings remain future work
+(Section~\ref{sec:discussion-threats}).
+
+The contributions of this paper are:
+\begin{itemize}
+\item \textbf{Predictor-grounded profile refresh:} A methodology in which
+profile dynamic fields are populated from per-application forecasting
+models rather than recent observation windows. On 1{,}576 VMs, this
+single change improves CPU profile class accuracy by 13.0 percentage
+points (95\% CI [12.1, 14.0]) and memory class accuracy by 14.5
+percentage points (95\% CI [13.8, 15.3]) over a matched-schedule
+observation-window baseline (paired asymptotic Wilcoxon
+$p = 5.17 \times 10^{-148}$).
+
+\item \textbf{Drift-augmented refresh:} An online refinement in which
+scheduled refreshes are augmented by drift-triggered refreshes, both
+grounded in the predictor's forecast. Drift augmentation adds a small
+but statistically robust further improvement of 0.24 percentage points
+CPU and 0.32 percentage points memory class accuracy (asymptotic
+Wilcoxon $p = 2.76 \times 10^{-18}$), with effect concentrated on
+high-volatility workloads and no observed degradation on any tier.
+
+\item \textbf{Snapshot-and-verify evaluation protocol:} A methodology
+for evaluating profile-shaped representations in which a profile snapshot
+at time $t$ is verified against ground truth derived from $[t, t+24\mathrm{h})$
+once that horizon has streamed past. We provide paired bootstrap
+confidence intervals and asymptotic Wilcoxon signed-rank tests for all
+headline comparisons.
+
+\item \textbf{Operational impact via downstream provisioning:} A direct
+evaluation of how profile accuracy translates to operational outcomes.
+Predictor-grounded profiles reduce SLA-risk events (under-provisioning)
+by 28\% in relative terms and 2.4 percentage points in absolute terms.
+\end{itemize}
+
+These contributions are methodological and are empirically supported on
+production data-center VMs; they are intended for CECC LCM consumers but
+are not validated here across edge, container, or live multi-tier systems.
+
+
+
+The remainder of this paper is organized as follows.
+Section~\ref{sec:bg} surveys related work in cloud workload forecasting,
+reactive autoscaling, concept drift adaptation, and application profiling
+for the CECC. Section~\ref{sec:framework} formalizes the DynAPM
+framework. Section~\ref{sec:setup} describes the experimental setup.
+Section~\ref{sec:results} presents the corpus-scale results.
+Section~\ref{sec:discussion} discusses implications and threats to
+validity. Section~\ref{sec:conclusion} concludes.
+
+% ============================================================
+% 2. Background and Related Work
+% ============================================================
+\section{Background and Related Work}\label{sec:bg}
+
+The problem of maintaining accurate, up-to-date application
+profiles in dynamic compute environments draws on four
+established research areas: cloud workload forecasting, reactive
+resource adaptation, concept-drift detection in streaming data,
+and application profiling for the cloud-edge continuum. Each of
+these literatures has matured along its own trajectory, and
+each contributes something to the design of an adaptive
+profile-maintenance method, but no prior work has integrated
+them around the central question we pose: \emph{where} should
+the content of profile updates come from? We review each area
+in turn, drawing out the threads that converge on this question
+and clarifying how our contribution sits relative to existing
+work.
+
+Workload forecasting in cloud and data-center environments is
+the most mature of the four. Classical statistical approaches
+such as ARIMA were among the earliest methods applied to
+cloud-resource prediction, with Calheiros et al.\ demonstrating
+that ARIMA-based prediction can achieve up to 91\% accuracy on
+web-server workloads and translate into measurable
+quality-of-service gains~\cite{calheiros_arima_2015}. With the
+availability of large-scale public traces such as the Google
+Borg traces~\cite{tirmazi_borg_2020} and the Alibaba production
+traces~\cite{lu_alibaba_2017}, the community has shifted toward
+machine-learning approaches that exploit per-VM and
+per-application heterogeneity. More recent work emphasizes deep
+models and hybrid architectures: LSTM and BiLSTM networks have
+been extensively applied to workload and energy-state
+forecasting at the VM
+level~\cite{khan_workload_forecasting_2022}, and hybrid models
+that combine signal decomposition, attention mechanisms, and
+LSTM variants achieve further accuracy gains on Google and
+Alibaba traces~\cite{bi_hybrid_lstm_2023}. RandomForest
+predictors~\cite{breiman_random_forests_2001} remain a
+competitive non-deep alternative, particularly when moderate
+training cost on tabular features is preferred over deep sequence
+models. Across this literature, the
+dominant evaluation metrics are per-step prediction quality
+measures: $R^2$, mean absolute error, and root mean squared
+error, reported on held-out test windows. This methodology
+answers the question of how accurate a model's prediction of
+the next observation is, but does not address how well that
+prediction serves a downstream operational consumer. DynAPM
+uses a RandomForest forecaster as a component, but our
+methodological focus differs: we evaluate the maintained
+profile representation that a lifecycle-management consumer
+would actually read, rather than the per-step accuracy of the
+underlying forecaster.
+
+Workload forecasters do not exist in isolation; they feed into
+the resource-adaptation systems that act on their predictions.
+A separate strand of work has therefore addressed online
+adaptation of resource allocations in response to observed
+workload changes. Reactive autoscalers monitor instantaneous
+metrics (CPU utilization, request queue depth, response
+latency) and trigger scale-up or scale-down events when
+thresholds are crossed. Production systems such as Kubernetes
+Horizontal Pod Autoscaler~\cite{kubernetes_hpa} and AWS Auto
+Scaling~\cite{aws_autoscaling} implement variants of this
+pattern. Threshold-based reactive policies are simple and
+well-understood, but they suffer from two known problems:
+oscillation under noise, often described as chatter, and lag
+in response to sustained changes. Periodic update policies
+represent a complementary design point: rather than triggering
+on individual observations, they refresh state at fixed
+intervals using aggregate statistics over a recent window.
+Both reactive and periodic strands share an implicit
+assumption that the input to any update decision is the
+recently observed resource trace.
+
+A substantial body of work goes further and uses forecasts
+to \emph{proactively} change resource allocations---predictive
+or proactive autoscaling. Surveys of cloud auto-scaling
+distinguish reactive threshold policies from proactive
+approaches based on time-series prediction, control theory,
+and related methods~\cite{lorido_botran_autoscaling_2014,qu_autoscaling_survey_2018}.
+Concrete systems couple demand predictors to scaling
+actuators: PRESS predicts resource demand and adjusts
+allocations to reduce waste and SLO risk~\cite{gong_press_2010};
+prediction models have likewise been used for adaptive cloud
+resource provisioning ahead of demand~\cite{islam_prediction_provisioning_2012}.
+At production scale, Google Autopilot continuously adjusts
+horizontal replica counts and vertical CPU/memory limits from
+historical usage~\cite{rzadca_autopilot_2020}, and hybrid
+frameworks such as OptScaler combine proactive forecasts with
+reactive feedback under model-predictive control to decide
+scaling actions~\cite{zou_optscaler_2024}. Across this
+literature, the system output is an \emph{actuation}---a replica
+count, a capacity limit, or a provisioning decision---rather than
+a durable, multi-consumer description of application behavior.
+DynAPM's predictor-grounded refresh is complementary: at each
+scheduled refresh, we ground a shared profile artifact in the
+predictor's forecast of the next 24 hours rather than in the most
+recent 24 hours of observations, without directly issuing scaling
+actions. The architectural change is small but, as
+Section~\ref{sec:results} shows, empirically consequential.
+
+A complementary line of research addresses the case in which
+the workload itself changes its statistical character over
+time --- the problem of concept drift in streaming data. The
+canonical methods are mature: sequential change-point tests
+(CUSUM)~\cite{page_cusum_1954}, the Page-Hinkley
+test~\cite{hinkley_changepoint_1971}, and ADWIN (Adaptive
+Windowing)~\cite{bifet_adwin_2007}. ADWIN maintains a
+variable-length window over a numerical stream and signals
+drift when sub-windows exhibit statistically distinct means,
+with formal guarantees on its false-positive rate that have
+made it a common default in streaming-ML toolkits such as
+River~\cite{montiel_river_2021}. The application of drift
+detection specifically to cloud workloads is more recent.
+Adaptive sliding-window techniques have been applied to
+data-center resource utilization estimation, demonstrating
+that window adaptation based on observed change rate improves
+utilization prediction over fixed-window
+baselines~\cite{baig_adaptive_windows_2019}. We use ADWIN in
+a different role from these prior works: not as a signal that
+invalidates a model and triggers retraining, but as one of two
+refresh triggers for a forecast-grounded profile. Drift events
+in our design augment a fixed periodic schedule with
+additional refreshes when the residual stream signals change
+between scheduled refreshes; the underlying forecaster remains
+frozen.
+
+These three literatures --- forecasting, reactive adaptation,
+and drift detection --- all concern the dynamics of resource
+management. The fourth concerns the data structure that
+mediates between resource managers and application instances:
+the application profile itself. The cloud-edge continuum
+extends classical cloud computing to a distributed fabric in
+which compute may execute at central clouds, regional edge
+sites, or on-premises infrastructure, and recent surveys
+characterize the orchestration challenges this distributed
+fabric introduces, including resource heterogeneity, mobility
+of data sources, and lifecycle complexity for applications
+spanning multiple tiers~\cite{ullah_cecc_survey_2023}.
+Lifecycle management in this regime requires structured
+representations of applications and their requirements that
+downstream consumers --- placement schedulers, autoscalers,
+SLA monitors --- can query at decision time. The
+structured-profile pattern itself appears in network function
+virtualization, where Application Profile Management schemas
+formalize what static and dynamic fields a profile carries and
+how consumers retrieve them. A unified APM template for
+microservices-based applications in the cloud-edge continuum
+has previously been proposed~\cite{nfv_sdn_apm}, defining
+static identity fields and dynamic behavior fields with formal
+OWL-based semantics. The present paper builds on that schema
+by addressing a complementary question: not what fields a
+profile should carry, but how those fields should be kept up
+to date as the underlying workload changes.
+
+The contribution of this paper sits at the intersection of
+these areas but is distinct from each. Relative to
+workload forecasting, we do not propose a novel forecasting
+model; we use a standard RandomForest predictor and ask a
+different question---what is the right way to use a
+forecaster's output as the source of profile updates. Relative
+to reactive and predictive autoscaling, we evaluate the
+profile-maintenance layer that sits beneath such consumers and
+characterize the accuracy implications of different update
+sources at that layer, rather than issuing scaling actuations.
+Relative to drift-detection literature, we use ADWIN in
+a refresh-augmentation role rather than as a model-invalidation
+signal, and we measure whether the augmented refresh improves
+an operationally meaningful metric. Relative to CECC profiling
+schemas, we treat the continuum as the motivating deployment
+context for LCM consumers of application profiles, but we do
+not claim a multi-tier continuum evaluation. The remaining gap
+is a controlled empirical comparison of \emph{profile update
+sources} for adaptive lifecycle management. DynAPM addresses
+that gap with forecast-based profile semantics, a
+snapshot-and-verify protocol, and a corpus-scale offline
+evaluation on 1{,}576 production data-center VMs.
+
+% ============================================================
+% 3. The DynAPM Framework
+% ============================================================
+\section{The DynAPM Framework}\label{sec:framework}
+
+This section formalizes the DynAPM framework: the profile schema
+and what its dynamic fields encode (\ref{sec:framework-schema}),
+the snapshot-and-verify protocol used to evaluate any
+profile-maintenance method (\ref{sec:framework-verify}), the
+per-application forecasting model (\ref{sec:framework-forecaster}),
+and the two proposed profile-maintenance methods:
+Periodic-Predictor (\ref{sec:framework-pp}) and DynAPM-V3 with
+drift augmentation (\ref{sec:framework-v3}). Four observation-window
+baselines are described in Section~\ref{sec:framework-baselines}.
+
+\subsection{Profile Schema and Forecast Semantics}\label{sec:framework-schema}
+
+A DynAPM profile is a key--value record associated with a single
+application instance (here, a single virtual machine). The schema
+extends the unified APM template proposed in
+prior work~\cite{nfv_sdn_apm} by adding forecast-grounded dynamic
+fields. The schema partitions fields into two groups.
+
+\textbf{Static fields} are fixed at deployment and unchanged
+during the application's lifecycle: an application identifier,
+provisioned CPU and memory capacity, deployment region, tenant,
+and similar metadata. These fields are written once and read
+many times; their maintenance is outside the scope of this work.
+
+\textbf{Dynamic fields} are intended to summarize the application's
+near-future operational behavior. In the present formulation,
+the dynamic fields are:
+\begin{itemize}
+\item \texttt{cpu\_class} and \texttt{memory\_class}: discrete load
+classes drawn from the five-element label space \{\textsc{idle},
+\textsc{low}, \textsc{medium}, \textsc{high}, \textsc{burst}\},
+defined by per-application empirical quantile thresholds.
+\item \texttt{predicted\_cpu\_p95\_next\_24h} and
+\texttt{predicted\_mem\_p95\_next\_24h}: numerical 95th-percentile
+forecasts of CPU and memory utilization over the next 24-hour window.
+\end{itemize}
+
+The class fields and the p95 fields are independent views of the
+same forecast: the numerical p95 is computed directly as the 95th
+percentile of the predicted next-24h utilization window, while the
+class label is computed by mapping the mean of that same predicted
+window through the per-application class thresholds. This decoupling
+is deliberate. Downstream LCM consumers concerned with absolute
+provisioning capacity read the p95 fields directly; consumers that
+operate over discrete behavioral categories (e.g., placement
+schedulers that reason in terms of load tiers) read the class
+fields. Both fields are written together at every refresh.
+
+The semantics of these fields differ from prior practice in a key
+respect. In conventional periodic update policies, the dynamic
+fields summarize \emph{recently observed} behavior --- for example,
+the empirical p95 over the previous 24 hours and the corresponding
+class derived from the same window. In DynAPM, the dynamic fields
+summarize \emph{predicted future} behavior over a forward 24-hour
+horizon. The class label and the numerical p95 are both derived
+from the forecaster's output rather than from observed history.
+
+This forecast-grounded semantics makes the profile directly
+actionable for downstream consumers. A capacity planner that
+provisions for the next 24 hours can use
+\texttt{predicted\_cpu\_p95\_next\_24h} directly as input to a
+provisioning decision (e.g., $\mathrm{capacity} =
+\texttt{predicted\_cpu\_p95\_next\_24h} \times s$, where $s$ is
+a safety factor). Under window-based semantics, the consumer
+would instead receive an estimate of past behavior and would have
+to perform its own forecasting, fragmenting forecast logic across
+multiple LCM components.
+
+The class thresholds for an application $A$ are computed from the
+bootstrap segment (Section~\ref{sec:framework-forecaster}) as the
+empirical 20th, 40th, 60th, and 80th percentiles of $A$'s
+utilization on that segment. Computing these per-application
+yields a stable per-VM calibration of the five-class label space:
+$T_{0.20}^A, T_{0.40}^A, T_{0.60}^A, T_{0.80}^A$ partition the
+real line into five intervals corresponding to \textsc{idle},
+\textsc{low}, \textsc{medium}, \textsc{high}, and \textsc{burst}.
+CPU and memory thresholds are computed independently from the same
+bootstrap segment but using their respective metric streams; they
+typically differ in absolute value.
+
+\subsection{Snapshot-and-Verify Evaluation Protocol}\label{sec:framework-verify}
+
+To evaluate any profile-maintenance method, we record what the
+profile says at a sequence of evaluation timestamps and compare
+those snapshots against ground truth derived from the streaming
+data that follows.
+
+Let $A$ denote an application with utilization stream
+$\{u_t\}_{t \geq 0}$. A profile-maintenance method $M$ produces,
+at each timestamp $t$, a profile snapshot $\Pi^M_A(t)$ containing
+the four dynamic fields described above. Evaluation proceeds at a
+fixed grid of evaluation timestamps drawn from the streaming
+segment of the trace; at each evaluation timestamp $t_e$, the
+method's most recently committed snapshot $\Pi^M_A(t_e)$ is
+recorded. The exact cadence of this evaluation grid and its
+data-aware filtering criterion are specified in
+Section~\ref{sec:setup-eval}; importantly, the evaluation cadence
+is independent of the refresh cadence used by any individual
+method, so a method that refreshes more often than evaluation
+occurs is read at evaluation time with whatever snapshot it has
+most recently written.
+
+\textbf{Ground truth} is derived from the future window
+$[t_e, t_e + 24\mathrm{h})$ once that window has streamed past. The
+ground-truth class is computed by mapping the mean of observed
+utilization over that same forward window
+$[t_e, t_e + 24\mathrm{h})$ through the same per-application class
+thresholds $T_q$ used for the profile's own class derivation. The
+ground-truth p95 is the empirical 95th percentile of utilization
+over $[t_e, t_e + 24\mathrm{h})$. Class and p95 ground truth
+therefore share the same forward horizon as the predicted fields.
+
+\textbf{Per-snapshot accuracy} is then computed as
+$\mathbb{1}[\texttt{cpu\_class}(\Pi^M_A(t_e)) =
+\mathrm{class}_\mathrm{gt}(t_e)]$ for the class metric, and
+$|\texttt{predicted\_cpu\_p95}(\Pi^M_A(t_e)) -
+\mathrm{p95}_\mathrm{gt}(t_e)|$ for the p95 absolute-error metric.
+Per-VM accuracies are averaged over evaluation timestamps; corpus
+accuracies are averaged over VMs. Pairwise statistical
+comparisons (Section~\ref{sec:setup-statistics}) operate at the
+per-VM level.
+
+A consequence of this protocol is that evaluation requires a
+warm-up period at both ends of the trace: the first 30\% of each
+VM's time series is reserved as the bootstrap segment for the
+per-application forecasting model and class thresholds (see
+Section~\ref{sec:framework-forecaster}), and the last 24 hours of
+the streamed period cannot be verified because the forward window
+extends past the trace.
+
+\subsection{Per-Application Forecasting Model}\label{sec:framework-forecaster}
+
+DynAPM uses a per-application forecasting model trained offline
+and frozen during operational evaluation. We use a RandomForest
+regressor~\cite{breiman_random_forests_2001} as a practical
+per-VM baseline on the engineered tabular feature set of lags,
+rolling-window statistics, and calendar encodings described below.
+This choice fits the study's constraints: moderate training cost
+on CPU-only hardware, low inference complexity for repeated
+lookahead generation, and suitability for fitting separate models
+on each VM's bootstrap segment without specialized accelerators.
+We do not claim that RandomForest is uniquely robust, efficient,
+or hyperparameter-insensitive; hyperparameters are fixed a priori
+and are not tuned in this work.
+
+For each application $A$, we reserve a per-application
+\emph{bootstrap segment} consisting of the first 30\% of the
+streaming time series. The 30\% fraction is fixed across all VMs;
+the corresponding duration in days varies per VM according to the
+length of its time series. Two regressors are trained on this
+segment, one for CPU usage and one for memory usage, each with
+the same input features. The features are built exclusively from
+the target metric's history at the same VM and include lagged
+values (at lags 1, 2, 3, 6, 12, 24, and 48 steps),
+rolling-window statistics (mean, standard deviation, minimum,
+maximum, and range over windows of 6, 12, 24, 48, and 96 steps),
+first and seasonal differences (lags 1 and 12), and cyclical
+hour-of-day and day-of-week encodings derived from the timestamp
+index. The first 96 timesteps of feature engineering are dropped
+before training, since the longest rolling-window features are
+not defined on earlier timestamps. The target variable is the
+next-step value of the same metric; the regressor is therefore a
+one-step-ahead numerical forecaster.
+
+Once trained, the regressor is frozen for the remainder of the
+trace. To produce the 24-hour forecasts that the profile-maintenance
+methods consume, the frozen regressor is rolled forward 288 steps
+(corresponding to 24 hours at the Materna trace's 5-minute sampling
+cadence) starting from the current feature vector. The resulting
+288-element predicted window provides both the numerical p95
+(via the 95th percentile of the window) and the input to the class
+derivation (via the window mean mapped through the per-application
+class thresholds).
+
+We deliberately do not propose a novel forecasting architecture.
+The contribution of DynAPM is in how forecaster output is consumed
+by the profile-maintenance layer, not in the forecaster itself.
+Replacing RandomForest with a more expressive model is
+straightforward and is left as future work.
+
+\subsection{Method: Periodic-Predictor}\label{sec:framework-pp}
+
+The Periodic-Predictor method refreshes the dynamic fields of the
+profile on a fixed periodic schedule, with each refresh's content
+sourced from the per-application forecaster's current output.
+
+Concretely, at every $\Delta_p$-hour interval (we use $\Delta_p = 6$
+hours throughout this work), the method invokes the forecaster on
+the current feature vector, rolls it forward 288 steps to obtain
+a predicted 24-hour window, computes the p95 (numerical field) and
+the window mean (mapped through per-application class thresholds
+to produce the class field), and writes all four dynamic fields to
+the profile in a single update event.
+
+Algorithmically:
+\begin{verbatim}
+on every periodic tick t_p:
+    fwin_cpu = roll_forward(forecaster_cpu, features(t_p), n=288)
+    fwin_mem = roll_forward(forecaster_mem, features(t_p), n=288)
+    Pi.predicted_cpu_p95_next_24h = p95(fwin_cpu)
+    Pi.predicted_mem_p95_next_24h = p95(fwin_mem)
+    Pi.cpu_class    = class_of(mean(fwin_cpu), T_cpu)
+    Pi.memory_class = class_of(mean(fwin_mem), T_mem)
+    log_refresh(t_p, source="periodic")
+\end{verbatim}
+
+Between periodic ticks, the profile is unchanged. The schedule is
+deterministic and independent of the observed utilization stream.
+
+The contrast with conventional window-based periodic refresh is
+narrow but consequential. A window-based method, given the same
+schedule, would compute the dynamic fields from the previous 24
+hours of \emph{observed} utilization. Periodic-Predictor instead
+sources its dynamic fields from the predictor's forecast of the
+\emph{next} 24 hours. The schedule is identical; only the source
+of the update content differs. Section~\ref{sec:results} shows
+that this single change improves per-snapshot class accuracy by
+13.0 percentage points for CPU and 14.5 percentage points for
+memory on 1{,}576 VMs.
+
+\subsection{Method: DynAPM-V3 with Drift Augmentation}\label{sec:framework-v3}
+
+DynAPM-V3 augments Periodic-Predictor with online drift detection
+that can trigger additional refreshes between scheduled periodic
+ticks. The method maintains \emph{two} independent ADWIN
+detectors~\cite{bifet_adwin_2007}, one for CPU and one for memory,
+implemented via River~\cite{montiel_river_2021} with significance
+parameter $\delta = 0.002$ and River's remaining defaults
+(notably $\mathrm{clock}=32$).
+
+At each streaming timestamp $t$, residuals are formed from the
+frozen per-metric RandomForest streaming predictions
+(precomputed offline), not from the profile's stored dynamic
+fields:
+\begin{align}
+r^{\mathrm{cpu}}_t &= u^{\mathrm{cpu}}_t - \hat{u}^{\mathrm{cpu}}_t, \\
+r^{\mathrm{mem}}_t &= u^{\mathrm{mem}}_t - \hat{u}^{\mathrm{mem}}_t,
+\end{align}
+where $u^{\cdot}_t$ is observed utilization and
+$\hat{u}^{\cdot}_t$ is the corresponding RF prediction at $t$.
+Each residual is fed to its own ADWIN instance. A drift event is
+declared if \emph{either} detector signals change. That event
+triggers a \emph{joint} profile refresh: all four dynamic fields
+are rewritten from the CPU and memory predictor lookaheads
+exactly as in Periodic-Predictor (next up to 288 steps of
+$\hat{u}$ starting at $t$). If a periodic tick is also due at
+$t$, the periodic refresh takes precedence and is logged as
+\texttt{periodic}; otherwise the refresh is logged as
+\texttt{drift}. Drift refreshes do not advance the periodic
+timer, so the 6-hour schedule remains calendar-aligned.
+
+DynAPM does not call an explicit detector reset after a refresh.
+River ADWIN fully resets a detector on the subsequent
+\texttt{update} after it has reported \texttt{drift\_detected};
+CPU and memory detectors therefore recover independently
+according to which stream signaled. Profile fields persist until
+the next refresh (no forecast TTL). Near the end of a VM series,
+the lookahead may contain fewer than 288 steps; an empty
+lookahead yields no update.
+
+Algorithmically:
+\begin{verbatim}
+initialize:
+    adwin_cpu <- ADWIN(delta=0.002)   # River defaults otherwise
+    adwin_mem <- ADWIN(delta=0.002)
+    last_periodic <- None             # first streaming step is due
+
+on every streaming timestamp t:
+    r_cpu <- u_cpu[t] - yhat_cpu[t]   # RF streaming pred, not profile
+    r_mem <- u_mem[t] - yhat_mem[t]
+    cpu_drift <- adwin_cpu.update(r_cpu)
+    mem_drift <- adwin_mem.update(r_mem)
+
+    periodic_due <- (last_periodic is None)
+                    or (t - last_periodic >= Delta_p)   # Delta_p = 6h
+    drift_event  <- cpu_drift or mem_drift
+
+    if periodic_due:
+        refresh_all_fields_from_predictor_lookahead(t, n<=288)
+        log_refresh(t, source="periodic")
+        last_periodic <- t
+    else if drift_event:
+        refresh_all_fields_from_predictor_lookahead(t, n<=288)
+        log_refresh(t, source="drift")
+        # do not advance last_periodic
+\end{verbatim}
+
+The two refresh sources---periodic and drift---both write the
+same field set, both use the same forecaster, and both produce
+fully-formed profile updates. They differ only in their trigger.
+Periodic refreshes occur at fixed cadence; drift refreshes occur
+when either residual stream signals change between scheduled ticks.
+
+The mechanism is intentionally conservative on update frequency.
+On the corpus reported in Section~\ref{sec:results}, drift events
+add approximately 6 additional refreshes per VM beyond the
+approximately 85 periodic refreshes per VM---a 7\% increase in
+refresh activity. The improvement in profile accuracy that this
+additional activity produces is small in absolute magnitude
+(0.24 percentage points CPU class accuracy) but statistically
+robust (asymptotic Wilcoxon $p = 2.76 \times 10^{-18}$) and
+concentrated on high-volatility workloads where drift events are
+most informative.
+
+\subsection{Baseline Methods}\label{sec:framework-baselines}
+
+We compare DynAPM-V3 and Periodic-Predictor against four baseline
+profile-maintenance methods that span the design space.
+
+\paragraph{Static.} Profile dynamic fields are populated once at the
+end of the bootstrap segment, using the empirical p95 and class of
+the bootstrap window, and are never updated thereafter. This
+represents the worst case for drift handling but is the design
+point that current LCM systems often default to in practice when
+no maintenance policy is specified.
+
+\paragraph{Periodic-Window.} Profile dynamic fields are refreshed on
+the same $\Delta_p = 6$-hour schedule as Periodic-Predictor, but
+each refresh's content is sourced from the previous 24-hour
+\emph{observation} window rather than from the forecaster's
+prediction. The numerical p95 field is the empirical 95th
+percentile of that observation window; the class field is derived
+by mapping the window's mean through the per-application class
+thresholds. This is the most direct comparison point for
+Periodic-Predictor: identical schedule, identical update event
+structure, identical class-and-p95 derivation logic; only the
+source of the underlying utilization window differs (past
+observation versus predicted future).
+
+\paragraph{Reactive.} Profile dynamic fields are refreshed when the
+class derived from a rolling 6-hour observation window changes
+relative to the class currently committed in the profile.
+Specifically, at each streaming timestep, the method computes the
+mean of the most recent 6 hours of observed CPU (and separately,
+memory) utilization, maps each mean through the per-application
+class thresholds, and triggers a profile refresh if either the
+candidate CPU class or the candidate memory class differs from the
+currently committed class. When triggered, the method commits both
+modalities together, sourcing the new dynamic fields from the
+observation window. This pattern represents the threshold-based
+reactive autoscaling design point exemplified by production
+systems such as Kubernetes HPA~\cite{kubernetes_hpa} and AWS Auto
+Scaling~\cite{aws_autoscaling}, mapped to the
+profile-maintenance layer; the design is purely observation-based
+and does not consult the forecaster.
+
+\paragraph{Full-Rewrite.} Profile dynamic fields are recomputed on
+every observation timestep from the trailing 24-hour
+\emph{observation} windows for CPU and memory (the same
+window-aggregation helpers used by Periodic-Window and Reactive).
+Predictor streams are accepted by the evaluation runner but are
+ignored by this baseline. It represents an observation-grounded
+upper bound on update frequency: a profile that is always
+maximally fresh with respect to recent observations, at the cost
+of substantial write churn. This baseline is included to test
+whether observation-window methods can close the accuracy gap to
+predictor-grounded refresh merely by refreshing more often.
+
+The six methods together span the trade-off space along two
+dimensions: source of update content (observation window versus
+forecaster output) and refresh trigger (none, threshold-based,
+fixed schedule, every-step, or drift-augmented). The four
+baselines are observation-window methods. Periodic-Predictor and
+DynAPM-V3 occupy a previously unexamined region: forecaster-sourced
+content combined with stable refresh policies (fixed schedule,
+optionally drift-augmented).
+
+% ============================================================
+% 4. Experimental Setup
+% ============================================================
+\section{Experimental Setup}\label{sec:setup}
+
+This section describes the dataset, forecasting-model
+configuration, evaluation protocol parameters, statistical
+methodology, and computing environment used to evaluate DynAPM.
+
+\subsection{Dataset}\label{sec:setup-dataset}
+
+We use the Materna VM utilization trace, distributed via the
+Grid Workloads Archive~\cite{iosup_gwa_2008,materna_trace}. The
+trace consists of three monthly snapshots from a distributed
+data center operated by Materna GmbH (Dortmund, Germany), each
+covering a one-month window over a heterogeneous set of business
+applications running on a VMware ESX
+environment~\cite{kohne_federatedcloudsim_2014,kohne_sla_vm_2016}.
+Per-VM time series are sampled every 5 minutes and report 11
+fields including provisioned CPU and memory, observed CPU and
+memory usage (in MHz, percentage, and KB units), disk I/O
+throughput, and network throughput. We use only the CPU and
+memory percentage fields in the evaluations reported here.
+
+The three traces collectively contain 1{,}592 distinct VM time
+series. We retain only VMs whose time series contain at least
+2{,}000 observations (corresponding to approximately 7 days of
+5-minute samples). This filter removes 16 short series, yielding
+a final corpus of 1{,}576 VMs: 511 from Materna-Trace-1, 521 from
+Materna-Trace-2, and 544 from Materna-Trace-3.
+
+Materna therefore supplies a production data-center/cloud-tier
+workload under offline trace replay. It does not include edge-tier
+devices, container or Kubernetes workloads, heterogeneous
+cloud--edge testbeds, or live orchestrator integration; those
+settings are outside the empirical scope of this paper.
+
+For each retained VM, we partition the time series temporally:
+the first 30\% of timestamps form the \emph{bootstrap segment},
+used to compute per-application class thresholds and to train
+the forecasting model; the remaining 70\% form the \emph{streaming
+segment}, used for evaluation. The 30\% fraction is fixed across
+all VMs; the corresponding bootstrap duration in days varies per
+VM with a mean of 9.3 days, median of 9.3 days, and a range of
+2.1 to 15.6 days (standard deviation 1.5 days).
+
+\subsection{Volatility Stratification}\label{sec:setup-volatility}
+
+To support per-tier analysis, we stratify the corpus by workload
+volatility. For each VM, we compute the population standard
+deviation of CPU utilization (in percentage points) over its
+bootstrap segment. This per-VM scalar is a stable, easily-computed
+proxy for the magnitude of behavioral variation in the workload.
+We then partition the corpus into three tiers --- \textsc{low},
+\textsc{medium}, and \textsc{high} --- using the empirical
+tertiles of this distribution as cut points. Tier sizes are
+525, 525, and 526 VMs respectively. The tier assignment is fixed
+at corpus-build time and does not change during evaluation.
+
+\subsection{Per-Application Forecasting Model}\label{sec:setup-forecaster}
+
+The per-VM forecasting model is a RandomForest
+regressor~\cite{breiman_random_forests_2001} from scikit-learn,
+configured with 200 trees, maximum depth 20, square-root feature
+subsampling at each split, and a fixed random seed (42). All
+other RandomForest hyperparameters take scikit-learn defaults.
+These settings were fixed before corpus evaluation; we do not
+report a hyperparameter search or sensitivity study. Each VM
+receives two independently trained regressors: one for CPU usage
+percentage and one for memory usage percentage. Training uses the
+full bootstrap segment after the feature construction in
+Section~\ref{sec:framework-forecaster}. No internal validation
+split is performed within the bootstrap segment: the forecaster
+is a frozen component for the profile-maintenance comparison, not
+an object of model selection in this study. The bootstrap segment
+contains roughly 2{,}600 samples on average after the corpus
+length filter.
+
+The first 96 timesteps of feature engineering are dropped before
+training, because the longest rolling-window features (96-step
+rolling statistics) are not defined on earlier timestamps. After
+this trimming, rows containing any NaN are also dropped. Once
+trained, the regressor is frozen for the remainder of the trace.
+At each refresh during the streaming segment, the method consumes
+the precomputed predictor lookahead of up to 288 steps to form the
+24-hour predicted window from which the p95 (numerical field) and
+the mean (class derivation) are computed.
+
+\subsection{Evaluation Protocol Parameters}\label{sec:setup-eval}
+
+The snapshot-and-verify protocol introduced in
+Section~\ref{sec:framework-verify} is parameterized as follows.
+
+Evaluation timestamps are drawn from a fixed 12-hour grid
+beginning at the start of each VM's streaming segment, with the
+constraint that the forward 24-hour window from each grid point
+must contain at least 200 observations (corresponding to roughly
+70\% sampling density at 5-minute cadence). This data-aware
+filter removes grid points where the trace is too sparse to
+support reliable ground-truth computation. Across the 1{,}576-VM
+corpus, the protocol generates 40.5 verified evaluation points
+per VM on average (median 41, range 7--48, standard deviation
+7.0).
+
+Ground truth at each evaluation timestamp $t_e$ is derived as
+follows: both the ground-truth class and the ground-truth p95 are
+computed from the forward 24-hour window
+$[t_e, t_e + 24\mathrm{h})$. The class is the mean of observed
+utilization over that window mapped through the per-application
+class thresholds; the p95 is the empirical 95th percentile over
+the same window. Snapshot accuracy at each evaluation
+timestamp is computed as exact-match for the class metric and
+absolute error in percentage points for the p95 metric.
+
+The evaluation cadence (12 hours) is independent of the refresh
+cadence used by Periodic-Predictor and DynAPM-V3 (6 hours), and
+of the refresh policies of the other baselines. At each
+evaluation timestamp, the method's most recently committed
+profile snapshot is read; consequently every method is evaluated
+on the same set of timestamps for the same VM, eliminating
+cadence-mismatch as a source of comparison bias.
+
+\subsection{Provisioning Recommendation Task}\label{sec:setup-provisioning}
+
+The downstream provisioning task uses the same evaluation
+timestamps. At each timestamp, the LCM consumer reads the
+current profile snapshot and computes a recommended capacity as
+$c = \texttt{predicted\_cpu\_p95\_next\_24h} \times s$, where $s$
+is a safety factor. We set $s = 1.2$ as the primary configuration
+and report sensitivity at $s \in \{1.1, 1.5\}$.
+
+The recommendation is compared against the actual observed p95
+of the same forward 24-hour window. We classify the outcome at
+each evaluation point into three categories:
+\textbf{under-provisioned} ($\mathrm{actual} > c$), corresponding
+to an SLA-risk event; \textbf{over-provisioned}
+($c > \mathrm{actual} \times 1.5$), corresponding to a wasted
+capacity event; and \textbf{well-provisioned} otherwise. We
+report per-method rates of each outcome category, averaged first
+within each VM across its evaluation points, then across VMs.
+
+\subsection{Statistical Methodology}\label{sec:setup-statistics}
+
+For each pairwise method comparison, we compute three statistics
+on the per-VM means.
+
+\paragraph{Mean difference.} The mean of paired per-VM differences
+between methods is reported with a 95\% confidence interval
+computed via 1{,}000-sample paired bootstrap with replacement
+over the VM index, taking the 2.5th and 97.5th percentiles of
+the bootstrapped means.
+
+\paragraph{Wilcoxon signed-rank test.} The two-sided paired Wilcoxon
+signed-rank test on per-VM differences, implemented with SciPy's
+\texttt{wilcoxon} using \texttt{zero\_method="wilcox"} (zero
+differences discarded), \texttt{alternative="two-sided"}, and
+default \texttt{method="auto"}. With $n=1{,}576$ pairs
+($n>50$), SciPy selects the \emph{asymptotic} normal
+approximation; we do not apply a continuity correction
+(\texttt{correction=False}). Reported $p$-values are therefore
+asymptotic, not exact enumerations of the signed-rank null.
+We report these $p$-values (in scientific notation or as
+conservative powers-of-ten bounds) rather than only fixed-$\alpha$
+accept/reject decisions.
+
+\paragraph{Cohen's $d$ (paired).} The standardized effect size,
+defined as the mean of paired differences divided by their
+standard deviation (Bessel-corrected). Conventional
+interpretation thresholds are $|d| \geq 0.8$ (large),
+$0.5 \leq |d| < 0.8$ (medium), $0.2 \leq |d| < 0.5$ (small). We
+report this alongside significance to disentangle effect magnitude
+from sample-size-driven significance.
+
+\subsection{Computing Environment}\label{sec:setup-environment}
+
+Experiments were executed on a Python 3 environment with
+scikit-learn $\geq$1.4, pandas $\geq$2.1, NumPy $\geq$1.26,
+joblib $\geq$1.3 for parallelism, River $\geq$0.21 for ADWIN, and
+SciPy $\geq$1.12 for statistical tests. Dependency floors are
+documented in the accompanying artifact's
+\texttt{requirements.txt}. Runs were parallelized across 8 worker
+processes via joblib. Wall-clock times for the headline-producing
+runs were: per-VM forecaster training across the 1{,}576-VM
+corpus, 783 seconds; full-corpus profile evaluation (9{,}456
+method-VM runs across six methods---two proposed and four
+baselines), 1{,}162 seconds; corpus normalized-churn rerun for
+Periodic-Predictor and DynAPM-V3, 297 seconds. The provisioning
+evaluation was bounded by the joinable parquet replays and
+completed within approximately 20 minutes wall-clock. The total
+compute budget for the headline results was approximately one hour
+on a single workstation with 8 worker processes.
+
+\paragraph{AI-assisted research tooling.}
+Consistent with the ACM Policy on Authorship, we disclose generative
+AI use in the research workflow. Anthropic's Claude, accessed through
+the Cursor development environment, assisted with implementing and
+editing evaluation-pipeline code and with interpreting empirical
+outputs during analysis. AI tools did not define the research
+questions, experimental design, or scientific claims. All
+AI-assisted code and analysis were reviewed and verified by the
+authors against executable runs and project tests; the authors remain
+solely responsible for the correctness of the reported results.
+
+% ============================================================
+% 5. Results
+% ============================================================
+\section{Results}\label{sec:results}
+
+This section presents the empirical results of evaluating the two
+proposed methods (Periodic-Predictor and DynAPM-V3) and four
+observation-window baselines on 1{,}576 production VMs from the
+Materna data-center corpus. Section~\ref{sec:results-accuracy} reports the
+headline profile-accuracy results at corpus scale.
+Section~\ref{sec:results-pairwise} presents pairwise statistical
+tests for the two contributions, predictor-grounded refresh and
+drift augmentation. Section~\ref{sec:results-tier} reports
+per-volatility-tier analysis showing where each contribution is
+most consequential. Section~\ref{sec:results-provisioning}
+evaluates the downstream resource-provisioning task.
+Section~\ref{sec:results-ablation} characterizes the drift
+augmentation in more detail through the V3-vs-PP per-VM
+distribution and reports normalized refresh-count statistics.
+
+\subsection{Profile Accuracy at Corpus Scale}\label{sec:results-accuracy}
+
+Table~\ref{tab:method-comparison} summarizes profile accuracy and
+refresh activity for all six methods on the full 1{,}576-VM
+corpus. We report mean CPU and memory class accuracy, mean p95
+absolute error, and mean refresh-event count per VM. Each
+metric is reported with a 95\% confidence interval computed via
+1{,}000-sample paired bootstrap over the VM index.
+
+\begin{table*}
+\centering
+\caption{Per-method profile accuracy and refresh activity on the
+full Materna corpus (1{,}576 VMs; six methods). Mean values are
+reported with 95\% confidence intervals from 1{,}000-sample paired
+bootstrap. Rows are ordered alphabetically by method identifier
+(DynAPM-V3, Full-Rewrite, Periodic-Window, Periodic-Predictor,
+Reactive, Static), not by accuracy.}
+\label{tab:method-comparison}
+\input{tables/table1_method_comparison.tex}
+\end{table*}
+
+The headline observation is that the two methods using
+predictor-grounded refresh (DynAPM-V3 and Periodic-Predictor) are
+clearly separated from the four observation-window methods. CPU
+class accuracy for DynAPM-V3 is 0.870 (95\% CI [0.863, 0.878]) and
+for Periodic-Predictor is 0.868 (95\% CI [0.860, 0.876]). The best
+observation-window method, Full-Rewrite, achieves 0.758
+(95\% CI [0.748, 0.767]). The 11.2 percentage point gap between
+Full-Rewrite and Periodic-Predictor is substantial despite
+Full-Rewrite's much higher refresh activity (1{,}253 refresh
+events per VM compared to Periodic-Predictor's 85.4): more
+refreshes do not compensate for grounding refreshes in observed
+history rather than in forecaster output.
+
+The same pattern holds for memory class accuracy (DynAPM-V3 0.893,
+Periodic-Predictor 0.890, Full-Rewrite 0.763) and for p95
+prediction error (DynAPM-V3 1.04 percentage points CPU MAE,
+Periodic-Predictor 1.06; Full-Rewrite 1.29; Periodic-Window 1.40).
+
+The Static baseline, which never updates the profile after
+deployment, provides the floor on what static profile
+representations can achieve: 0.475 CPU class accuracy and 2.56
+percentage points CPU p95 MAE. The Reactive baseline performs
+worse than several scheduled-refresh baselines on the class
+metric (0.645 CPU accuracy versus 0.737 for Periodic-Window),
+illustrating that observation-window refresh combined with
+threshold-triggered timing chatters under noise without yielding
+a corresponding accuracy benefit.
+
+Figure~\ref{fig:method-progression} visualizes the per-method CPU
+class accuracy ranking. The visual gap between the four
+observation-window methods (Static, Reactive, Periodic-Window,
+Full-Rewrite) and the two predictor-grounded methods
+(Periodic-Predictor, DynAPM-V3) is the central qualitative
+result: predictor-grounded refresh is not a marginal optimization
+but a categorically different operating point on the
+profile-maintenance design space.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figs/figure1_method_progression.pdf}
+  \caption{CPU class accuracy by method, sorted ascending.
+Error bars represent 95\% bootstrap confidence intervals over per-VM
+means ($n_\mathrm{vms}=1{,}576$). The two predictor-grounded methods
+are visibly separated from the four observation-window baselines.}
+  \Description{Vertical bar chart of mean CPU class accuracy for six
+methods ordered left to right from lowest to highest accuracy
+(Static, Reactive, Periodic-Window, Full-Rewrite, Periodic-Predictor,
+DynAPM-V3), each with a small 95\% bootstrap CI error bar. Accuracy
+rises across the four observation-window methods, then jumps to a
+higher, nearly tied pair for Periodic-Predictor and DynAPM-V3.}
+  \label{fig:method-progression}
+\end{figure}
+
+\subsection{Pairwise Statistical Tests}\label{sec:results-pairwise}
+
+Table~\ref{tab:pairwise-deltas} reports paired statistical
+comparisons for the two contributions. Each row reports the mean
+per-VM difference between two methods, its 95\% bootstrap
+confidence interval, the two-sided Wilcoxon signed-rank
+$p$-value, and Cohen's $d$ for paired samples. All comparisons
+use $n=1{,}576$ paired VMs.
+
+\begin{table*}
+\centering
+\caption{Pairwise per-VM differences between methods. Mean
+deltas, 95\% bootstrap CIs (1{,}000 resamples), two-sided
+Wilcoxon signed-rank $p$-values from SciPy's asymptotic
+approximation (\texttt{zero\_method="wilcox"}; zeros discarded;
+no continuity correction), and Cohen's $d$ for paired samples.
+All rows use $n=1{,}576$ VMs.}
+\label{tab:pairwise-deltas}
+\input{tables/table2_pairwise_deltas.tex}
+\end{table*}
+
+\paragraph{Predictor-grounded refresh.} The first four rows of the
+table compare Periodic-Predictor against Periodic-Window. CPU
+class accuracy improves by 13.05 percentage points
+(95\% CI [12.08, 14.03], asymptotic Wilcoxon
+$p = 5.17 \times 10^{-148}$, Cohen's $d = 0.69$). Memory class
+accuracy improves by 14.54 percentage points
+(95\% CI [13.71, 15.31], asymptotic Wilcoxon
+$p = 1.50 \times 10^{-190}$, Cohen's $d = 0.89$). Both effects
+are statistically robust at any conventional significance
+threshold and have effect sizes in the medium-to-large range.
+The CPU and memory p95 prediction errors also decrease (mean
+reduction of 0.34 percentage points CPU,
+$p = 1.20 \times 10^{-42}$; 0.52 percentage points memory,
+$p = 2.38 \times 10^{-22}$), though their Cohen's $d$ values are
+smaller (0.12 and 0.25), as expected for an absolute-error
+metric whose per-VM variance is larger than for the bounded
+class-accuracy metric.
+
+The narrowness of the change distinguishes this from typical ML
+methods comparisons. We do not introduce a new forecasting model
+or change the refresh schedule. The single change is the
+\emph{source} of the update content: forecaster prediction rather
+than recent observation. The 13-to-14 percentage point gap is the
+empirical magnitude of this change at corpus scale.
+
+\paragraph{Drift augmentation.} The next four rows compare
+DynAPM-V3 against Periodic-Predictor. CPU class accuracy improves by 0.24
+percentage points (95\% CI [0.19, 0.28], asymptotic Wilcoxon
+$p = 2.76 \times 10^{-18}$, Cohen's $d = 0.23$). Memory class accuracy improves by 0.32
+percentage points ($d = 0.28$). p95 prediction errors decrease
+by 0.02 percentage points each. The improvements are small in
+absolute terms and small in effect size, but the bootstrap
+confidence intervals exclude zero and the $p$-values are highly
+significant. This is the expected pattern when a refinement is
+genuine but limited in scope: the refinement helps most VMs by a
+small amount, with the consistency of direction generating the
+significance.
+
+Figure~\ref{fig:predictor-lift} shows the per-VM distribution of
+the predictor-grounded effect (CPU class accuracy of
+Periodic-Predictor minus CPU class accuracy of Periodic-Window).
+The mean improvement is $+0.130$ (median $0.125$), with the
+distribution mass-shifted above zero; a minority of VMs are
+negative, including a thin left tail of larger reversals, while
+most paired differences remain positive.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figs/figure2_predictor_lift_distribution.pdf}
+  \caption{Per-VM distribution of the predictor-grounded effect on
+CPU class accuracy: $\mathrm{Periodic\text{-}Predictor} -
+\mathrm{Periodic\text{-}Window}$. Each histogram bar represents
+VM count. Vertical lines indicate the corpus mean and median.
+The distribution is mass-shifted positive across the corpus.}
+  \Description{Histogram of per-VM CPU class-accuracy differences
+(Periodic-Predictor minus Periodic-Window) for 1{,}576 VMs. The
+horizontal axis is the paired difference; the vertical axis is VM
+count. Most mass lies above zero, with dashed mean and dotted median
+reference lines both near $+0.13$. A thinner left tail of negative
+differences extends below zero.}
+  \label{fig:predictor-lift}
+\end{figure}
+
+\subsection{Per-Volatility-Tier Analysis}\label{sec:results-tier}
+
+Table~\ref{tab:per-tier} reports CPU class accuracy and CPU
+under-provisioning rate for each method, stratified by VM
+volatility tier (low, medium, high). Tier sizes are 525, 525, and
+526 VMs respectively (Section~\ref{sec:setup-volatility}). For
+the predictor-grounded methods, the relative gain over
+observation-window baselines grows with workload volatility.
+
+\begin{table*}
+\centering
+\caption{Per-volatility-tier results. CPU class accuracy and CPU
+under-provisioning rate for each method, by tier. The
+predictor-grounded methods' relative gains are largest in the
+high-volatility tier.}
+\label{tab:per-tier}
+\input{tables/table3_per_tier.tex}
+\end{table*}
+
+The CPU under-provisioning rate (computed as part of the
+provisioning evaluation,
+Section~\ref{sec:results-provisioning}) shows the most
+operationally meaningful per-tier story. For the high-volatility
+tier --- the 526 most variable VMs in the corpus, where
+provisioning errors are most consequential ---
+Periodic-Predictor cuts the under-rate from 14.79\% (under
+Periodic-Window) to 9.08\%, an absolute reduction of 5.71
+percentage points and a relative reduction of 38.6\%. For the
+medium-volatility tier the absolute reduction is 1.71 percentage
+points (relative 21.5\%). For the low-volatility tier
+Periodic-Predictor's under-rate is marginally higher than
+Periodic-Window's (3.07\% vs 2.83\%, an absolute increase of
+0.24 percentage points), reflecting the fact that on stable
+workloads, both methods are accurate enough that the residual
+error is dominated by per-window noise rather than by
+forecasting source.
+
+This per-tier pattern is consistent with the operational
+intuition behind the methodology: forecasting helps most where
+recent observations are least reliable as a predictor of future
+behavior. On low-volatility workloads, the previous 24 hours
+predict the next 24 hours well, and observation-window refresh
+suffices. On high-volatility workloads, the predictor's ability
+to integrate longer-range features (lagged values, day-of-week
+seasonality, rolling-window statistics over multiple horizons)
+yields substantial accuracy gains that compound into significant
+reductions in operational SLA-risk.
+
+Figure~\ref{fig:per-tier-under-rate} visualizes the
+under-provisioning rates for all six methods broken down by
+tier. The visual clarity of the high-tier gap between
+predictor-grounded and observation-window methods is the most
+compelling figure for the operational impact of the
+methodology.
+
+\begin{figure*}
+\centering
+\includegraphics[width=\linewidth]{figs/figure4_per_tier_under_rate.pdf}
+\caption{Mean CPU under-provisioning rate by method, grouped by
+volatility tier. Predictor-grounded methods (Periodic-Predictor
+and DynAPM-V3) cut the high-volatility-tier under-rate by 39\%
+relative to Periodic-Window.}
+\Description{Grouped bar chart of mean CPU under-provisioning rate.
+Methods appear along the horizontal axis; within each method, three
+bars show low-, medium-, and high-volatility tiers. Under-rates rise
+with volatility for every method. Reactive is highest on the
+high-volatility tier; Periodic-Predictor and DynAPM-V3 are nearly
+tied and lowest on that tier, below Periodic-Window and Full-Rewrite.}
+\label{fig:per-tier-under-rate}
+\end{figure*}
+
+\subsection{Resource Provisioning Recommendation Task}\label{sec:results-provisioning}
+
+The provisioning task (Section~\ref{sec:setup-provisioning})
+treats each profile snapshot as input to a downstream LCM
+consumer that recommends a provisioned capacity of $1.2 \times
+\texttt{predicted\_cpu\_p95\_next\_24h}$. We measure the rate of
+under-provisioning (actual p95 exceeds recommended capacity, an
+SLA-risk event) and over-provisioning (recommended capacity
+exceeds 1.5 times actual p95, a wasted-capacity event) at each
+evaluation timestamp.
+
+Figure~\ref{fig:provisioning-outcomes} shows stacked
+under/well/over rates for all six methods. Predictor-grounded
+methods achieve the highest well-provisioned share (DynAPM-V3
+88.2\%, Periodic-Predictor 87.8\%); the remaining 12\% is split
+roughly evenly between under-provisioning (6.1\% for both
+methods) and over-provisioning (5.7\% V3, 6.0\% PP). Static and
+Reactive sit at the operationally bad extremes: Static
+over-provisions in 16.0\% of windows (worst over-rate) while
+Reactive under-provisions in 16.4\% (worst under-rate).
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figs/figure3_provisioning_outcomes.pdf}
+  \caption{Resource provisioning outcomes for all six evaluated methods
+at safety factor 1.2. Stacked bars show the fraction of evaluation
+points classified as under-provisioned (SLA risk), well-provisioned,
+or over-provisioned (wasted capacity), averaged within each VM and
+then across VMs.}
+  \Description{Stacked bar chart for six methods at safety factor 1.2.
+Each bar sums to one and stacks under-provisioned (bottom),
+well-provisioned (middle), and over-provisioned (top) fractions after
+averaging within then across VMs. Periodic-Predictor and DynAPM-V3
+show the largest well-provisioned middle segments and small under
+and over caps; Static has the largest over segment; Reactive has the
+largest under segment.}
+  \label{fig:provisioning-outcomes}
+\end{figure}
+
+\paragraph{Predictor-grounded versus observation-window provisioning.}
+Comparing Periodic-Predictor against Periodic-Window: CPU
+under-rate drops from 8.52\% to 6.13\%, an absolute reduction of
+2.39 percentage points and a relative reduction of 28\%
+(95\% bootstrap CI on the absolute delta:
+[$-3.07\%, -1.67\%$], asymptotic Wilcoxon
+$p = 7.06 \times 10^{-62}$, Cohen's
+$d = -0.17$). Memory under-rate similarly drops by 1.55
+percentage points ($p = 1.86 \times 10^{-57}$). The over-rate change is
+small for CPU but substantial for memory ($-3.20$ percentage
+points absolute, $p = 4.77 \times 10^{-83}$), reflecting the larger
+forecasting improvement on memory than on CPU.
+
+\paragraph{Drift augmentation in provisioning.} DynAPM-V3 ties
+Periodic-Predictor on under-rate (the difference is 0.016
+percentage points, with a CI containing zero and Wilcoxon
+$p = 0.21$, statistically not distinguishable from no effect),
+but reduces over-rate by 0.31 percentage points
+($p = 1.24 \times 10^{-26}$, Cohen's $d = -0.30$). The interpretation is that drift
+augmentation does not measurably reduce SLA-risk events further
+beyond what predictor-grounded refresh already achieves, but it
+does reduce wasted capacity by trimming over-allocation when the
+forecaster's residuals indicate the workload has shifted to a
+lower regime.
+
+\paragraph{Sensitivity to safety factor.} We re-evaluated the
+provisioning task at safety factors $s \in \{1.1, 1.2, 1.5\}$ to
+verify that the method ranking is not an artifact of the chosen
+safety margin. Across all three values of $s$, the ordering of
+methods by under-rate is preserved: predictor-grounded methods
+are always the lowest, observation-window scheduled methods
+intermediate, and Reactive is always worst. The
+predictor-grounded under-rate advantage over Periodic-Window has
+absolute magnitudes of 1.4, 2.4, and 1.8 percentage points at
+$s = 1.1, 1.2, 1.5$ respectively. The qualitative ranking of
+methods is therefore robust to the choice of safety margin in
+the range we evaluated.
+
+\subsection{Drift Augmentation: Per-VM Distribution and Refresh Activity}\label{sec:results-ablation}
+
+To characterize when drift augmentation helps, we examine the
+per-VM distribution of the V3-versus-PP CPU class accuracy
+delta. Figure~\ref{fig:v3-vs-pp-scatter} plots each VM as a point
+with x-coordinate equal to Periodic-Predictor's CPU class
+accuracy and y-coordinate equal to DynAPM-V3's accuracy on the
+same VM. Points above the $y=x$ diagonal are VMs where drift
+augmentation helps; points below are VMs where it hurts.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figs/figure5_v3_vs_pp_per_vm_corpus.pdf}
+  \caption{Per-VM CPU class accuracy: DynAPM-V3 versus
+Periodic-Predictor (n=1{,}576). Points above the y=x diagonal
+indicate VMs where drift augmentation improves accuracy; points
+below indicate VMs where it hurts. The corpus distribution shows
+a strong concentration on the diagonal (drift augmentation
+neutral on most VMs), with a long upper tail of VMs that benefit
+substantially from the additional refreshes.}
+  \Description{Scatter plot of 1{,}576 VMs with Periodic-Predictor CPU
+class accuracy on the x-axis and DynAPM-V3 accuracy on the y-axis,
+plus a dashed $y=x$ line. Most points lie on the diagonal (equal
+accuracy). Points colored as V3 greater than PP sit above the line,
+including a sparse upper tail of larger gains; only a few points fall
+slightly below the line.}
+  \label{fig:v3-vs-pp-scatter}
+\end{figure}
+
+The distribution is highly asymmetric. Of the 1{,}576 VMs:
+\begin{itemize}
+\item 1{,}427 VMs (90.5\%) have V3 = PP exactly --- drift
+augmentation triggers no improvement, typically because no drift
+events fire during the operational period or because the periodic
+schedule already captures the relevant changes.
+\item 135 VMs (8.6\%) have V3 \textgreater\ PP --- drift events fired
+and the additional refreshes improved accuracy.
+\item 14 VMs (0.9\%) have V3 \textless\ PP --- drift events fired
+and the additional refreshes degraded accuracy.
+\end{itemize}
+
+The ratio of helped to hurt VMs is approximately 10:1, and the
+maximum per-VM gain (12.5 percentage points) is more than twice
+the maximum per-VM loss (5.3 percentage points). The per-VM mean
+gain of 0.24 percentage points is therefore not characteristic of
+the corpus as a whole: it is concentrated in a minority of VMs,
+mostly in the high-volatility tier, where drift augmentation
+delivers operationally meaningful improvements.
+
+\paragraph{Refresh activity.} DynAPM-V3 commits 91.3 refresh events
+per VM on average across the operational period (median 89),
+compared to Periodic-Predictor's 85.4 (median 86). The
+decomposition for V3 is 85.4 periodic refreshes plus 5.96 drift
+refreshes per VM on average. The paired per-VM delta is 5.96
+events with 95\% bootstrap CI [5.57, 6.33], asymptotic Wilcoxon
+$p = 1.54 \times 10^{-212}$. The drift augmentation increases refresh activity by
+about 7\% on average; this overhead is the cost paid for the
+gains documented in this section. Methods that refresh more
+aggressively (Full-Rewrite at 1{,}253 events per VM) achieve
+substantially worse accuracy, confirming that refresh frequency
+is not the primary lever and that the source of update content
+matters more than the timing of updates.
+
+% ============================================================
+% 6. Discussion
+% ============================================================
+\section{Discussion}\label{sec:discussion}
+
+This section discusses the implications of the two contributions,
+identifies threats to validity, and considers the conditions
+under which the findings reported in Section~\ref{sec:results}
+would and would not generalize beyond our experimental setting.
+
+\subsection{Implications of Predictor-Grounded Refresh}\label{sec:discussion-pp}
+
+The empirical magnitude of the predictor-grounded refresh
+effect --- 13.05 percentage points CPU class accuracy and 14.54
+percentage points memory class accuracy over a matched-schedule
+observation-window baseline --- is not a marginal improvement.
+At this magnitude on a 1{,}576-VM corpus, with bootstrap
+confidence intervals on the order of one percentage point and
+$p$-values below $10^{-147}$, the effect is qualitatively distinct
+from the kind of accuracy lift achievable through tuning of an
+observation-window method. The 11.2 percentage point gap between
+Periodic-Predictor and Full-Rewrite, despite Full-Rewrite's
+1{,}253 refreshes per VM versus Periodic-Predictor's 85, indicates
+that this gap is not closable by increasing refresh frequency
+within the observation-window paradigm.
+
+The mechanism explaining this gap is straightforward in retrospect.
+Profile dynamic fields are read by downstream consumers that act
+on \emph{future} behavior: an autoscaler provisions for the
+upcoming window, a placement scheduler considers projected load,
+a capacity planner reasons about the next operational period.
+When dynamic fields summarize past observations, the consumer must
+either accept that summary as a proxy for the future (introducing
+prediction error implicit in the proxy assumption) or perform its
+own forecasting on top of the profile (fragmenting forecasting
+logic across multiple LCM components). Predictor-grounded refresh
+moves the forecasting step into the profile-maintenance layer
+itself: the per-VM forecaster is consulted at each refresh, and
+its output becomes the profile's dynamic-field content. Consumers
+read forecasts directly. The 13--15 percentage point accuracy gap
+quantifies the information loss imposed by the
+observation-as-proxy assumption.
+
+This finding has design implications for application-profile
+schemas intended for CECC LCM systems. Schemas that explicitly
+distinguish between observed and predicted dynamic fields, and
+that provide first-class support for forecast-grounded updates,
+should produce more actionable profiles than schemas that treat
+dynamic fields as monitoring summaries---at least for
+data-center/cloud-tier consumers of the kind evaluated here.
+Concretely, schema designs should consider semantic versioning of
+dynamic fields (observed-window vs.\ predicted-window), explicit
+forecast-horizon metadata, and update-event provenance so that
+consumers know which version of a field they are reading.
+
+\subsection{Why Drift Augmentation Provides Small but Consistent Gains}\label{sec:discussion-drift}
+
+The drift-augmentation contribution is genuine but smaller in
+scope than the predictor-grounded contribution. The corpus-mean
+gain is 0.24 percentage points CPU class accuracy with $p$ below
+$10^{-17}$, but the per-VM distribution
+(Section~\ref{sec:results-ablation}) reveals that 90.5\% of VMs
+see no change at all from drift augmentation, while 8.6\% of VMs
+benefit, and 0.9\% are slightly hurt. The corpus mean is a
+weighted average across these three populations.
+
+Two observations explain this pattern. First, the periodic
+refresh schedule already captures most of the actionable change
+in workload behavior: at $\Delta_p = 6$ hours, scheduled refreshes
+occur 4 times per day and four times more frequently than the
+forecast horizon's 24-hour scope. Drift events between scheduled
+refreshes correspond to unexpectedly fast change relative to this
+already-frequent baseline. Such events are sparse on most VMs
+because most VMs in production data centers are stable enough
+that 6-hour periodic refresh suffices.
+
+Second, when drift events do fire, they correspond to
+operationally meaningful change. The 135 VMs where DynAPM-V3
+improves over Periodic-Predictor are concentrated in the
+high-volatility tier (Section~\ref{sec:results-tier}); the
+maximum per-VM gain is 12.5 percentage points, more than twice
+the maximum loss of 5.3 percentage points. The asymmetry is
+consistent with the operational interpretation of the mechanism:
+ADWIN signals drift only when the residual stream contains
+statistically distinct sub-windows, and the ensuing refresh
+incorporates the most recent signal into the profile. On VMs
+where the workload is genuinely changing, this targeted
+intervention helps. On VMs where the workload is stable, ADWIN
+seldom signals, and DynAPM-V3 reduces to Periodic-Predictor.
+
+The result also tempers an instinctive expectation that adding
+``intelligence'' to a maintenance method should yield large
+gains. In our setting, the largest gain came from rethinking the
+\emph{source} of the update (predictor versus observation),
+not from elaborating the trigger logic with a sophisticated
+detector. The methodological lesson is that data-source decisions
+should be exhausted before trigger-mechanism elaboration is
+considered.
+
+\subsection{Threats to Validity}\label{sec:discussion-threats}
+
+We identify four threats to validity for the findings reported
+in Section~\ref{sec:results}.
+
+\paragraph{External validity (corpus and deployment tier).}
+Our evaluation uses the Materna VM trace exclusively, under
+offline replay of CPU and memory utilization. Materna is a
+substantial corpus (1{,}576 VMs across three monthly snapshots of
+heterogeneous business applications) but represents a single
+deployment context: a European enterprise data center on VMware
+ESX---i.e., the data-center/cloud tier of the continuum, not a
+full CECC testbed. We do not evaluate edge-tier workloads,
+containerized or Kubernetes deployments, heterogeneous
+cloud--edge platforms, or live orchestrator integration.
+Public-cloud traces (e.g., Google Borg or Alibaba) and edge-tier
+workloads may exhibit different volatility, periodicity, and
+scaling behavior. The qualitative finding that predictor-grounded
+refresh outperforms observation-window refresh should transfer
+wherever workloads are non-trivially predictable from
+per-instance history, but the magnitude of the effect may differ,
+and continuum-wide claims require additional validation.
+
+\paragraph{Single forecaster.} We use RandomForest with fixed
+hyperparameters as the per-VM forecaster. The forecaster is not
+the contribution of this work, but its choice affects the
+absolute accuracy of predictor-grounded methods. A weaker
+forecaster would likely shrink the predictor-grounded gap; a
+stronger one would likely widen it. We did not compare alternative
+forecasters in this study, so we do not claim robustness of the
+gap magnitude to model family. The qualitative finding that
+predictor-sourced updates outperform matched-schedule
+observation-window updates presupposes that the forecaster
+carries some signal about future behavior on the evaluated
+traces.
+
+\paragraph{Single class scheme.} The five-class label space
+(\textsc{idle}, \textsc{low}, \textsc{medium}, \textsc{high},
+\textsc{burst}) and the per-VM tertile-based volatility tiers
+are specific to our schema. The accuracy advantage of
+predictor-grounded refresh applies to any classification scheme
+where the predicted distribution carries information beyond the
+observed distribution; the specific percentage-point magnitudes
+are sensitive to bin boundaries (a four-class scheme with wider
+bins would naturally have higher absolute accuracy and a smaller
+percentage-point gap, even though the underlying mechanism is
+unchanged).
+
+\paragraph{Snapshot-and-verify protocol versus production deployment.}
+Our evaluation protocol reads profile snapshots at fixed
+12-hour grid points and verifies them against ground truth from
+the subsequent 24 hours. This protocol abstracts away the
+operational behaviors of real LCM consumers, which may read
+profiles at unpredictable times, may persist their own copies
+of profiles, and may interact with profile maintenance
+asynchronously. The protocol is appropriate for measuring profile
+representation accuracy as an isolated property; integrating
+DynAPM into a production LCM stack and measuring end-to-end
+operational metrics (e.g., actual SLA-violation rates, resource
+utilization, cost) is future work.
+
+\subsection{Generalization}\label{sec:discussion-generalization}
+
+The methodology is intended for CECC LCM systems that share two
+structural features: applications with per-instance behavioral
+heterogeneity (so that per-application forecasters carry
+meaningful signal), and consumers that read profile snapshots and
+act on near-future behavior. Our evidence for those features comes
+from production data-center VMs; we hypothesize---but do not
+demonstrate---that the same design applies at edge and hybrid
+tiers when analogous telemetry and profile consumers exist.
+
+The contributions are likely \emph{not} useful where applications
+are too homogeneous for per-application forecasting to beat global
+heuristics, where behavior is effectively unpredictable, or where
+downstream consumers do not read the profile fields whose accuracy
+we measure. The third case is a deployment concern that warrants
+integration testing before any production rollout.
+
+Replication on public-cloud, edge-tier, containerized, and live
+orchestrated settings is needed to validate effect magnitudes
+beyond the Materna data-center tier.
+
+% ============================================================
+% 7. Conclusion and Future Work
+% ============================================================
+\section{Conclusion and Future Work}\label{sec:conclusion}
+
+We presented DynAPM, a profile-maintenance methodology intended for
+lifecycle management in the cloud-edge continuum, in which dynamic
+profile fields encode forecasts of near-future application behavior
+rather than summaries of recent observations. Within this framework
+we propose two methods: Periodic-Predictor, which performs
+predictor-grounded refresh on a fixed schedule, and DynAPM-V3, which
+augments that schedule with drift-triggered refreshes on the
+prediction residual stream. Evaluating both proposed methods against
+four observation-window baselines (Static, Periodic-Window, Reactive,
+and Full-Rewrite)---six methods in total---via offline replay on
+1{,}576 production VMs from the Materna enterprise data-center
+corpus (the data-center/cloud tier), we found that predictor-grounded
+refresh substantially improves profile accuracy over a
+matched-schedule observation-window baseline, that this accuracy gain
+translates into a corresponding reduction in SLA-risk events on a
+downstream provisioning task, and that drift augmentation yields a
+small but statistically robust further refinement concentrated on
+high-volatility workloads.
+
+The methodological lesson from this work is narrower and more
+specific than ``prediction beats observation.'' The lesson is
+that the \emph{source} of profile updates --- whether observed
+history or model-based forecast --- is a first-order design
+choice for profile-maintenance methods, separable from the
+trigger logic that decides when to refresh. Both academic and
+production profile-maintenance designs have largely treated the
+update source as an implicit by-product of the trigger
+mechanism. Treating the source as a primary design dimension,
+and grounding it in per-application forecasters, opens a
+previously underexplored region of the design space.
+
+Several directions follow naturally from the limitations
+identified in Section~\ref{sec:discussion-threats}.
+Cross-dataset replication on public-cloud traces and, separately,
+edge-tier, containerized, and heterogeneous cloud--edge workloads
+would test whether the predictor-grounded effect holds beyond the
+Materna data-center tier. End-to-end integration with a live LCM
+or orchestrator stack, with measurement of operational SLA,
+utilization, and cost outcomes, remains future work. Substituting
+more expressive forecasters---attention-based architectures,
+ensemble models, or online-learning forecasters that adapt to
+drift directly---would characterize the upper bound on what
+predictor-grounded refresh can achieve. Finally, the asymmetric
+per-VM distribution of the drift-augmentation effect
+(Section~\ref{sec:results-ablation}) suggests that selective
+drift-augmentation policies---enabling drift refreshes only for
+VMs whose volatility characteristics indicate the mechanism will
+help---could improve the cost-benefit profile of DynAPM-V3 further.
+
+% ============================================================
+% Declarations
+% ============================================================
+
+\section*{Declaration of Competing Interest}
+The authors declare that they have no known competing financial interests
+or personal relationships that could have appeared to influence the work
+reported in this paper.
+
+\section*{Declaration of Generative AI and AI-Assisted Technologies}
+We used Anthropic's Claude through the Cursor environment as follows.
+\emph{Code assistance:} drafting and editing evaluation-pipeline and
+supporting scripts. \emph{Analysis assistance:} help interpreting
+empirical outputs and organizing comparisons. \emph{Language and
+drafting assistance:} help editing and drafting manuscript prose
+(disclosed for transparency; ACM does not currently require
+disclosure of writing assistance alone). AI systems are not authors.
+The authors reviewed and revised all AI-assisted code, analyses, and
+text, verified empirical claims against executed experiments and
+tests, and take full responsibility for the content of this article.
+Research uses of AI are also summarized in
+Section~\ref{sec:setup-environment}.
+
+\section*{Data Availability}
+The Materna VM utilization traces used in this study are publicly
+available from the Grid Workloads Archive~\cite{iosup_gwa_2008,materna_trace}
+and via Kaggle at
+\url{https://www.kaggle.com/datasets/kpiyush04/maternaworkloadtraces}.
+Raw Materna CSVs are not redistributed with the submission artifact.
+Evaluation code, scripts, and regenerated paper tables/figures will be
+made available via an anonymous artifact link for review
+(\texttt{ANONYMOUS-ARTIFACT-URL}) and via a public archival release upon
+acceptance.
+
+\section*{Artifact Availability}
+An anonymous review artifact will be hosted at
+\texttt{ANONYMOUS-ARTIFACT-URL}. The intended contents include source
+code and scripts to regenerate the reported tables and figures from
+precomputed intermediate artifacts, dependency pins
+(\texttt{requirements.txt}), and documentation sufficient to rerun the
+evaluation pipeline. Large raw traces and full intermediate result
+trees may be omitted for size; instructions will describe how to obtain
+Materna data from the Grid Workloads Archive and which derived
+artifacts are included.
+
+% ============================================================
+% Bibliography
+% ============================================================
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{cas-refs}
+
+\end{document}

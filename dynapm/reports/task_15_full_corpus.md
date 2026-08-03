@@ -1,11 +1,18 @@
 # Task 15: Full-corpus evaluation (1,576 VMs × 6 methods)
 
 ## What was ran
-Locked kept list `/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/data/kept_vms.json` (**1576** VMs) was evaluated under `runner_v2.run_method_on_vm` for six methods (**9456** runs) with `joblib.Parallel(n_jobs=8)`. Volatility tiers are tertiles of bootstrap-segment CPU% std (same construction as Task 5B’s sample strata). Per-run JSON fragments are stored under `/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/results/eval_full_corpus/` **without** the heavy `update_log` field (metrics are duplicated in parquet). Consolidated **`/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/data/eval_full_corpus_summary.parquet`** includes `run_status` ∈ {`ok`,`failed`,`skipped`} and `failure_reason`. The driver script reloads existing valid per-run JSON so interrupted batches can resume without recomputing finished pairs.
+Locked kept list `/Users/fgtek002/gwa-t-13-lstm-pipeline/dynapm/data/kept_vms.json` (**1576** VMs)
+was evaluated under `runner_v2.run_method_on_vm` for six methods (**9456** runs) with
+`joblib.Parallel(n_jobs=8)`. Volatility tiers are tertiles of bootstrap-segment CPU% std (same
+construction as Task 5B’s sample strata). Outputs: per-run JSON fragments stored under
+`/Users/fgtek002/gwa-t-13-lstm-pipeline/dynapm/results/eval_full_corpus/` **without** the heavy
+`update_log` field (metrics are duplicated in parquet). Consolidated
+**`/Users/fgtek002/gwa-t-13-lstm-pipeline/dynapm/data/eval_full_corpus_summary.parquet`** includes
+`run_status` ∈ {`ok`,`failed`,`skipped`} and `failure_reason`.
 
 ## Run-status diagnostic
 - **Total runs attempted:** 9456 (expected **9456**).
-- **Total wall-clock:** 1162.0 s.
+- **Total wall-clock:** 2130.0 s.
 - **static_v2:** ok **1576**, failed **0**, skipped **0** (success fraction **1.0000**).
 - **periodic_6h_v2:** ok **1576**, failed **0**, skipped **0** (success fraction **1.0000**).
 - **reactive_v2:** ok **1576**, failed **0**, skipped **0** (success fraction **1.0000**).
@@ -39,9 +46,9 @@ Successful runs only; **fraction_corpus** = successful / 1,576. Sorted by **mean
 *Mean CPU / memory class accuracy; tier counts reflect the full kept list.*
 | volatility_tier | n_vms_in_tier | static_v2_cpu | static_v2_mem | periodic_6h_v2_cpu | periodic_6h_v2_mem | reactive_v2_cpu | reactive_v2_mem | full_rewrite_v2_cpu | full_rewrite_v2_mem | periodic_predictor_6h_v2_cpu | periodic_predictor_6h_v2_mem | dynapm_v3_v2_cpu | dynapm_v3_v2_mem |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| low | 525 | 0.4134123021404823 | 0.6975408781859836 | 0.7357822225716083 | 0.7845006059562294 | 0.6956575480144958 | 0.7097271133179245 | 0.7560807025056974 | 0.8005920180432378 | 0.8760071258749661 | 0.9126269768463217 | 0.8768138130342116 | 0.9136675779155589 |
-| medium | 525 | 0.47467499812516184 | 0.5754920758931468 | 0.7367280037631266 | 0.7389221669380704 | 0.6197430895313154 | 0.6012707868869911 | 0.7554925697401417 | 0.7573439564317628 | 0.8503580314061779 | 0.8751642569240543 | 0.8523845284896603 | 0.8791697739235989 |
-| high | 526 | 0.5353660370758812 | 0.49373981169923875 | 0.7383883527125827 | 0.7094257002541264 | 0.6180704777840095 | 0.5792141190622151 | 0.7615689581390582 | 0.7313114147910483 | 0.8759720281313732 | 0.8812825190867368 | 0.8802206679564729 | 0.8857932819163943 |
+| low | 526 | 0.4145274878778578 | 0.6970068967952625 | 0.736284537737822 | 0.784474622548201 | 0.6962361458319586 | 0.7097244635460908 | 0.7565444274058767 | 0.800614656792205 | 0.8762428537725422 | 0.9127930852553591 | 0.8770480073060096 | 0.9138317079955673 |
+| medium | 525 | 0.4733741851170317 | 0.5760456957150591 | 0.7359846820441951 | 0.7385224379407804 | 0.6191391406346836 | 0.6007578174715827 | 0.7549350784509432 | 0.7565861167105085 | 0.8501722009764451 | 0.8746067656348557 | 0.8521986980599275 | 0.8786122826344 |
+| high | 525 | 0.5357818330117747 | 0.4933329978678645 | 0.7386333665319192 | 0.7097084623312657 | 0.6179469418764203 | 0.5794811471171071 | 0.7616722950628074 | 0.7319146095880953 | 0.8759216148051657 | 0.8816138818408626 | 0.8801783472775514 | 0.8861332365997194 |
 
 ## Pairwise deltas with bootstrap CIs
 *Paired exclusively on VMs where **both** methods succeeded.*
@@ -53,9 +60,9 @@ Successful runs only; **fraction_corpus** = successful / 1,576. Sorted by **mean
 
 Per-tier mean ΔCPU / ΔMem:
 
-- **low:** ΔCPU **0.140225**, ΔMem **0.128126**
-- **medium:** ΔCPU **0.113630**, ΔMem **0.136242**
-- **high:** ΔCPU **0.137584**, ΔMem **0.171857**
+- **low:** ΔCPU **0.139958**, ΔMem **0.128318**
+- **medium:** ΔCPU **0.114188**, ΔMem **0.136084**
+- **high:** ΔCPU **0.137288**, ΔMem **0.171905**
 ### (B) DynAPM-V3 vs Periodic-Predictor
 - **n_pairs:** 1576
 - **Δ CPU:** mean **0.002362**, bootstrap 95% CI **[0.001885, 0.002887]**, Wilcoxon *p=* **2.759e-18**
@@ -63,9 +70,9 @@ Per-tier mean ΔCPU / ΔMem:
 
 Per-tier mean ΔCPU / ΔMem:
 
-- **low:** ΔCPU **0.000807**, ΔMem **0.001041**
+- **low:** ΔCPU **0.000805**, ΔMem **0.001039**
 - **medium:** ΔCPU **0.002026**, ΔMem **0.004006**
-- **high:** ΔCPU **0.004249**, ΔMem **0.004511**
+- **high:** ΔCPU **0.004257**, ΔMem **0.004519**
 
 ## Near-idle VM subset analysis
 Non-idle if `bootstrap_summary.cpu_p80` **>** **5**. Count **non-idle VMs:** **386** / **1576**.
@@ -91,29 +98,29 @@ Non-idle if `bootstrap_summary.cpu_p80` **>** **5**. Count **non-idle VMs:** **3
 | Q2 PP−Window Δ CPU bootstrap 95% CI excludes **0**? | **PASS** | CI **[0.121514, 0.139817]** |
 | Q3 V3 mean CPU acc ≥ PP mean? | **PASS** | V3 **0.869813**, PP **0.867451** |
 | Q4 V3−PP Δ CPU CI excludes negatives (low ≥ 0)? | **PASS** | CI **[0.001885, 0.002887]** |
-| Q5 High tier: V3 mean CPU > PP mean? | **PASS** | V3 **0.880221**, PP **0.875972** |
+| Q5 High tier: V3 mean CPU > PP mean? | **PASS** | V3 **0.880178**, PP **0.875922** |
 | Q6 Failures per method < **5%**? | **PASS** | `static_v2` **0.00%**, `periodic_6h_v2` **0.00%**, `reactive_v2` **0.00%**, `full_rewrite_v2` **0.00%**, `periodic_predictor_6h_v2` **0.00%**, `dynapm_v3_v2` **0.00%** |
 
 ## Figures
-- `/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_15/method_progression_corpus.png`
-- `/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_15/method_progression_per_tier.png`
-- `/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_15/dynapm_v3_vs_periodic_predictor_per_vm_corpus.png`
-- `/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_15/predictor_lift_distribution.png`
+- `/Users/fgtek002/gwa-t-13-lstm-pipeline/dynapm/reports/task_15/method_progression_corpus.png`
+- `/Users/fgtek002/gwa-t-13-lstm-pipeline/dynapm/reports/task_15/method_progression_per_tier.png`
+- `/Users/fgtek002/gwa-t-13-lstm-pipeline/dynapm/reports/task_15/dynapm_v3_vs_periodic_predictor_per_vm_corpus.png`
+- `/Users/fgtek002/gwa-t-13-lstm-pipeline/dynapm/reports/task_15/predictor_lift_distribution.png`
 
 ## Files created or modified
-- `/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/data/eval_full_corpus_summary.parquet`
-- `/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/data/eval_full_corpus_diagnostics.json`
-- `/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/reports/task_15_full_corpus.md`
-- `/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/dynapm/results/eval_full_corpus`
+- `/Users/fgtek002/gwa-t-13-lstm-pipeline/dynapm/data/eval_full_corpus_summary.parquet`
+- `/Users/fgtek002/gwa-t-13-lstm-pipeline/dynapm/data/eval_full_corpus_diagnostics.json`
+- `/Users/fgtek002/gwa-t-13-lstm-pipeline/dynapm/reports/task_15_full_corpus.md`
+- `/Users/fgtek002/gwa-t-13-lstm-pipeline/dynapm/results/eval_full_corpus`
 
 ## Test results
-- `pytest dynapm/tests/test_dynapm_v3.py -q` — **3 passed** (post–Task 15 smoke).
+`pytest dynapm/tests/test_dynapm_v3.py -q` — **3 passed** after Task 15 (smoke sanity for drift policy). Full corpus run does not add new mandated tests.
 
 ## Assumptions
 - **Volatility tiers** follow Task 5B: tertiles of bootstrap CPU% standard deviation across the locked kept list (not a column shipped in `bootstrap_summary.parquet`).
 - Corpus JSON omit `update_log` to limit disk footprint; parquet holds all headline metrics.
-- **`task15_full_corpus.py` resume:** existing per-run JSON with finite `cpu_class_accuracy` reloads that result instead of recomputing the VM–method pair.
-- **Skipped** runs are precondition failures (`failure_reason` e.g. `MissingResidualCpu`).
+- **`task15_full_corpus.py` resume:** if a per-run JSON already exists and parses with finite `cpu_class_accuracy`, that VM–method pair is reloaded instead of recomputing.
+- **Skipped** runs are precondition failures (`failure_reason` e.g. `MissingResidualCpu`);
 - **Wilcoxon** uses `zero_method="wilcox"`; ill-conditioned cases return `nan` *p*-value.
 
 ## Surprises
@@ -122,13 +129,8 @@ Non-idle if `bootstrap_summary.cpu_p80` **>** **5**. Count **non-idle VMs:** **3
 
 ## Commands
 ```text
-$ cd /Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline && . .venv/bin/activate
-$ PYTHONPATH=. pytest dynapm/tests/test_dynapm_v3.py -q
-... 3 passed in ~2s ...
+$ cd /Users/fgtek002/gwa-t-13-lstm-pipeline && . .venv/bin/activate
 $ PYTHONPATH=. python dynapm/scripts/task15_full_corpus.py
-Computing volatility tiers ...
-Per-tier VM counts: {'high': 526, 'medium': 525, 'low': 525}
-{ "wall_seconds": 1162.0, "checkpoint": { ... all Q1–Q6 PASS ... } }
 ```
 
 ## Next-step suggestion
