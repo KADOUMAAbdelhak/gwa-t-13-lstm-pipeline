@@ -43,7 +43,7 @@ PARQUET_OUT = REPO / "dynapm/data/normalized_refresh_counts_corpus.parquet"
 
 def _precheck_vm(trace: str, vm_id: str) -> str | None:
     vm_id = str(vm_id)
-    if not (REPO / "old/data/raw" / trace / f"{vm_id}.csv").is_file():
+    if not (REPO / "data/raw" / trace / f"{vm_id}.csv").is_file():
         return "MissingRawCsv"
     if not (RESID_FULL / f"{trace}__{vm_id}__cpu.parquet").is_file():
         return "MissingResidualCpu"

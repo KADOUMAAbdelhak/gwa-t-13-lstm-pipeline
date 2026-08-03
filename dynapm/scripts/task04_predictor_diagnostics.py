@@ -47,7 +47,7 @@ def _compute_vol_tiers(df_summary: pd.DataFrame) -> pd.DataFrame:
     for item in kept:
         trace = item["trace"]
         vm_id = item["vm_id"]
-        p = REPO / "old/data/raw" / trace / f"{vm_id}.csv"
+        p = REPO / "data/raw" / trace / f"{vm_id}.csv"
         df = load_vm_csv(str(p))
         df_b, _, _ = compute_split(df)
         rows.append({"trace": trace, "vm_id": vm_id, "cpu_boot_std": float(df_b[CPU_T].std(ddof=0))})

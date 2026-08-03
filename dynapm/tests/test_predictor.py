@@ -1,6 +1,8 @@
 """Unit tests for feature engineering and VM predictor pipeline."""
 from __future__ import annotations
 
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 
@@ -9,7 +11,8 @@ from dynapm.core.predictor import VMPredictor
 from dynapm.data.bootstrap import compute_split
 from dynapm.data.loader import load_vm_csv
 
-TRACE1_501 = "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/old/data/raw/Materna-Trace-1/501.csv"
+REPO = Path(__file__).resolve().parents[2]
+TRACE1_501 = str(REPO / "data/raw/Materna-Trace-1/501.csv")
 CPU_T = "CPU usage [%]"
 MEM_T = "Memory usage [%]"
 

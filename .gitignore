@@ -6,16 +6,12 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+.pytest_cache/
+.matplotlib_cache/
+_mplconfig/
+.vscode/
 
-# Data
-/data/raw/
-/data/processed/
-/data/external/
-
-# Outputs
-/outputs/
-
-# Notebooks checkpoints
+# Notebooks
 .ipynb_checkpoints/
 
 # Env files

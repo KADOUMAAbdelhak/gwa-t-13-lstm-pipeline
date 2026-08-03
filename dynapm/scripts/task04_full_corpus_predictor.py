@@ -32,7 +32,7 @@ META_PATH = REPO / "dynapm/data/predictor_run_meta.json"
 
 
 def _vm_path(trace: str, vm_id: str) -> Path:
-    return REPO / "old/data/raw" / trace / f"{vm_id}.csv"
+    return REPO / "data/raw" / trace / f"{vm_id}.csv"
 
 
 def _process_vm(item: dict) -> dict:

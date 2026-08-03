@@ -82,7 +82,7 @@ def collect_verified_p95_pairs(
     RESID_FULL = repo_root / "dynapm/results/residuals_full"
     GT_DIR = repo_root / "dynapm/results/ground_truth"
 
-    path = repo_root / "old/data/raw" / trace / f"{vm_id}.csv"
+    path = repo_root / "data/raw" / trace / f"{vm_id}.csv"
     df = load_vm_csv(str(path))
     df_boot, _, info = compute_split(df)
 

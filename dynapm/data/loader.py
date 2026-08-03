@@ -33,7 +33,7 @@ def _repo_root() -> Path:
 
 def default_corpus_parent() -> Path:
     """Parent directory containing ``Materna-Trace-1`` … ``Materna-Trace-3``."""
-    return _repo_root() / "old" / "data" / "raw"
+    return _repo_root() / "data" / "raw"
 
 
 def load_vm_csv(path: str) -> pd.DataFrame:
@@ -84,7 +84,7 @@ def iter_corpus(
     Yield ``(trace_name, vm_id, df)`` for every VM CSV under the three Materna traces.
 
     *root* is the parent of ``Materna-Trace-1``, ``Materna-Trace-2``, ``Materna-Trace-3``
-    (default: ``<repo>/old/data/raw``). Skips non-``*.csv`` and ``00-Trace-Info.txt``.
+    (default: ``<repo>/data/raw``). Skips non-``*.csv`` and ``00-Trace-Info.txt``.
     """
     if root is None:
         base = default_corpus_parent()

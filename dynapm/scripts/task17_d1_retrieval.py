@@ -125,7 +125,7 @@ def build_streaming_features_parquet(kept_path: Path, out_path: Path, n_jobs: in
     def one(item: dict) -> dict:
         trace_name = item["trace"]
         vm_id = item["vm_id"]
-        path = REPO / "old/data/raw" / trace_name / f"{vm_id}.csv"
+        path = REPO / "data/raw" / trace_name / f"{vm_id}.csv"
         df = load_vm_csv(str(path))
         _, df_stream, _ = compute_split(df)
         row = compute_streaming_feature_row(df_stream, trace_name, vm_id)
@@ -163,7 +163,7 @@ def collect_eval_snapshots_only(
     lookback_steps: int = 288,
 ) -> list[dict]:
     """Streamer matching runner_v2; returns list of snapshots at GT eval timestamps (no aggregation)."""
-    path = REPO / "old/data/raw" / trace / f"{vm_id}.csv"
+    path = REPO / "data/raw" / trace / f"{vm_id}.csv"
     df = load_vm_csv(str(path))
     df_boot, _, info = compute_split(df)
     cpu_th, mem_th, prov = _thresholds(trace, vm_id)

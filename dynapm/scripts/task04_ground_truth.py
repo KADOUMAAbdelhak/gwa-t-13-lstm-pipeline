@@ -48,7 +48,7 @@ def _process(item: dict, tmap: dict) -> dict:
     trace = item["trace"]
     vm_id = item["vm_id"]
     try:
-        p = REPO / "old/data/raw" / trace / f"{vm_id}.csv"
+        p = REPO / "data/raw" / trace / f"{vm_id}.csv"
         df = load_vm_csv(str(p))
         _, df_s, _ = compute_split(df)
         eval_ts, clock_info = compute_data_aware_evaluation_timestamps(

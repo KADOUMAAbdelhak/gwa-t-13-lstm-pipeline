@@ -32,7 +32,7 @@ def main() -> int:
     for item in kept:
         trace_name = item["trace"]
         vm_id = item["vm_id"]
-        path = REPO / "old/data/raw" / trace_name / f"{vm_id}.csv"
+        path = REPO / "data/raw" / trace_name / f"{vm_id}.csv"
         df = load_vm_csv(str(path))
         df_b, _, info = compute_split(df)
         prov = extract_provisioning(df)

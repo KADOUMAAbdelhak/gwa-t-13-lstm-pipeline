@@ -1,16 +1,19 @@
 """Tests for Materna CSV loader and corpus filter."""
 from __future__ import annotations
 
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 
 from dynapm.data.filter import vm_passes_min_timesteps
 from dynapm.data.loader import SCHEMA_COLUMNS, TIMESTAMP_COL, load_vm_csv
 
-TRACE1 = "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/old/data/raw/Materna-Trace-1/501.csv"
-T1 = "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/old/data/raw/Materna-Trace-1/501.csv"
-T2 = "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/old/data/raw/Materna-Trace-2/58.csv"
-T3 = "/Users/fgtek002/Downloads/gwa-t-13-lstm-pipeline/old/data/raw/Materna-Trace-3/238.csv"
+REPO = Path(__file__).resolve().parents[2]
+TRACE1 = str(REPO / "data/raw/Materna-Trace-1/501.csv")
+T1 = str(REPO / "data/raw/Materna-Trace-1/501.csv")
+T2 = str(REPO / "data/raw/Materna-Trace-2/58.csv")
+T3 = str(REPO / "data/raw/Materna-Trace-3/238.csv")
 
 
 def test_load_one_csv():

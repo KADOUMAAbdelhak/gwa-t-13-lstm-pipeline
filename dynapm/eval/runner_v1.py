@@ -48,7 +48,7 @@ def _p95_pred_window(pred_series: pd.Series, t: pd.Timestamp, steps: int = 288) 
 
 
 def run_method_on_vm(trace, vm_id, method_factory, **kwargs) -> dict:
-    path = REPO / "old/data/raw" / trace / f"{vm_id}.csv"
+    path = REPO / "data/raw" / trace / f"{vm_id}.csv"
     df = load_vm_csv(str(path))
     df_boot, df_stream, info = compute_split(df)
 

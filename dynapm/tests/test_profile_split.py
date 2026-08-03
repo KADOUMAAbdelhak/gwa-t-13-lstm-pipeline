@@ -19,7 +19,7 @@ from dynapm.core.discretization import classify_value, compute_thresholds
 from dynapm.data.provisioning import extract_provisioning
 
 REPO = Path(__file__).resolve().parents[2]
-TRACE1_501 = REPO / "old/data/raw/Materna-Trace-1/501.csv"
+TRACE1_501 = REPO / "data/raw/Materna-Trace-1/501.csv"
 KEPT_VMS = REPO / "dynapm/data/kept_vms.json"
 
 CPU_M = "CPU usage [%]"
@@ -98,7 +98,7 @@ def test_ground_truth_returns_all_fields():
     with open(KEPT_VMS, encoding="utf-8") as f:
         kept = json.load(f)
     item = kept[0]
-    path = REPO / "old/data/raw" / item["trace"] / f'{item["vm_id"]}.csv'
+    path = REPO / "data/raw" / item["trace"] / f'{item["vm_id"]}.csv'
     df = load_vm_csv(str(path))
     df_b, _, _ = compute_split(df)
     cpu_th = compute_thresholds(df_b, CPU_M)
@@ -128,7 +128,7 @@ def test_derive_ground_truth_v2_returns_4_keys():
     with open(KEPT_VMS, encoding="utf-8") as f:
         kept = json.load(f)
     item = kept[0]
-    path = REPO / "old/data/raw" / item["trace"] / f'{item["vm_id"]}.csv'
+    path = REPO / "data/raw" / item["trace"] / f'{item["vm_id"]}.csv'
     df = load_vm_csv(str(path))
     df_b, _, _ = compute_split(df)
     cpu_th = compute_thresholds(df_b, CPU_M)

@@ -37,7 +37,7 @@ def _load_kept():
 def _tier_map(kept: list[dict]) -> dict[tuple[str, str], str]:
     rows = []
     for item in kept:
-        p = REPO / "old/data/raw" / item["trace"] / f"{item['vm_id']}.csv"
+        p = REPO / "data/raw" / item["trace"] / f"{item['vm_id']}.csv"
         df = load_vm_csv(str(p))
         b, _, _ = compute_split(df)
         rows.append({"trace": item["trace"], "vm_id": item["vm_id"], "std": float(b["CPU usage [%]"].std(ddof=0))})

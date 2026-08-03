@@ -84,7 +84,7 @@ def _tier_map_from_kept(kept: list[dict]) -> dict[tuple[str, str], str]:
     rows = []
     for item in kept:
         trace, vm_id = item["trace"], item["vm_id"]
-        p = REPO / "old/data/raw" / trace / f"{vm_id}.csv"
+        p = REPO / "data/raw" / trace / f"{vm_id}.csv"
         df = load_vm_csv(str(p))
         b, _, _ = compute_split(df)
         rows.append({"trace": trace, "vm_id": str(vm_id), "std": float(b["CPU usage [%]"].std(ddof=0))})
@@ -106,7 +106,7 @@ def _tier_map_from_kept(kept: list[dict]) -> dict[tuple[str, str], str]:
 
 def _precheck_vm(trace: str, vm_id: str) -> str | None:
     vm_id = str(vm_id)
-    if not (REPO / "old/data/raw" / trace / f"{vm_id}.csv").is_file():
+    if not (REPO / "data/raw" / trace / f"{vm_id}.csv").is_file():
         return "MissingRawCsv"
     if not (RESID_FULL / f"{trace}__{vm_id}__cpu.parquet").is_file():
         return "MissingResidualCpu"

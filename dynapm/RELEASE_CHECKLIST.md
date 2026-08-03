@@ -16,7 +16,7 @@ Use this list before publishing the code bundle. This is a **pre-flight** only; 
 
 ## Data & size
 
-- [ ] Sample traces or a tiny public subset are documented; full `old/data/raw/` is **not** assumed to ship with Zenodo
+- [ ] Sample traces or a tiny public subset are documented; full `data/raw/` may be omitted from Zenodo with download instructions (Kaggle / GWA)
 - [ ] Total downloadable artifact is under **100 MB** unless a split-archive plan is documented (Git LFS, Zenodo multiple files, etc.)
 - [ ] `normalized_refresh_counts_sample.parquet` and `reports/paper/` artifacts are reproducible from checked-in intermediates **or** explicitly listed as generated-only
 

@@ -35,7 +35,7 @@ def _load_kept() -> list[dict]:
 
 
 def _vm_path(item: dict) -> Path:
-    return REPO / "old/data/raw" / item["trace"] / f'{item["vm_id"]}.csv'
+    return REPO / "data/raw" / item["trace"] / f'{item["vm_id"]}.csv'
 
 
 def _tier_from_std(v: float, q1: float, q2: float) -> str:
